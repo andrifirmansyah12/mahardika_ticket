@@ -18,16 +18,28 @@
             <thead class="bg-gray-50">
               <tr>
                 <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Name
+                  No
                 </th>
                 <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Title
+                  Gambar
                 </th>
                 <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Status
+                  Judul
                 </th>
                 <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Role
+                  Deskripsi Film
+                </th>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  Harga
+                </th>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  Diskon
+                </th>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  Hari/Tanggal
+                </th>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  Jam Tayang
                 </th>
                 <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                     Aksi
@@ -35,39 +47,43 @@
               </tr>
             </thead>
             <tbody class="bg-white divide-y divide-gray-200">
+              <?php $no=1; ?>
+              @foreach ($film as $data)
               <tr>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                  {{$no++}}
+                </td>
                 <td class="px-6 py-4 whitespace-nowrap">
                   <div class="flex items-center">
                     <div class="flex-shrink-0 h-10 w-10">
-                      <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60" alt="">
-                    </div>
-                    <div class="ml-4">
-                      <div class="text-sm font-medium text-gray-900">
-                        Jane Cooper
-                      </div>
-                      <div class="text-sm text-gray-500">
-                        jane.cooper@example.com
-                      </div>
+                      <img class="h-10 w-10 rounded-full" src="{{ url('img-film/' . $data->foto)}}" alt="foto">
                     </div>
                   </div>
                 </td>
                 <td class="px-6 py-4 whitespace-nowrap">
-                  <div class="text-sm text-gray-900">Regional Paradigm Technician</div>
-                  <div class="text-sm text-gray-500">Optimization</div>
+                  <div class="text-sm text-gray-900">{{$data->judul}}</div>
                 </td>
                 <td class="px-6 py-4 whitespace-nowrap">
-                  <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                    Active
-                  </span>
+                  <p class="text-sm text-gray-900 truncate">{{$data->deskripsi_film}}</p>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="text-sm text-gray-900" widht="10%">{{$data->harga}}</div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="text-sm text-gray-900">{{$data->diskon}}</div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="text-sm text-gray-900">{{$data->hari}}, {{$data->tanggal}}</div>
                 </td>
                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                  Admin
+                  {{$data->jam_tayang}}
                 </td>
                 <td class="py-4 whitespace-nowrap space-x-1 text-sm font-medium">
-                  <a href="/ticket/edit" class="rounded-xl bg-green-600 p-3 hover:text-white">Edit</a>
-                  <a href="#" class="rounded-xl bg-red-600 p-3 hover:text-white">Hapus</a>
+                  <a href="/ticket/edit/{{ $data->id }}" class="rounded-xl bg-green-600 p-3 hover:text-white">Edit</a>
+                  <a href="/ticket/hapus/{{ $data->id }}" class="rounded-xl bg-red-600 p-3 hover:text-white">Hapus</a>
                 </td>
               </tr>
+              @endforeach
             </tbody>
           </table>
         </div>

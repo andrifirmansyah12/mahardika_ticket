@@ -36,7 +36,7 @@
             </thead>
             <tbody class="bg-white divide-y divide-gray-200">
               <?php $no=1; ?>
-              @foreach ($users as $data)
+              @foreach ($akun as $data)
               <tr>
                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                   {{$no++}}
@@ -44,7 +44,7 @@
                 <td class="px-6 py-4 whitespace-nowrap">
                   <div class="flex items-center">
                     <div class="flex-shrink-0 h-10 w-10">
-                      <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60" alt="">
+                      <img class="h-10 w-10 rounded-full" src="{{ url('img-akun/' . $data->foto)}}" alt="foto">
                     </div>
                     <div class="ml-4">
                       <div class="px-2 inline-flex text-sm leading-5 font-semibold rounded-full bg-green-100 text-green-800">
@@ -56,12 +56,12 @@
                 <td class="px-6 py-4 whitespace-nowrap">
                   <div class="text-sm text-gray-900">{{$data->email}}</div>
                 </td>
-                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 truncate">
-                  {{$data->alamat}}
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="text-sm text-gray-900">{{$data->alamat}}</div>
                 </td>
                 <td class="py-4 whitespace-nowrap space-x-1 text-sm font-medium">
-                  <a href="/akun/edit" class="rounded-xl bg-green-600 p-3 hover:text-white">Edit</a>
-                  <a href="#" class="rounded-xl bg-red-600 p-3 hover:text-white">Hapus</a>
+                  <a href="/akun/edit/{{ $data->id }}" class="rounded-xl bg-green-600 p-3 hover:text-white">Edit</a>
+                  <a href="/akun/hapus/{{ $data->id }}" class="rounded-xl bg-red-600 p-3 hover:text-white">Hapus</a>
                 </td>
               </tr>
               @endforeach
