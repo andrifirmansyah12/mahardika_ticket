@@ -64,7 +64,7 @@
                   <div class="text-sm text-gray-900">{{$data->judul}}</div>
                 </td>
                 <td class="px-6 py-4 whitespace-nowrap">
-                  <p class="text-sm text-gray-900 truncate">{{$data->deskripsi_film}}</p>
+                  <p class="text-sm text-gray-900 xl:w-2/4 lg:w-3/4">{{$data->deskripsi_film}}</p>
                 </td>
                 <td class="px-6 py-4 whitespace-nowrap">
                   <div class="text-sm text-gray-900" widht="10%">{{$data->harga}}</div>

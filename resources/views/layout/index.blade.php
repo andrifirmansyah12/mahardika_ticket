@@ -10,7 +10,7 @@
     @include('layout.header')
     
 </head>
-<body class="bg-yellow-100 font-family-karla flex">
+<body class="bg-gray-100 font-family-karla flex">
 
     @include('layout.nav')
 

@@ -27,6 +27,7 @@ class TicketController extends Controller
     public function tambah_aksi()
     {
         Request()->validate([
+            'foto' => 'required|mimes:jpg,jpeg,bmp,png|max:10000000',
             'judul' => 'required',
             'deskripsi_film' => 'required',
             'harga' => 'required', 
@@ -78,6 +79,7 @@ class TicketController extends Controller
     public function edit_aksi($id)
     {
         Request()->validate([
+            'foto' => 'mimes:jpg,jpeg,bmp,png|max:10000000',
             'judul' => 'required',
             'deskripsi_film' => 'required',
             'harga' => 'required', 
@@ -85,7 +87,7 @@ class TicketController extends Controller
             'tanggal' => 'required',  
             'hari' => 'required', 
             'jam_tayang' => 'required',  
-            'foto' => 'mimes:jpg,jpeg,bmp,png|max:1024',
+            
         ], [
             'judul.required' => 'Harus diisi, tidak boleh kosong!',
             'deskripsi_film.required' => 'Harus diisi, tidak boleh kosong!',

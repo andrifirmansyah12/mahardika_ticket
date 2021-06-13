@@ -7,6 +7,7 @@ use App\Http\Controllers\TicketController;
 use App\Http\Controllers\AkunController;
 use App\Http\Controllers\DetailPageController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\HomePageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,8 +44,12 @@ Route::get('/akun/edit/{id}', [AkunController::class, 'edit']);
 Route::post('/akun/edit_aksi/{id}', [AkunController::class, 'edit_aksi']);
 Route::get('/akun/hapus/{id}', [AkunController::class, 'hapus']);
 
+// Home Page
+Route::get('/homepage', [HomePageController::class, 'index'])->name('film');
+Route::get('/homepage/detail{id}', [HomePageController::class, 'detail']);
+
 // Detail Page
-Route::get('/detailpage', [DetailPageController::class, 'index']);
+// Route::get('/detailpage', [DetailPageController::class, 'index'])->name('detailpage');
 
 Auth::routes();
 
