@@ -25,24 +25,29 @@ Route::get('/', function () {
     return view('v_login');
 })->name('login');
 
-// Calendar
-Route::get('/calendar', [CalendarController::class, 'index']);
+Route::group(['middleware' => ['auth']], function () {
+    // Dashboard Admin
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-// Ticket
-Route::get('/ticket', [TicketController::class, 'index'])->name('film');
-Route::get('/ticket/tambah', [TicketController::class, 'tambah']);
-Route::post('/ticket/tambah_aksi', [TicketController::class, 'tambah_aksi']);
-Route::get('/ticket/edit/{id}', [TicketController::class, 'edit']);
-Route::post('/ticket/edit_aksi/{id}', [TicketController::class, 'edit_aksi']);
-Route::get('/ticket/hapus/{id}', [TicketController::class, 'hapus']);
+    // Calendar
+    Route::get('/calendar', [CalendarController::class, 'index']);
 
-// Akun
-Route::get('/akun', [AkunController::class, 'index'])->name('akun');
-Route::get('/akun/tambah', [AkunController::class, 'tambah']);
-Route::post('/akun/tambah_aksi', [AkunController::class, 'tambah_aksi']);
-Route::get('/akun/edit/{id}', [AkunController::class, 'edit']);
-Route::post('/akun/edit_aksi/{id}', [AkunController::class, 'edit_aksi']);
-Route::get('/akun/hapus/{id}', [AkunController::class, 'hapus']);
+    // Ticket
+    Route::get('/ticket', [TicketController::class, 'index'])->name('film');
+    Route::get('/ticket/tambah', [TicketController::class, 'tambah']);
+    Route::post('/ticket/tambah_aksi', [TicketController::class, 'tambah_aksi']);
+    Route::get('/ticket/edit/{id}', [TicketController::class, 'edit']);
+    Route::post('/ticket/edit_aksi/{id}', [TicketController::class, 'edit_aksi']);
+    Route::get('/ticket/hapus/{id}', [TicketController::class, 'hapus']);
+
+    // Akun
+    Route::get('/akun', [AkunController::class, 'index'])->name('akun');
+    Route::get('/akun/tambah', [AkunController::class, 'tambah']);
+    Route::post('/akun/tambah_aksi', [AkunController::class, 'tambah_aksi']);
+    Route::get('/akun/edit/{id}', [AkunController::class, 'edit']);
+    Route::post('/akun/edit_aksi/{id}', [AkunController::class, 'edit_aksi']);
+    Route::get('/akun/hapus/{id}', [AkunController::class, 'hapus']);
+});
 
 // Home Page
 Route::get('/homepage', [HomePageController::class, 'index'])->name('homepage');
@@ -53,5 +58,3 @@ Route::get('/homepage/detail{id}', [HomePageController::class, 'detail']);
 
 Auth::routes();
 
-// Dashboard Admin
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -1,7 +1,7 @@
-<aside class="relative bg-sidebar h-screen w-64 hidden sm:block shadow-xl">
+<aside class="relative bg-yellow-600 h-screen w-64 hidden sm:block shadow-xl">
     <div class="flex items-center space-x-3 p-6">
         <button class="realtive z-10 w-12 h-12">
-            <img class="" src="{{ asset('Admin/dist/img/Indramayu.png') }}">
+            <img class="" src="{{ asset('mahardika_ticket/dist/img/logo9.png') }}">
         </button>
         <a href="/home" class="text-white text-3xl font-semibold uppercase hover:text-gray-300">Admin</a>
     </div>

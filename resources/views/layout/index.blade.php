@@ -20,11 +20,15 @@
             <div class="w-1/2"></div>
             <div x-data="{ isOpen: false }" class="relative w-1/2 flex justify-end">
                 <button @click="isOpen = !isOpen" class="realtive z-10 w-12 h-12 rounded-full overflow-hidden border-4 border-gray-400 hover:border-gray-300 focus:border-gray-300 focus:outline-none">
-                    <img src="https://source.unsplash.com/uJ8LNVCBjFQ/400x400">
+                    <i class="fas fa-sign-out-alt"></i>
                 </button>
                 <button x-show="isOpen" @click="isOpen = false" class="h-full w-full fixed inset-0 cursor-default"></button>
                 <div x-show="isOpen" class="absolute w-32 bg-white rounded-lg shadow-lg py-2 mt-16">
-                    <a href="/" class="block px-4 py-2 account-link hover:text-white">Sign Out</a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                        <button type="submit" href="/" class="block px-4 py-2 account-link hover:text-white">Sign Out</button>
+                    </form>
+                    
                 </div>
             </div>
         </header>
@@ -33,7 +37,7 @@
         <header x-data="{ isOpen: false }" class="w-full bg-sidebar py-5 px-6 sm:hidden">
             <div class="flex items-center justify-between">
                 <button @click="isOpen = !isOpen" class="realtive z-10 w-12 h-12">
-                    <img class="" src="{{ asset('Admin/dist/img/Indramayu.png') }}">
+                    <img class="" src="{{ asset('mahardika_ticket/dist/img/logo.png') }}">
                 </button>
                 <a href="/home" class="text-white text-3xl font-semibold uppercase hover:text-gray-300">Admin</a>
                 <button @click="isOpen = !isOpen" class="text-white text-3xl focus:outline-none">

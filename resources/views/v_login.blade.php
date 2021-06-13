@@ -5,7 +5,7 @@
     <title>Admin | Login</title>
 
     <!-- FavIcon -->
-    <link rel="shortcut icon" href="{{ asset('Admin/dist/img/Indramayu.png') }}">
+    <link rel="shortcut icon" href="{{ asset('mahardika_ticket/dist/img/logo9.png') }}">
 
     <link
       rel="stylesheet"
@@ -13,11 +13,12 @@
     />
 
     {{-- Css.style --}}
-    <link rel="stylesheet" href="{{asset('LoginTailwindCss')}}/static/dist/tailwind.css" />
+    <link rel="stylesheet" href="{{asset('LoginTailwindCss')}}/static/dist/tailwind.css"/>
 
   </head>
   {{-- background Body Utama --}}
   <body class="bg-yellow-100">
+    
     <img
         {{-- Gambar Variasi Ombak --}}
       src="{{asset('LoginTailwindCss')}}/Assets/wave.png"
@@ -28,17 +29,16 @@
       class="w-screen h-screen flex flex-col justify-center items-center lg:grid lg:grid-cols-2"
     >
       <img
-        {{-- Gambar Indramayu --}}
-        src="{{asset('LoginTailwindCss')}}/Assets/Indramayu.png"
-        class="hidden lg:block w-1/2 hover:scale-150 transition-all duration-500 transform mx-auto"
+        src=""
+        class="hidden lg:block w-1/2 transform mx-auto"
       />
-      <div class="flex flex-col justify-center items-center w-1/2">
+      <div class="bg-white flex flex-col justify-center items-center w-1/2 rounded-full mt-4 lg:mt-0 py-4 px-8 shadow border-2 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
         {{-- Gambar Avatar --}}
-        <img src="{{asset('LoginTailwindCss')}}/Assets/avatar.svg" class="w-32" />
+        <img src="{{asset('LoginTailwindCss')}}/Assets/avatar.svg" class="w-32 py-3" />
         <h2
           class="my-8 font-display font-bold text-3xl text-gray-700 text-center"
         >
-          Sistem Informasi Desa Kenanga
+          Mahardika Ticket
         </h2>
         
         <form method="POST" action="{{ route('login') }}">

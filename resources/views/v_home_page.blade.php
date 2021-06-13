@@ -5,13 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page | Mahardika Ticket</title>
-    <link rel="stylesheet" href="{{ asset('Admin/dist/style.css') }}">
-    <link rel="shortcut icon" href="{{ asset('Admin/dist/img/Indramayu.png') }}">
-    <style>
-      html{
-        scroll-behavior: smooth;
-      }
-    </style>
+    
+    <!-- Header -->
+    @component("components.header_page")
+    @endcomponent
+
 </head>
 <body class="leading-normal tracking-normal bg-white text-white" style="font-family: 'Source Sans Pro', sans-serif;">
 
@@ -32,7 +30,7 @@
     @section('isi2')
     <a class="transform transition hover:scale-95 duration-300 ease-in-out rounded-md cursor-pointer" href="/homepage/detail{{ $data->id }}"><img src="{{ url('img-film/' . $data->foto)}}" alt="foto" class="w-full rounded-lg"></a>
     <div class="pt-5 space-y-2 self-center sm:pt-0 sm:pl-10 col-span-3">
-      <a href="/homepage/detail{id}" class="mx-auto font-bold text-green-600 text-5xl">
+      <a href="/homepage/detail{{ $data->id }}" class="mx-auto font-bold text-green-600 text-5xl">
         {{ $data->judul }}
       </a>
       <p class="px-1 mx-auto text-black text-red-600">
@@ -59,7 +57,6 @@
     @endforelse
     @endcomponent
 
-    
     <!-- Footer -->
     @component("components.footer_page")
     @endcomponent

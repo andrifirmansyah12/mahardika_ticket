@@ -11,7 +11,7 @@ class HomePageModel extends Model
     protected $table = 'film';
     public function allData()
     {
-        return DB::table('film')->paginate(3);
+        return DB::table('film')->get();
     }
 
     public function detail($id)

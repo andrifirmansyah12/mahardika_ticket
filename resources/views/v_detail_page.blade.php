@@ -5,13 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detail Page | Mahardika Ticket</title>
-    <link rel="stylesheet" href="{{ asset('Admin/dist/style.css') }}">
-    <link rel="shortcut icon" href="{{ asset('Admin/dist/img/Indramayu.png') }}">
-    <style>
-      html{
-        scroll-behavior: smooth;
-      }
-    </style>
+
+    <!-- Header -->
+    @component("components.header_page")
+    @endcomponent
+
 </head>
 <body class="leading-normal tracking-normal bg-white text-white" style="font-family: 'Source Sans Pro', sans-serif;">
 
@@ -89,11 +87,11 @@
     @component("components.footer_page")
     @endcomponent
 
-    <!-- <a href="#" class="back-to-top w-10 h-10 fixed bottom-0 right-0 mb-5 mr-5 flex items-center justify-center rounded-full bg-blue-600 text-white text-lg z-20 duration-300 hover:bg-blue-400">
+    <a href="#" class="back-to-top w-10 h-10 fixed bottom-0 right-0 mb-5 mr-5 flex items-center justify-center rounded-full bg-blue-600 text-white text-lg z-20 duration-300 hover:bg-blue-400">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z" clip-rule="evenodd" />
       </svg>
-    </a> -->
+    </a>
     
   </body>
 </html>
