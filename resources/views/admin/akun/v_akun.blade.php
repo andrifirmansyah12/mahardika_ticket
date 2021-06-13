@@ -60,6 +60,7 @@
                   <div class="text-sm text-gray-900">{{$data->alamat}}</div>
                 </td>
                 <td class="py-4 whitespace-nowrap space-x-1 text-sm font-medium">
+                  <a href="/akun/detailakun/{{ $data->id }}" class="rounded-xl bg-yellow-300 p-3 hover:text-white">Detail</a>
                   <a href="/akun/edit/{{ $data->id }}" class="rounded-xl bg-green-600 p-3 hover:text-white">Edit</a>
                   <a href="/akun/hapus/{{ $data->id }}" class="rounded-xl bg-red-600 p-3 hover:text-white">Hapus</a>
                 </td>

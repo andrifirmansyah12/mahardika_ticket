@@ -55,9 +55,15 @@ class AkunController extends Controller
         return redirect()->route('akun')->with('pesan', 'Data Berhasil Ditambahkan !');
     }
 
-    public function detailData($id)
+    public function detailakun($id)
     {
-        return DB::table('users')->where('id', $id)->first();
+        if (!$this->AkunModel->detailData($id)) {
+            abort(404);
+        }
+        $data = [
+            'akun' => $this->AkunModel->detailData($id),
+        ];
+        return view('admin.akun.v_detail_akun', $data);
     }
 
     public function edit($id)

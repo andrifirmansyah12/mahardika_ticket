@@ -56,7 +56,20 @@
                     <label class="text-sm" for="hari">
                         Hari
                     </label>
-                    <input type="text" class="h-12 px-3 w-full border-blue-400 border-2 rounded focus:outline-none focus:border-blue-600" id="hari" name="hari" value="{{old('hari')}}">
+                    <div class="relative">
+                        <select class="block appearance-none w-full bg-white border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="hari" name="hari" value="{{old('hari')}}">
+                          <option>Senin</option>
+                          <option>Selasa</option>
+                          <option>Rabu</option>
+                          <option>Kamis</option>
+                          <option>Jum'at</option>
+                          <option>Sabtu</option>
+                          <option>Minggu</option>
+                        </select>
+                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                          <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                        </div>
+                    </div>
                     @error('hari')
                     <div class="bg-red-400 p-2 shadow-sm rounded mt-2">
                         {{ $message }}
@@ -78,7 +91,17 @@
                     <label class="text-sm" for="jam_tayang">
                         Jam Tayang
                     </label>
-                    <input type="text" class="h-12 px-3 w-full border-blue-400 border-2 rounded focus:outline-none focus:border-blue-600" id="jam_tayang" name="jam_tayang" value="{{old('jam_tayang')}}">
+                    <div class="relative">
+                        <select class="block appearance-none w-full bg-white border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="jam_tayang" name="jam_tayang" value="{{old('jam_tayang')}}">
+                          <option>09 : 00 - 11 : 00</option>
+                          <option>12 : 00 - 15 : 00</option>
+                          <option>16 : 00 - 18 : 00</option>
+                          <option>19 : 00 - 21 : 00</option>
+                        </select>
+                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                          <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                        </div>
+                    </div>
                     @error('jam_tayang')
                     <div class="bg-red-400 p-2 shadow-sm rounded mt-2">
                         {{ $message }}

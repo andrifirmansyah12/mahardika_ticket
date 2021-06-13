@@ -43,6 +43,7 @@ Route::group(['middleware' => ['auth']], function () {
     // Akun
     Route::get('/akun', [AkunController::class, 'index'])->name('akun');
     Route::get('/akun/tambah', [AkunController::class, 'tambah']);
+    Route::get('/akun/detailakun/{id}', [AkunController::class, 'detailakun']);
     Route::post('/akun/tambah_aksi', [AkunController::class, 'tambah_aksi']);
     Route::get('/akun/edit/{id}', [AkunController::class, 'edit']);
     Route::post('/akun/edit_aksi/{id}', [AkunController::class, 'edit_aksi']);
