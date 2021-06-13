@@ -17,7 +17,6 @@ class HomePageController extends Controller
         $data = [
             'film' => $this->HomePageModel->allData(),
         ];
-
         return view('v_home_page', $data);
     }
 
