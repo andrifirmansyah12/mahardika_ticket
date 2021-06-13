@@ -45,7 +45,7 @@ Route::post('/akun/edit_aksi/{id}', [AkunController::class, 'edit_aksi']);
 Route::get('/akun/hapus/{id}', [AkunController::class, 'hapus']);
 
 // Home Page
-Route::get('/homepage', [HomePageController::class, 'index'])->name('film');
+Route::get('/homepage', [HomePageController::class, 'index'])->name('homepage');
 Route::get('/homepage/detail{id}', [HomePageController::class, 'detail']);
 
 // Detail Page
