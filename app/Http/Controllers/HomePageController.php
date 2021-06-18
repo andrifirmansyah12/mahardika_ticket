@@ -15,7 +15,7 @@ class HomePageController extends Controller
     public function index()
     {   
         $data = [
-            'film' => $this->HomePageModel->allData(),
+            'film' => $this->HomePageModel->paginate(3),
         ];
         return view('v_home_page', $data);
     }

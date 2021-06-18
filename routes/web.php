@@ -21,7 +21,7 @@ use App\Http\Controllers\HomePageController;
 */
 
 // Login
-Route::get('/', function () {
+Route::get('/login', function () {
     return view('v_login');
 })->name('login');
 
@@ -51,7 +51,7 @@ Route::group(['middleware' => ['auth']], function () {
 });
 
 // Home Page
-Route::get('/homepage', [HomePageController::class, 'index'])->name('homepage');
+Route::get('/', [HomePageController::class, 'index'])->name('homepage');
 Route::get('/homepage/detail{id}', [HomePageController::class, 'detail']);
 
 // Detail Page

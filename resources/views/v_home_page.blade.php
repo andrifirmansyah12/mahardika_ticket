@@ -17,45 +17,54 @@
     @component("components.nav_page")
     @endcomponent
 
-    @component("components.isi_page")
-    @forelse ($film as $data)
-    @section('isi')
-    <div class='mx-3 w-full'>
-      <a href="/homepage/detail{{ $data->id }}"><div class='border-2 transform transition hover:scale-95 duration-300 ease-in-out rounded-md cursor-pointer mb-3'><img class="rounded" src="{{ url('img-film/' . $data->foto)}}">
+    <section class="w-full" style="background-image: url({{ asset('mahardika_ticket/dist/img/img5.jpg') }});">
+      <div class="container flex flex-wrap mx-auto px-2 pt-4 pb-12 text-gray-800">
+        <h1 class="w-full my-2 mt-16 text-5xl font-extrabold leading-tight text-center text-white">
+          Best Seller
+        </h1>
+        @forelse($film as $data)
+        <div class='flex max-w-sm w-70 shadow-2xl rounded-lg overflow-hidden mx-auto'>
+          <div class='flex items-center w-full px-2 py-2'>
+              <div class='mx-3 w-full'>
+                  <div class="flex flex-row mb-6 mt-2">
+                    <a class='border-2 transform transition hover:scale-95 duration-300 ease-in-out rounded-md cursor-pointer mb-3' href="/homepage/detail{{ $data->id }}">
+                      <img class="rounded" src="{{ url('img-film/' . $data->foto)}}">
+                    </a>
+                  </div>
+              </div>
+          </div>
+        </div>
+        @endforeach
       </div>
-      </a>
+    </section>
+    
+    @foreach ($film as $data)
+    <div class="w-full p-7 px-16 bg-gray-200 flex justify-center items-center">
+      <article class="sm:grid grid-cols-5 bg-white shadow-sm p-7 relative sm:p-4 rounded-lg lg:col-span-2 ">
+        <a class="transform transition hover:scale-95 duration-300 ease-in-out rounded-md cursor-pointer" href="/homepage/detail{{ $data->id }}"><img src="{{ url('img-film/' . $data->foto)}}" alt="foto" class="w-full rounded-lg"></a>
+        <div class="pt-5 space-y-2 self-center sm:pt-0 sm:pl-10 col-span-3">
+          <a href="/homepage/detail{{ $data->id }}" class="mx-auto font-bold text-green-600 text-5xl">
+            {{ $data->judul }}
+          </a>
+          <p class="px-1 mx-auto text-black text-red-600">
+            {{ $data->hari }}
+            <span class="px-4 font-semibold">{{ $data->tanggal }}</span>
+          </p>
+          <h3 class="px-1 mx-auto text-2xl font-bold text-red-600">
+            {{ $data->jam_tayang }}
+          </h3>
+        </div>
+        <div class="justify-self-end mt-2">
+          <h3 class="line-through mx-auto text-1xl font-bold text-red-600">
+            {{ $data->diskon }}
+          </h3>
+          <p class="py-1 mx-auto text-black font-bold text-4xl">
+            {{ $data->harga }}
+          </p>
+        </div>
+      </article>
     </div>
-    @endsection
-
-    @section('isi2')
-    <a class="transform transition hover:scale-95 duration-300 ease-in-out rounded-md cursor-pointer" href="/homepage/detail{{ $data->id }}"><img src="{{ url('img-film/' . $data->foto)}}" alt="foto" class="w-full rounded-lg"></a>
-    <div class="pt-5 space-y-2 self-center sm:pt-0 sm:pl-10 col-span-3">
-      <a href="/homepage/detail{{ $data->id }}" class="mx-auto font-bold text-green-600 text-5xl">
-        {{ $data->judul }}
-      </a>
-      <p class="px-1 mx-auto text-black text-red-600">
-        {{ $data->hari }}
-        <span class="px-4 font-semibold">{{ $data->tanggal }}</span>
-      </p>
-      <h3 class="px-1 mx-auto text-2xl font-bold text-red-600">
-        {{ $data->jam_tayang }}
-      </h3>
-    </div>
-    <div class="justify-self-end mt-2">
-      <h3 class="line-through mx-auto text-1xl font-bold text-red-600">
-        {{ $data->diskon }}
-      </h3>
-      <p class="py-1 mx-auto text-black font-bold text-4xl">
-        {{ $data->harga }}
-      </p>
-    </div>
-    @endsection
-    @empty
-    <h1 class="text-center text-gray-600" >
-      Data Aparatur Desa Kosong
-    </h1>
-    @endforelse
-    @endcomponent
+    @endforeach 
 
     <!-- Footer -->
     @component("components.footer_page")

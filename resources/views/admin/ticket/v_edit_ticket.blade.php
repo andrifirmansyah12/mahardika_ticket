@@ -128,7 +128,7 @@
                         Cancel
                     </a>
                     <button type="submit" class="ml-2 h-10 w-32 bg-blue-600 rounded text-white hover:bg-blue-700">
-                        Tambah
+                        Edit
                     </button>
                 </div>
             </div>

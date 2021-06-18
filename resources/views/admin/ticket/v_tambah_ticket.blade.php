@@ -23,7 +23,7 @@
                     <label class="text-sm" for="deskripsi_film">
                         Deskripsi Film
                     </label>
-                    <input type="text" class="h-12 px-3 w-full border-blue-400 border-2 rounded focus:outline-none focus:border-blue-600" id="deskripsi_film" name="deskripsi_film" value="{{old('deskripsi_film')}}">
+                    <textarea class="h-12 px-3 w-full border-blue-400 border-2 rounded focus:outline-none focus:border-blue-600" id="deskripsi_film" name="deskripsi_film" value="{{old('deskripsi_film')}} cols="30" rows="10"></textarea>
                     @error('deskripsi_film')
                     <div class="bg-red-400 p-2 shadow-sm rounded mt-2">
                         {{ $message }}
