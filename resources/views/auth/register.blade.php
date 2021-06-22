@@ -91,7 +91,10 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="{{ asset('Login_inv/bower_components/Ionicons/css/ionicons.min.css') }}">
+    <!-- iCheck -->
+    <link rel="stylesheet" href="{{ asset('Login_inv/plugins/iCheck/square/blue.css') }}">
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
@@ -145,7 +148,6 @@
                   autocomplete="foto"
                   placeholder="foto"
                   class="w-full pl-8 border-b-2 font-display focus:outline-none focus:border-primarycolor transition-all duration-500 capitalize text-md form-control @error('foto') is-invalid @enderror"
-                  style="text-transform: lowercase;"
                   />
             </div>
 
@@ -158,8 +160,8 @@
               value="{{ old('name') }}" 
               required autocomplete="name" 
               autofocus
-              placeholder="name"
-              class="w-full pl-8 border-b-2 font-display focus:outline-none focus:border-primarycolor transition-all duration-500 text-md form-control @error('name') is-invalid @enderror"
+              placeholder="Name"
+              class="w-full pl-8 border-b-2 font-display focus:outline-none focus:border-primarycolor capitalize transition-all duration-500 text-md form-control @error('name') is-invalid @enderror"
               />
           </div>
 
@@ -172,9 +174,9 @@
               value="{{ old('email') }}" 
               required 
               autocomplete="email"
-              placeholder="email"
+              placeholder="Email"
               class="w-full pl-8 border-b-2 font-display focus:outline-none focus:border-primarycolor transition-all duration-500 text-md form-control @error('email') is-invalid @enderror"
-              style="text-transform: lowercase;"
+              {{-- style="text-transform: lowercase;" --}}
               />
           </div>
 
@@ -189,11 +191,11 @@
               autocomplete="alamat"
               placeholder="alamat"
               class="w-full pl-8 border-b-2 font-display focus:outline-none focus:border-primarycolor transition-all duration-500 capitalize text-md form-control @error('alamat') is-invalid @enderror"
-              style="text-transform: lowercase;"
+              {{-- style="text-transform: lowercase;" --}}
               />
           </div>
 
-          <div class="py-1 relative mt-3">
+          <div class="py-1 relative mt-3 flex flex-row">
             <label for="password"><i class="fa fa-lock absolute text-primarycolor text-xl"></i></label>
             <input
               id="password"
@@ -201,10 +203,11 @@
               name="password"
               required
               autocomplete="new-password"
-              placeholder="password"
-              class="w-full pl-8 border-b-2 font-display focus:outline-none focus:border-primarycolor transition-all duration-500 capitalize text-md @error('password') is-invalid @enderror"
-              style="text-transform: lowercase;"
+              placeholder="Password"
+              class="w-full pl-8 border-b-2 font-display focus:outline-none focus:border-primarycolor transition-all duration-500 text-md @error('password') is-invalid @enderror"
+              {{-- style="text-transform: lowercase;" --}}
               />
+              <span class="fa fa-eye-slash form-control-feedback view_password"></span>
           </div>
 
           <div class="py-1 relative mt-3">
@@ -216,8 +219,8 @@
                 required 
                 autocomplete="new-password"
                 placeholder="Konfirmasi password"
-                class="w-full pl-8 border-b-2 font-display focus:outline-none focus:border-primarycolor transition-all duration-500 capitalize text-md @error('password') is-invalid @enderror"
-                style="text-transform: lowercase;"
+                class="w-full pl-8 border-b-2 font-display focus:outline-none focus:border-primarycolor transition-all duration-500 text-md @error('password') is-invalid @enderror"
+                {{-- style="text-transform: lowercase;" --}}
                 />
           </div>
 
@@ -256,3 +259,32 @@
 
 <script src="{{asset('template-login')}}/vendor/jquery/jquery.min.js"></script>
 <script src="{{asset('template-login')}}/js/main.js"></script>
+
+<!-- jQuery 3 -->
+<script src="{{asset('Login_inv/bower_components/jquery/dist/jquery.min.js')}}"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="{{ asset('Login_inv/bower_components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+<!-- iCheck -->
+<script src="{{ asset('Login_inv/plugins/iCheck/icheck.min.js') }}"></script>
+
+<script>
+  $(function () {
+    $('input').iCheck({
+      checkboxClass: 'icheckbox_square-blue',
+      radioClass: 'iradio_square-blue',
+      increaseArea: '20%' /* optional */
+    });
+    $('.view_password').on('click', function(){
+      var x = document.getElementById("password");
+      if (x.type === "password") {
+          x.type = "text";
+          $(this).removeClass('fa-eye-slash');
+          $(this).addClass('fa-eye');
+      } else {
+          x.type = "password";
+          $(this).removeClass('fa-eye');
+          $(this).addClass('fa-eye-slash');
+      }
+     });
+  });
+</script>

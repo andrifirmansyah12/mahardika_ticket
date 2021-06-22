@@ -113,9 +113,9 @@
                 value="{{ old('email') }}" 
                 required autocomplete="email" 
                 autofocus
-                placeholder="email"
+                placeholder="Email"
                 class="w-full pl-8 border-b-2 font-display focus:outline-none focus:border-primarycolor transition-all duration-500 text-md form-control @error('email') is-invalid @enderror"
-                style="text-transform: lowercase;"
+                {{-- style="text-transform: lowercase;" --}}
                 />
             </div>
 
@@ -163,7 +163,6 @@
     </div>
   </body>
 </html>
-
 
 <script src="{{asset('template-login')}}/vendor/jquery/jquery.min.js"></script>
 <script src="{{asset('template-login')}}/js/main.js"></script>

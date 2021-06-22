@@ -12,6 +12,11 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
     />
 
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="{{ asset('Login_inv/bower_components/Ionicons/css/ionicons.min.css') }}">
+    <!-- iCheck -->
+    <link rel="stylesheet" href="{{ asset('Login_inv/plugins/iCheck/square/blue.css') }}">
+
     {{-- Css.style --}}
     <link rel="stylesheet" href="{{asset('LoginTailwindCss')}}/static/dist/tailwind.css"/>
 
@@ -50,8 +55,7 @@
               name="email"
               id="email"
               placeholder="Email"
-              class="w-full pl-8 border-b-2 font-display focus:outline-none focus:border-primarycolor transition-all duration-500 capitalize text-md"
-              style="text-transform: lowercase;"
+              class="w-full pl-8 border-b-2 font-display focus:outline-none focus:border-primarycolor transition-all duration-500 text-md"
               />
           </div>
           
@@ -68,16 +72,17 @@
           </div>
           @enderror
 
-          <div class="py-1 relative mt-3">
+          <div class="py-1 relative mt-3 flex flex-row">
             <label for="your_pass"><i class="fa fa-lock absolute text-primarycolor text-xl"></i></label>
             <input
               type="password"
               name="password"
               id="password" 
-              placeholder="password"
-              class="w-full pl-8 border-b-2 font-display focus:outline-none focus:border-primarycolor transition-all duration-500 capitalize text-md"
-              style="text-transform: lowercase;"
+              placeholder="Password"
+              class="w-full pl-8 border-b-2 font-display focus:outline-none focus:border-primarycolor transition-all duration-500 text-md"
+              {{-- style="text-transform: lowercase;" --}}
               />
+              <span class="fa fa-eye-slash form-control-feedback view_password"></span>
           </div>
 
           @error('password')
@@ -140,3 +145,31 @@
 
 <script src="{{asset('template-login')}}/vendor/jquery/jquery.min.js"></script>
 <script src="{{asset('template-login')}}/js/main.js"></script>
+<!-- jQuery 3 -->
+<script src="{{asset('Login_inv/bower_components/jquery/dist/jquery.min.js')}}"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="{{ asset('Login_inv/bower_components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+<!-- iCheck -->
+<script src="{{ asset('Login_inv/plugins/iCheck/icheck.min.js') }}"></script>
+
+<script>
+  $(function () {
+    $('input').iCheck({
+      checkboxClass: 'icheckbox_square-blue',
+      radioClass: 'iradio_square-blue',
+      increaseArea: '20%' /* optional */
+    });
+    $('.view_password').on('click', function(){
+      var x = document.getElementById("password");
+      if (x.type === "password") {
+          x.type = "text";
+          $(this).removeClass('fa-eye-slash');
+          $(this).addClass('fa-eye');
+      } else {
+          x.type = "password";
+          $(this).removeClass('fa-eye');
+          $(this).addClass('fa-eye-slash');
+      }
+     });
+  });
+</script>
