@@ -37,4 +37,11 @@ class AkunModel extends Model
             ->where('id', $id)
             ->delete();
     }
+
+    // public function deleteSelectData($data)
+    // {
+    //     return DB::table('users')
+    //         ->whereIn('id', $data)
+    //         ->delete();
+    // }
 }

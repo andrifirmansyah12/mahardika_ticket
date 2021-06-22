@@ -17,7 +17,7 @@
 
   </head>
   {{-- background Body Utama --}}
-  <body class="bg-yellow-100">
+  <body class="bg-white">
     
     <img
         {{-- Gambar Variasi Ombak --}}
@@ -29,28 +29,28 @@
       class="w-screen h-screen flex flex-col justify-center items-center lg:grid lg:grid-cols-2"
     >
       <img
-        src=""
-        class="hidden lg:block w-1/2 transform mx-auto"
+        src="{{ asset('mahardika_ticket/dist/img/guitar.png') }}"
+        class="hidden lg:block w-1/2 hover:scale-110 transition-all duration-500 transform mx-auto"
       />
-      <div class="bg-white flex flex-col justify-center items-center w-1/2 rounded-full mt-4 lg:mt-0 py-4 px-8 shadow border-2 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+      <div class="bg-white flex flex-col justify-center items-center w-1/2 rounded-md mt-4 lg:mt-0 py-4 px-6 shadow border-4 border-gray-100">
         {{-- Gambar Avatar --}}
         <img src="{{asset('LoginTailwindCss')}}/Assets/avatar.svg" class="w-32 py-3" />
         <h2
-          class="my-8 font-display font-bold text-3xl text-gray-700 text-center"
+          class="my-8 font-bold text-3xl text-gray-700 text-center"
         >
-          Mahardika Ticket
+          MAHARDIKA TICKET
         </h2>
         
         <form method="POST" action="{{ route('login') }}">
           @csrf
           <div class="py-1 relative">
-            <label for="your_name"><i class="fa fa-user absolute text-primarycolor text-xl"></i></label>
+            <label for="your_name"><i class="fa fa-envelope absolute text-primarycolor text-xl"></i></label>
             <input
               type="text"
               name="email"
               id="email"
               placeholder="Email"
-              class="pl-8 border-b-2 font-display focus:outline-none focus:border-primarycolor transition-all duration-500 capitalize text-md"
+              class="w-full pl-8 border-b-2 font-display focus:outline-none focus:border-primarycolor transition-all duration-500 capitalize text-md"
               style="text-transform: lowercase;"
               />
           </div>
@@ -75,7 +75,7 @@
               name="password"
               id="password" 
               placeholder="password"
-              class="pl-8 border-b-2 font-display focus:outline-none focus:border-primarycolor transition-all duration-500 capitalize text-md"
+              class="w-full pl-8 border-b-2 font-display focus:outline-none focus:border-primarycolor transition-all duration-500 capitalize text-md"
               style="text-transform: lowercase;"
               />
           </div>
@@ -107,10 +107,30 @@
               <button
                   name="signin" 
                   id="signin"
-                  class="py-3 px-20 bg-yellow-600 lg:mx-0 hover:underline bg-white text-white font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+                  class="w-full bg-yellow-600 lg:mx-0 hover:underline bg-white text-white font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
               >
                   Login
-          </button>
+              </button>
+          </div>
+          @guest
+          <div class="flex flex-row space-x-4">
+            <div class="hover:underline text-black font-bold opacity-75 focus:outline-none transform transition hover:scale-105 duration-300 ease-in-out">
+              @if (Route::has('register'))
+                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+              @endif
+            </div>
+            <div>
+              <p>||</p>
+            </div>
+            <div class="hover:underline text-black font-bold opacity-75 focus:outline-none transform transition hover:scale-105 duration-300 ease-in-out">
+              @if (Route::has('password.request'))
+                <a class="btn btn-link" href="{{ route('password.request') }}">
+                  {{ __('Forgot Your Password?') }}
+                </a>
+              @endif
+            </div>
+          </div>
+          @endguest
         </form>
       </div>
     </div>

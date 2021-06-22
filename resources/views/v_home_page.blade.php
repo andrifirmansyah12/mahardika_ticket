@@ -17,7 +17,7 @@
     @component("components.nav_page")
     @endcomponent
 
-    <section class="w-full" style="background-image: url({{ asset('mahardika_ticket/dist/img/img5.jpg') }});">
+    <section class="w-full" style="background-image: url({{ asset('mahardika_ticket/dist/img/img6.jpg') }});">
       <div class="container flex flex-wrap mx-auto px-2 pt-4 pb-12 text-gray-800">
         <h1 class="w-full my-2 mt-16 text-5xl font-extrabold leading-tight text-center text-white">
           Best Seller

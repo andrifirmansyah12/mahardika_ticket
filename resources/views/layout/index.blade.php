@@ -24,20 +24,20 @@
                 </button>
                 <button x-show="isOpen" @click="isOpen = false" class="h-full w-full fixed inset-0 cursor-default"></button>
                 <div x-show="isOpen" class="absolute w-32 bg-white rounded-lg shadow-lg py-2 mt-16">
+                    <a href="/profile" class="block px-4 py-2 account-link hover:text-white">Profile</a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                         @csrf
                         <button type="submit" href="/" class="block px-4 py-2 account-link hover:text-white">Sign Out</button>
                     </form>
-                    
                 </div>
             </div>
         </header>
 
         <!-- Mobile Header & Nav -->
-        <header x-data="{ isOpen: false }" class="w-full bg-sidebar py-5 px-6 sm:hidden">
+        <header x-data="{ isOpen: false }" class="w-full bg-yellow-600 py-5 px-6 sm:hidden">
             <div class="flex items-center justify-between">
                 <button @click="isOpen = !isOpen" class="realtive z-10 w-12 h-12">
-                    <img class="" src="{{ asset('mahardika_ticket/dist/img/logo.png') }}">
+                    <img class="" src="{{ asset('mahardika_ticket/dist/img/logo9.png') }}">
                 </button>
                 <a href="/home" class="text-white text-3xl font-semibold uppercase hover:text-gray-300">Admin</a>
                 <button @click="isOpen = !isOpen" class="text-white text-3xl focus:outline-none">
@@ -199,5 +199,24 @@
         button.addEventListener('click',()=>modal.classList.add('scale-100'))
         closebutton.addEventListener('click',()=>modal.classList.remove('scale-100'))
     </script>
+
+    {{-- Data Tables
+    <script>
+        $(document).ready( function () {
+            $('.data').DataTable(); 
+        } );
+    </script>
+
+    {{-- check all --}}
+    {{-- <script>
+        $(function(e) {
+        $("#checkAll").click(function(){
+            $('input:checkbox').not(this).prop('checked', this.checked);
+
+        })
+        })
+    </script> --}}
+
+
 </body>
 </html>

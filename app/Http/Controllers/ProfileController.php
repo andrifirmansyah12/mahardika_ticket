@@ -3,20 +3,24 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\AkunModel;
+use App\Models\ProfileModel;
 
 class ProfileController extends Controller
 {
     public function __construct()
     {
-        $this->AkunModel = new AkunModel();
+        $this->ProfileModel = new ProfileModel();
         $this->middleware('auth');
     }
 
-    public function index(){
+    public function detailakun($id)
+    {
+        if (!$this->AkunModel->detailData($id)) {
+            abort(404);
+        }
         $data = [
-            'akun' => $this->AkunModel->allData(),
+            'akun' => $this->AkunModel->detailData($id),
         ];
-        return view('layout.profile', $data);
+        return view('admin.profile.v_profile', $data);
     }
 }

@@ -18,6 +18,8 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'alamat',
+        'foto',
         'email',
         'password',
     ];
@@ -40,4 +42,16 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    // public function detailData($id)
+    // {
+    //     return DB::table('users')->where('id', $id)->first();
+    // }
+
+    // public function editData($id, $data)
+    // {
+    //     return DB::table('users')
+    //         ->where('id', $id)
+    //         ->update($data);
+    // }
 }

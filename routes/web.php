@@ -8,6 +8,7 @@ use App\Http\Controllers\AkunController;
 use App\Http\Controllers\DetailPageController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\HomePageController;
+use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,9 +26,13 @@ Route::get('/login', function () {
     return view('v_login');
 })->name('login');
 
+Route::get('/profile', function () {
+    return view('admin.profile.v_profile');
+})->name('[profile]');
+
 Route::group(['middleware' => ['auth']], function () {
     // Dashboard Admin
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index','detail',])->name('home');
 
     // Calendar
     Route::get('/calendar', [CalendarController::class, 'index']);
@@ -48,10 +53,12 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/akun/edit/{id}', [AkunController::class, 'edit']);
     Route::post('/akun/edit_aksi/{id}', [AkunController::class, 'edit_aksi']);
     Route::get('/akun/hapus/{id}', [AkunController::class, 'hapus']);
+    Route::get('/akun/hapusTerpilih', [AkunController::class, 'hapusTerpilih']);
 });
 
 // Home Page
 Route::get('/', [HomePageController::class, 'index'])->name('homepage');
+Route::get('/Homepage', [HomePageController::class, 'index'])->name('homepage');
 Route::get('/homepage/detail{id}', [HomePageController::class, 'detail']);
 
 // Detail Page

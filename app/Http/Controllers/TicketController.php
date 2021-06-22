@@ -13,9 +13,12 @@ class TicketController extends Controller
         $this->middleware('auth');
     }
     
-    public function index(){
+    public function index(Request $request){
         $data = [
-            'film' => $this->TicketModel->allData(),
+            'film' => $this->TicketModel::when($request->keyword, function ($query) use ($request) {
+                $query
+                ->where('judul', 'like', "%{$request->keyword}%");
+            })->orderBy('id', 'desc')->paginate(1),
         ];
         return view('admin.ticket.v_ticket', $data);
     }

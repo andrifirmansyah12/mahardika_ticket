@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\HomeModel;
+use App\Models\User;
 use DB;
 
 class HomeController extends Controller
@@ -14,6 +16,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
+        $this->HomeModel = new HomeModel();
         $this->middleware('auth');
     }
 
@@ -31,4 +34,5 @@ class HomeController extends Controller
             'ticket'
         ));
     }
+    
 }

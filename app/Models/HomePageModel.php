@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 
+
 class HomePageModel extends Model
 {
     protected $table = 'film';
@@ -18,4 +19,5 @@ class HomePageModel extends Model
     {
         return DB::table('film')->where('id', $id)->first();
     }
+
 }
