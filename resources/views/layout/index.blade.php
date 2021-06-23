@@ -99,7 +99,7 @@
             </main>
     
             <footer class="w-full bg-white text-right p-4">
-                <a target="_blank" href="https://davidgrzyb.com" class="no-underline">
+                <a target="_blank" href="#" class="no-underline">
                     © PT. Mahardika Solusi Teknologi. 2020.
                 </a>
             </footer>

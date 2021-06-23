@@ -13,28 +13,12 @@ class AkunController extends Controller
         $this->middleware('auth');
     }
 
-//     public function index(Request $request)
-// {
-//     $pagination  = 5;
-//     $data    = AkunModel::when($request->keyword, function ($query) use ($request) {
-//         $query
-//         ->where('name', 'like', "%{$request->keyword}%");
-//     })->orderBy('created_at', 'desc')->paginate($pagination);
-
-//     $articles->appends($request->only('keyword'));
-
-//     return view('admin.akun.v_akun', [
-//         'name'    => 'Articles',
-//         'articles' => $articles,
-//     ])->with('i', ($request->input('page', 1) - 1) * $pagination);
-// }
-
     public function index(Request $request){
         $data = [
             'akun' => $this->AkunModel::when($request->keyword, function ($query) use ($request) {
                 $query
                 ->where('name', 'like', "%{$request->keyword}%");
-            })->orderBy('created_at', 'desc') ->paginate(1)
+            })->orderBy('created_at', 'desc') ->paginate(2)
         ];
         return view('admin.akun.v_akun', $data);
     }

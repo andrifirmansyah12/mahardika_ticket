@@ -18,7 +18,7 @@ class TicketController extends Controller
             'film' => $this->TicketModel::when($request->keyword, function ($query) use ($request) {
                 $query
                 ->where('judul', 'like', "%{$request->keyword}%");
-            })->orderBy('id', 'desc')->paginate(1),
+            })->orderBy('id', 'desc')->paginate(2),
         ];
         return view('admin.ticket.v_ticket', $data);
     }
@@ -135,6 +135,17 @@ class TicketController extends Controller
 
         $this->TicketModel->editData($id, $data);
         return redirect()->route('film')->with('pesan', 'Data Berhasil Ubah');
+    }
+
+    public function detailticket($id)
+    {
+        if (!$this->TicketModel->detailData($id)) {
+            abort(404);
+        }
+        $data = [
+            'film' => $this->TicketModel->detailData($id),
+        ];
+        return view('admin.ticket.v_detail_ticket', $data);
     }
 
     public function hapus($id)

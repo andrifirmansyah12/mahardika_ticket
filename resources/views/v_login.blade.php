@@ -51,7 +51,7 @@
           <div class="py-1 relative">
             <label for="your_name"><i class="fa fa-envelope absolute text-primarycolor text-xl"></i></label>
             <input
-              type="text"
+              type="email"
               name="email"
               id="email"
               placeholder="Email"
@@ -98,11 +98,11 @@
           </div>  
           @enderror
 
-          @if (session('pesan'))
+          @if (session('status'))
           <div class="px-4 py-2 -mx-3" role="alert">
             <div class="mx-3">
               <p class="text-sm text-gray-600 dark:text-gray-200">
-                {{session('pesan')}}
+                {{session('status')}}
               </p>
             </div>
           </div>
@@ -117,6 +117,17 @@
                   Login
               </button>
           </div>
+          {{-- <div class="py-2">
+            <div class="col-md-6 offset-md-4">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+
+                    <label class="form-check-label" for="remember">
+                        {{ __('Remember Me') }}
+                    </label>
+                </div>
+            </div>
+          </div> --}}
           @guest
           <div class="flex flex-row space-x-4">
             <div class="hover:underline text-black font-bold opacity-75 focus:outline-none transform transition hover:scale-105 duration-300 ease-in-out">

@@ -115,6 +115,7 @@
                   {{$data->jam_tayang}}
                 </td>
                 <td class="py-4 whitespace-nowrap space-x-1 text-sm font-medium px-3">
+                  <a href="/ticket/detailticket/{{ $data->id }}" class="rounded-xl bg-yellow-300 p-3 hover:text-white">Detail</a>
                   <a href="/ticket/edit/{{ $data->id }}" class="rounded-xl bg-green-600 p-3 hover:text-white">Edit</a>
                   <a href="/ticket/hapus/{{ $data->id }}" class="rounded-xl bg-red-600 p-3 hover:text-white">Hapus</a>
                 </td>

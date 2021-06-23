@@ -28,7 +28,11 @@ Route::get('/login', function () {
 
 Route::get('/profile', function () {
     return view('admin.profile.v_profile');
-})->name('[profile]');
+})->name('profile');
+
+// Route::get('/welcome', function () {
+//     return view('layouts.app');
+// })->name('welcome');
 
 Route::group(['middleware' => ['auth']], function () {
     // Dashboard Admin
@@ -41,6 +45,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/ticket', [TicketController::class, 'index'])->name('film');
     Route::get('/ticket/tambah', [TicketController::class, 'tambah']);
     Route::post('/ticket/tambah_aksi', [TicketController::class, 'tambah_aksi']);
+    Route::get('/ticket/detailticket/{id}', [TicketController::class, 'detailticket']);
     Route::get('/ticket/edit/{id}', [TicketController::class, 'edit']);
     Route::post('/ticket/edit_aksi/{id}', [TicketController::class, 'edit_aksi']);
     Route::get('/ticket/hapus/{id}', [TicketController::class, 'hapus']);
@@ -53,12 +58,12 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/akun/edit/{id}', [AkunController::class, 'edit']);
     Route::post('/akun/edit_aksi/{id}', [AkunController::class, 'edit_aksi']);
     Route::get('/akun/hapus/{id}', [AkunController::class, 'hapus']);
-    Route::get('/akun/hapusTerpilih', [AkunController::class, 'hapusTerpilih']);
+    // Route::get('/akun/hapusTerpilih', [AkunController::class, 'hapusTerpilih']);
 });
 
 // Home Page
 Route::get('/', [HomePageController::class, 'index'])->name('homepage');
-Route::get('/Homepage', [HomePageController::class, 'index'])->name('homepage');
+Route::get('/homepage', [HomePageController::class, 'index'])->name('homepage');
 Route::get('/homepage/detail{id}', [HomePageController::class, 'detail']);
 
 // Detail Page

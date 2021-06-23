@@ -104,6 +104,9 @@
         
         <form method="POST" action="{{ route('password.email') }}">
             @csrf
+
+            {{-- https://mailtrap.io/inboxes --}}
+            
             <div class="py-1 relative mt-3">
                 <label for="email"><i class="fa fa-envelope absolute text-primarycolor text-xl"></i></label>
                 <input
@@ -132,9 +135,12 @@
             </div>
             @enderror
 
-            @if (session('pesan'))
+            @if (session('status'))
             <div class="px-4 py-2 -mx-3" role="alert">
                 <div class="mx-3">
+                <span class="font-semibold text-green-500 dark:text-red-400"
+                  >Succes!</span
+                >
                 <p class="text-sm text-gray-600 dark:text-gray-200">
                     {{session('status')}}
                 </p>

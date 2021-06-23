@@ -17,7 +17,7 @@
                 </div>
                 <div class="main-question mb-8 flex flex-col divide-y text-gray-800 text-base">
                     <div class="item px-6 py-6">
-                        <h4 class="font-extrabold">
+                        <h4 class="font-bold">
                             Nama : 
                             <span class="px-2 inline-flex text-sm leading-5 font-semibold rounded-full bg-green-100 text-green-800">
                                 {{ $akun->name}}
@@ -25,7 +25,7 @@
                         </h4>
                     </div>
                     <div class="item px-6 py-6">
-                        <h4 class="font-extrabold">
+                        <h4 class="font-bold">
                             Email : 
                             <span class="px-2 inline-flex text-sm leading-5 font-semibold rounded-full bg-green-100 text-green-800">
                                 {{ $akun->email}}
@@ -33,15 +33,15 @@
                         </h4>
                     </div>
                     <div class="item px-6 py-6">
-                        <h4 class="font-extrabold">
-                            Password
+                        <h4 class="font-bold">
+                            Password :
                             <span class="px-2 inline-flex text-sm leading-5 font-semibold rounded-full bg-green-100 text-green-800">
                                 {{ $akun->password}}
                             </span>
                         </h4>
                     </div>
                     <div class="item px-6 py-6">
-                        <h4 class="font-extrabold">
+                        <h4 class="font-bold">
                             Alamat : 
                             <span class="px-2 inline-flex text-sm leading-5 font-semibold rounded-full bg-green-100 text-green-800">
                                 {{ $akun->alamat}}
