@@ -5,14 +5,14 @@
 
 <form action="/ticket/edit_aksi/{{ $film->id }}" method="POST" enctype="multipart/form-data">
     @csrf
-    <div class="w-full px-3">
+    <div class="w-full px-3 bg-white rounded-md border-4 border-yellow-600">
         <div class="md:flex">
             <div class="w-full px-4 py-6 ">
                 <div class="mb-1"> 
                     <label class="text-sm" for="judul">
                         Judul
                     </label>
-                      <input type="text" value="{{$film->judul}}" class="h-12 px-3 w-full border-blue-400 border-2 rounded focus:outline-none focus:border-blue-600" id="judul" name="judul" value="{{old('judul')}}">
+                      <input type="text" value="{{$film->judul}}" class="h-12 px-3 w-full border-black border-2 rounded focus:outline-none focus:border-gray-600" id="judul" name="judul" value="{{old('judul')}}">
                       @error('judul')
                       <div class="bg-red-400 p-2 shadow-sm rounded mt-2">
                           {{ $message }}
@@ -23,7 +23,7 @@
                     <label class="text-sm" for="deskripsi_film">
                         Deskripsi Film
                     </label>
-                    <input type="text" value="{{$film->deskripsi_film}}" class="h-12 px-3 w-full border-blue-400 border-2 rounded focus:outline-none focus:border-blue-600" id="deskripsi_film" name="deskripsi_film">
+                    <input type="text" value="{{$film->deskripsi_film}}" class="h-12 px-3 w-full border-black border-2 rounded focus:outline-none focus:border-gray-600" id="deskripsi_film" name="deskripsi_film">
                     @error('deskripsi_film')
                     <div class="bg-red-400 p-2 shadow-sm rounded mt-2">
                         {{ $message }}
@@ -34,7 +34,7 @@
                     <label class="text-sm" for="harga">
                         Harga
                     </label>
-                    <input type="text" value="{{$film->harga}}" class="h-12 px-3 w-full border-blue-400 border-2 rounded focus:outline-none focus:border-blue-600" id="harga" name="harga">
+                    <input type="text" value="{{$film->harga}}" class="h-12 px-3 w-full border-black border-2 rounded focus:outline-none focus:border-gray-600" id="harga" name="harga">
                     @error('harga')
                     <div class="bg-red-400 p-2 shadow-sm rounded mt-2">
                         {{ $message }}
@@ -45,7 +45,7 @@
                     <label class="text-sm" for="diskon">
                         Diskon
                     </label>
-                    <input type="text" value="{{$film->diskon}}" class="h-12 px-3 w-full border-blue-400 border-2 rounded focus:outline-none focus:border-blue-600" id="diskon" name="diskon">
+                    <input type="text" value="{{$film->diskon}}" class="h-12 px-3 w-full border-black border-2 rounded focus:outline-none focus:border-gray-600" id="diskon" name="diskon">
                     @error('diskon')
                     <div class="bg-red-400 p-2 shadow-sm rounded mt-2">
                         {{ $message }}
@@ -57,7 +57,7 @@
                         Hari
                     </label>
                     <div class="relative">
-                        <select class="block appearance-none w-full bg-white border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="hari" name="hari" value="{{old('hari')}}">
+                        <select class="block appearance-none w-full bg-white border border-black text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="hari" name="hari" value="{{old('hari')}}">
                           <option>Senin</option>
                           <option>Selasa</option>
                           <option>Rabu</option>
@@ -80,7 +80,7 @@
                     <label class="text-sm" for="tanggal">
                         Tanggal
                     </label>
-                    <input type="date" value="{{$film->tanggal}}" class="h-12 px-3 w-full border-blue-400 border-2 rounded focus:outline-none focus:border-blue-600" id="tanggal" name="tanggal"">
+                    <input type="date" value="{{$film->tanggal}}" class="h-12 px-3 w-full border-black border-2 rounded focus:outline-none focus:border-gray-600" id="tanggal" name="tanggal"">
                     @error('tanggal')
                     <div class="bg-red-400 p-2 shadow-sm rounded mt-2">
                         {{ $message }}
@@ -92,7 +92,7 @@
                         Jam Tayang
                     </label>
                     <div class="relative">
-                        <select class="block appearance-none w-full bg-white border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="jam_tayang" name="jam_tayang" value="{{old('jam_tayang')}}">
+                        <select class="block appearance-none w-full bg-white border border-black text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="jam_tayang" name="jam_tayang" value="{{old('jam_tayang')}}">
                           <option>09 : 00 - 11 : 00</option>
                           <option>12 : 00 - 15 : 00</option>
                           <option>16 : 00 - 18 : 00</option>
@@ -109,17 +109,17 @@
                     @enderror
                 </div>
                 <div class="mb-1"> 
-                    <span class="text-sm text-gray-400">
-                        Format foto PNG, JPG .
-                    </span> 
-                </div>
-                <div class="mb-1"> 
                     <span>
                         Unggah Foto
                     </span>
-                    <div class="relative border-dotted h-32 rounded-lg border-dashed border-2 border-blue-700 bg-gray-100 flex justify-center items-center">
+                    <div class="mb-1"> 
+                        <span class="text-sm text-gray-400">
+                            Format foto PNG, JPG .
+                        </span> 
+                    </div>
+                    <div class="relative border-dotted h-32 rounded-lg border-dashed border-2 border-black bg-gray-100 flex justify-center items-center">
                         <div class="absolute">
-                            <div class="flex flex-col items-center"> <i class="fa fa-folder-open fa-3x text-blue-700"></i> <span class="block text-gray-400 font-normal">Attach you files here</span> </div>
+                            <div class="flex flex-col items-center"> <i class="fa fa-folder-open fa-3x text-yellow-700"></i> <span class="block text-gray-400 font-normal">Attach you files here</span> </div>
                         </div> <input type="file" class="h-full w-full opacity-50" id="foto" name="foto" value="{{old('foto')}}">
                     </div>
                 </div>

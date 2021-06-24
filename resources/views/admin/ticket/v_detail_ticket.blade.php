@@ -4,12 +4,12 @@
 @section('content')
 
 {{-- Forms --}}
-<div class="flex flex-col">
+<div class="flex flex-col container bg-white border-2 border-gray-200">
     <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
         <body class="font-nunito antialiased bg-gray-100 text-gray-900 my-16 flex items-center justify-center">
-            <div class="bg-white border-4 container mx-auto px-4 sm:px-8 max-w-3xl">
-                <div class="main-images py-3 ">
-                    <div class="images grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white container mx-auto px-4 sm:px-8 max-w-3xl">
+                <div class="main-images py-3">
+                    <div class="images md:grid-cols-3 gap-8">
                         <div class="image border-2 border-gray-200 bg-white items-center rounded-lg shadow-lg overflow-hidden">
                                 <img class="" src="{{ url('img-film/' . $film->foto)}}" alt="foto">
                         </div>

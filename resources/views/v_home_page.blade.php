@@ -66,7 +66,7 @@
     </div>
     @endforeach 
     
-    <div class="mb-3 bg-gray-200 text-black">
+    <div class="mb-3 bg-gray-200 text-gray-200">
       {{ $film->links() }}
     </div>
 

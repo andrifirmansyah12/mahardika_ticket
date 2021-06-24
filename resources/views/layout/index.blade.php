@@ -13,7 +13,7 @@
 <body class="bg-gray-100 font-family-karla flex">
 
     @include('layout.nav')
-
+    
     <div class="w-full flex flex-col h-screen overflow-y-hidden">
         <!-- Desktop Header -->
         <header class="w-full items-center bg-white py-2 px-6 hidden sm:flex">
@@ -48,11 +48,11 @@
 
             <!-- Dropdown Nav -->
             <nav :class="isOpen ? 'flex': 'hidden'" class="flex flex-col pt-4">
-                <a href="/home" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
+                <a href="/home" class="flex items-center text-white opacity-75 hover:opacity-100 hover:text-gray-600 py-2 pl-4 nav-item">
                     <i class="fas fa-tachometer-alt mr-3"></i>
                     Dashboard
                 </a>
-                <a href="/ticket" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
+                <a href="/ticket" class="flex items-center text-white opacity-75 hover:opacity-100 hover:text-gray-600 py-2 pl-4 nav-item">
                     <i class="fas fa-sticky-note mr-3"></i>
                     Ticket Film
                 </a>
@@ -63,12 +63,12 @@
                 <a href="forms.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
                     <i class="fas fa-align-left mr-3"></i>
                     Forms
-                </a>
-                <a href="tabs.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
-                    <i class="fas fa-tablet-alt mr-3"></i>
-                    Tabbed Content
                 </a> --}}
-                <a href="/calendar" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
+                <a href="/akun" class="flex items-center text-white opacity-75 hover:opacity-100 hover:text-gray-600 py-2 pl-4 nav-item">
+                    <i class="fas fa-user mr-3"></i>
+                    Akun
+                </a>
+                <a href="/calendar" class="flex items-center text-white opacity-75 hover:opacity-100 hover:text-gray-600 py-2 pl-4 nav-item">
                     <i class="fas fa-calendar mr-3"></i>
                     Calendar
                 </a>
@@ -82,7 +82,7 @@
                 </a> --}}
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                     @csrf
-                    <button type="submit" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
+                    <button type="submit" class="w-full flex items-center text-white opacity-75 hover:opacity-100 hover:text-gray-600 py-2 pl-4 nav-item">
                         <i class="fas fa-sign-out-alt mr-3"></i>
                         Sign Out
                     </button>
@@ -91,8 +91,10 @@
         </header>
     
         <div class="w-full overflow-x-hidden border-t flex flex-col">
-            <main class="w-full flex-grow p-6">
-                <h1 class="text-3xl font-bold text-black pb-6">@yield('title')</h1>
+            <main class="w-full flex-grow p-6 space-y-1">
+                <h1 class="text-3xl font-bold text-black mb-3">
+                    @yield('title')
+                </h1>
                 
                 @yield('content')
                 
