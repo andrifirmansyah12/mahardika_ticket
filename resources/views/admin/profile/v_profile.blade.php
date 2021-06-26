@@ -17,7 +17,6 @@
             <div class="bg-white container mx-auto px-4 sm:px-8 max-w-3xl">
                 <div class="main-images py-3 ">
                     <div class="images grid grid-cols-1 md:grid-cols-3 gap-8">
-                        
                     </div>
                 </div>
                 <div class="main-question mb-8 flex flex-col divide-y text-gray-800 text-base">

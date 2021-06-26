@@ -23,10 +23,10 @@
             <a class="inline-block py-2 px-1 text-black font-bold font-sans no-underline" href="/homepage">Home</a>
           </li>
           <li class="mr-3">
-            <a class="inline-block text-black no-underline font-sans hover:text-gray-800 hover:text-underline py-2 px-1" href="#">About Us</a>
+            <a class="inline-block text-black no-underline font-sans hover:text-gray-800 hover:text-underline py-2 px-1" href="/aboutus">About Us</a>
           </li>
           <li class="mr-3">
-            <a class="inline-block text-black no-underline font-sans hover:text-gray-800 hover:text-underline py-2 px-1" href="#">Contact</a>
+            <a class="inline-block text-black no-underline font-sans hover:text-gray-800 hover:text-underline py-2 px-1" href="/contact">Contact</a>
           </li>
         </ul>
       </div>

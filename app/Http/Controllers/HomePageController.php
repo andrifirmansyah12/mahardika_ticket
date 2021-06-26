@@ -30,4 +30,15 @@ class HomePageController extends Controller
         ];
         return view('v_detail_page', $data);
     }
+
+    public function aboutUs()
+    {   
+        return view('main.v_about_us');
+    }
+
+    public function contact()
+    {   
+        return view('main.v_contact');
+    }
+    
 }

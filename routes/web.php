@@ -65,6 +65,8 @@ Route::group(['middleware' => ['auth']], function () {
 Route::get('/', [HomePageController::class, 'index'])->name('homepage');
 Route::get('/homepage', [HomePageController::class, 'index'])->name('homepage');
 Route::get('/homepage/detail{id}', [HomePageController::class, 'detail']);
+Route::get('/aboutus', [HomePageController::class, 'aboutUs'])->name('aboutUs');;
+Route::get('/contact', [HomePageController::class, 'contact'])->name('contact');;
 
 // Detail Page
 // Route::get('/detailpage', [DetailPageController::class, 'index'])->name('detailpage');
