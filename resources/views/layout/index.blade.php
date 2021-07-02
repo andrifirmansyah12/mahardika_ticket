@@ -95,7 +95,7 @@
                 <h1 class="text-3xl font-bold text-black mb-3">
                     @yield('title')
                 </h1>
-                
+
                 @yield('content')
                 
             </main>

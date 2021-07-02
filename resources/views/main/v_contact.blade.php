@@ -15,6 +15,29 @@
 
     <!-- Nav -->
     @component("components.nav_page")
+        @section('nav')
+        <div class="block lg:hidden pr-4">
+            <button id="nav-toggle" class="flex items-center p-1 text-pink-800 hover:text-gray-900 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+              <svg class="fill-current h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <title>Menu</title>
+                <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+              </svg>
+            </button>
+          </div>
+          <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20" id="nav-content">
+            <ul class="list-reset lg:flex justify-end flex-1 items-center">
+              <li class="mr-3">
+                <a class="inline-block text-black no-underline font-sans hover:text-gray-800 hover:text-underline py-2 px-1" href="/homepage">Home</a>
+              </li>
+              <li class="mr-3">
+                <a class="inline-block text-black no-underline font-sans hover:text-gray-800 hover:text-underline py-2 px-1" href="/aboutus">About Us</a>
+              </li>
+              <li class="mr-3">
+                <a class="inline-block py-2 px-1 text-black font-bold font-sans no-underline" href="/contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        @endsection
     @endcomponent
 
     {{-- Content --}}
@@ -100,7 +123,7 @@
                         <div class="mx-6 mb-6">
                             <div class="flex">
                                 <div class="w-full mb-4">
-                                    <object style="border:0; height: 450px; width: 100%;" data="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.2506277041375!2d108.3187113142735!3d-6.3615999953965705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6eb92f80cf7b55%3A0x7262306082cc4945!2sBalai%20Desa%20Kenanga!5e0!3m2!1sid!2sid!4v1618481153293!5m2!1sid!2sid"></object>
+                                    <object style="border:0; height: 450px; width: 100%;" data="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.8476269056127!2d107.591019314317!3d-6.908816469534198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e6151d3906f5%3A0xb61bbd8c34675dfe!2sPt%20Mahardika%20Solusi%20Teknologi!5e0!3m2!1sid!2sid!4v1624710477542!5m2!1sid!2sid"></object>
                                 </div>
                             </div>
                         </div>

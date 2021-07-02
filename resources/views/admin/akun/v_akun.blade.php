@@ -41,6 +41,7 @@
   </div>
 @endif
 
+
 {{-- Forms --}}
 <div class="flex flex-col">
     <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -67,11 +68,10 @@
               </tr>
             </thead>
             <tbody class="bg-white divide-y divide-gray-200">
-              <?php $no=1; ?>
               @forelse ($akun as $data)
               <tr>
                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                  {{$no++}}
+                  {{ $loop->iteration }}
                 </td>
                 <td class="px-6 py-4 whitespace-nowrap">
                   <div class="flex items-center">
