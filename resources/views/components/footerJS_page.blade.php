@@ -1,5 +1,12 @@
 <!-- JavaScript -->
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script>
+  $(document).ready(function(){
+    setTimeout(function() {
+      $(".preloader").fadeOut();               
+    }, 500);
+  })
+</script>
 
 <script>
     var scrollpos = window.scrollY;

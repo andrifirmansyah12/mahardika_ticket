@@ -74,6 +74,13 @@
 </head>
 
 <body class="bg-white text-gray-600 work-sans leading-normal text-base tracking-normal">
+    {{-- loader --}}
+    <div class="preloader bg-white">
+        <div class="loading">
+          <img src="{{ asset('mahardika_ticket/img/tenor.png') }}" width="80">
+          <p class="text-gray-600 font-bold py-2">Harap Tunggu</p>
+        </div>
+    </div>
 
     <!--Nav-->
     <nav id="header" class="fixed bg-white border-b-2 border-gray-200 w-full z-30 top-0 py-1">
@@ -410,6 +417,13 @@ Alternatively if you want to just have a single hero
       </svg>
     </a>
 
+<script>
+    $(document).ready(function(){
+        setTimeout(function() {
+            $(".preloader").fadeOut();               
+        }, 200);
+    })
+</script>
 
 <script>
 	/*Toggle dropdown list*/
