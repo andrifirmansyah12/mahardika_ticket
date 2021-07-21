@@ -119,8 +119,14 @@
                     </div>
                     <div class="relative border-dotted h-32 rounded-lg border-dashed border-2 border-black bg-gray-100 flex justify-center items-center">
                         <div class="absolute">
-                            <div class="flex flex-col items-center"> <i class="fa fa-folder-open fa-3x text-yellow-700"></i> <span class="block text-gray-400 font-normal">Attach you files here</span> </div>
-                        </div> <input type="file" class="h-full w-full opacity-50" id="foto" name="foto" value="{{old('foto')}}">
+                            <div class="flex flex-col items-center"> 
+                                <i class="fa fa-folder-open fa-3x text-yellow-700"></i> 
+                                <span class="block text-gray-400 font-normal">
+                                    Attach you files here
+                                </span> 
+                            </div>
+                        </div> 
+                        <input type="file" class="h-full w-full opacity-50" id="foto" name="foto" value="{{old('foto')}}">
                     </div>
                 </div>
                 <div class="mt-3 text-right">

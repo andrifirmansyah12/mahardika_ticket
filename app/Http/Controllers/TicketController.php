@@ -14,13 +14,15 @@ class TicketController extends Controller
     }
     
     public function index(Request $request){
+        $pagination = 3;
         $data = [
             'film' => $this->TicketModel::when($request->keyword, function ($query) use ($request) {
                 $query
                 ->where('judul', 'like', "%{$request->keyword}%");
-            })->orderBy('id', 'desc')->paginate(2),
+            })->orderBy('id', 'desc')->paginate($pagination),
         ];
-        return view('admin.ticket.v_ticket', $data);
+        return view('admin.ticket.v_ticket', $data)
+            ->with('i', ($request->input('page', 1) - 1) * $pagination);
     }
 
     public function tambah(){

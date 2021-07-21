@@ -22,10 +22,6 @@ use App\Http\Controllers\ProfileController;
 */
 
 // Login
-Route::get('/login', function () {
-    return view('v_login');
-})->name('login');
-
 Route::get('/profile', function () {
     return view('admin.profile.v_profile');
 })->name('profile');
@@ -65,8 +61,12 @@ Route::group(['middleware' => ['auth']], function () {
 Route::get('/', [HomePageController::class, 'index'])->name('homepage');
 Route::get('/homepage', [HomePageController::class, 'index'])->name('homepage');
 Route::get('/homepage/detail{id}', [HomePageController::class, 'detail']);
-Route::get('/aboutus', [HomePageController::class, 'aboutUs'])->name('aboutUs');;
-Route::get('/contact', [HomePageController::class, 'contact'])->name('contact');;
+Route::get('/aboutus', [HomePageController::class, 'aboutUs'])->name('aboutUs');
+Route::get('/contact', [HomePageController::class, 'contact'])->name('contact');
+Route::get('/ticketkonser', [HomePageController::class, 'ticket'])->name('ticket');
+Route::get('/forum', [HomePageController::class, 'forum'])->name('forum');
+Route::get('/store', [HomePageController::class, 'store'])->name('store');
+Route::get('/latihan', [HomePageController::class, 'latihan'])->name('latihan');
 
 // Detail Page
 // Route::get('/detailpage', [DetailPageController::class, 'index'])->name('detailpage');

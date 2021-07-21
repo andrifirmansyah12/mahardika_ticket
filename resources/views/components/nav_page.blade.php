@@ -1,4 +1,4 @@
-<nav id="header" class="fixed w-full z-30 top-0 text-black bg-white">
+<nav id="header" class="fixed w-full z-30 top-0 text-black bg-white border-b-2 border-gray-300">
   <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
     <div class="flex items-center space-x-1 p-2">
       <button class="relative z-10 w-8 h-8">

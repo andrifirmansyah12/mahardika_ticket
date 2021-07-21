@@ -1,4 +1,4 @@
-<footer class="bg-white">
+<footer class="bg-white border-t-2 border-gray-300">
     <div class="py-3">
       <div class="container mx-auto py-4 flex flex-wrap flex-col sm:flex-row">
         <div class="flex items-center space-x-1 p-2">

@@ -35,6 +35,9 @@
               <li class="mr-3">
                 <a class="inline-block text-black no-underline font-sans hover:text-gray-800 hover:text-underline py-2 px-1" href="/contact">Contact</a>
               </li>
+              <li class="mr-3">
+                {{-- <a class="inline-block text-black no-underline font-sans hover:text-gray-800 hover:text-underline py-2 px-1" href="/latihan">Latihan</a> --}}
+              </li>
             </ul>
           </div>
         @endsection
@@ -79,8 +82,8 @@
                               </div>
                           </div>
                           <a href="/contact" class="no-underline">
-                              <div class="mt-8 p-2 bg-gray-200 text-gray-600 font-bold hover:bg-gray-300 hover:text-gray-700">
-                                  Contact Support
+                              <div class="mt-8 p-2 bg-gray-200 text-gray-600 font-bold hover:bg-gray-300 hover:text-gray-700"> 
+                                Contact Support
                               </div>
                           </a>
                       </div>

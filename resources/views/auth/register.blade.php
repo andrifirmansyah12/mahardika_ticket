@@ -77,188 +77,157 @@
 @endsection --}}
 
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-  <head>
-    <meta charset="UTF-8" />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Admin | Register</title>
-
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    <!-- Ionicons -->
-    <link rel="stylesheet" href="{{ asset('Login_inv/bower_components/Ionicons/css/ionicons.min.css') }}">
-    <!-- iCheck -->
-    <link rel="stylesheet" href="{{ asset('Login_inv/plugins/iCheck/square/blue.css') }}">
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+  	<meta name="author" content="David Grzyb">
+    <meta name="description" content="">
 
     <!-- FavIcon -->
     <link rel="shortcut icon" href="{{ asset('mahardika_ticket/dist/img/logo9.png') }}">
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
     />
+     <!-- Ionicons -->
+     <link rel="stylesheet" href="{{ asset('Login_inv/bower_components/Ionicons/css/ionicons.min.css') }}">
+     <!-- iCheck -->
+     <link rel="stylesheet" href="{{ asset('Login_inv/plugins/iCheck/square/blue.css') }}">
 
-    {{-- Css.style --}}
-    <link rel="stylesheet" href="{{asset('LoginTailwindCss')}}/static/dist/tailwind.css"/>
+    <link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .body-bg {
+            background-color: #9921e8;
+            background-image: linear-gradient(315deg, #9921e8 0%, #5f72be 74%);
+        }
+    </style>
+</head>
+<body class="body-bg min-h-screen pt-12 md:pt-20 pb-6 px-2 md:px-0" style="font-family:'Lato',sans-serif;">
+    <header class="max-w-lg mx-auto">
+        <a href="#">
+            <h1 class="text-4xl font-bold text-white text-center">REGISTER</h1>
+        </a>
+    </header>
 
-  </head>
-  {{-- background Body Utama --}}
-  <body class="bg-white">
-    
-    <img
-        {{-- Gambar Variasi Ombak --}}
-      src="{{asset('LoginTailwindCss')}}/Assets/wave.png"
-      class="fixed hidden lg:block inset-0 h-full"
-      style="z-index: -1;"
-    />
-    <div
-      class="w-screen h-screen flex flex-col justify-center items-center lg:grid lg:grid-cols-2"
-    >
-      <img
-        src="{{ asset('mahardika_ticket/dist/img/guitar.png') }}"
-        class="hidden lg:block w-1/2 hover:scale-110 transition-all duration-500 transform mx-auto"
-      />
-      <div class="bg-white flex flex-col justify-center items-center w-1/2 rounded-md mt-4 lg:mt-0 py-4 px-6 shadow border-4 border-gray-100">
-        {{-- Gambar Avatar --}}
-        {{-- <img src="{{asset('LoginTailwindCss')}}/Assets/avatar.svg" class="w-32 py-3" /> --}}
-        <h2
-          class="my-8 font-bold text-3xl text-gray-700 text-center"
-        >
-          REGISTER
-        </h2>
-        
-        <form method="POST" action="{{ route('register') }}">
-            @csrf
-            <div class="py-1 relative">
-                <label for="foto"></label>
-                <input
-                  id="foto"
-                  type="file" 
-                  name="foto" 
-                  value="{{ old('foto') }}" 
-                  required 
-                  autocomplete="foto"
-                  placeholder="foto"
-                  class="w-full pl-8 border-b-2 font-display focus:outline-none focus:border-primarycolor transition-all duration-500 capitalize text-md form-control @error('foto') is-invalid @enderror"
-                  />
-            </div>
+    <main class="bg-white max-w-lg mx-auto p-8 md:p-12 my-10 rounded-lg shadow-2xl">
+        <section>
+            <h3 class="font-bold text-2xl">Welcome to Mahardika Ticket</h3>
+            <p class="text-gray-600 pt-2">Sign Up to your account.</p>
+        </section>
 
-          <div class="py-1 relative mt-3">
-            <label for="name"><i class="fa fa-user absolute text-primarycolor text-xl"></i></label>
-            <input
-              type="text"
-              id="name" 
-              name="name" 
-              value="{{ old('name') }}" 
-              required autocomplete="name" 
-              autofocus
-              placeholder="Name"
-              class="w-full pl-8 border-b-2 font-display focus:outline-none focus:border-primarycolor capitalize transition-all duration-500 text-md form-control @error('name') is-invalid @enderror"
-              />
-          </div>
+        <section class="mt-10">
+            <form class="flex flex-col" method="POST" action="{{ route('register') }}">
+                @csrf
 
-          <div class="py-1 relative mt-3">
-            <label for="email"><i class="fa fa-envelope absolute text-primarycolor text-xl"></i></label>
-            <input
-              id="email" 
-              type="email" 
-              name="email" 
-              value="{{ old('email') }}" 
-              required 
-              autocomplete="email"
-              placeholder="Email"
-              class="w-full pl-8 border-b-2 font-display focus:outline-none focus:border-primarycolor transition-all duration-500 text-md form-control @error('email') is-invalid @enderror"
-              {{-- style="text-transform: lowercase;" --}}
-              />
-          </div>
+                <div class="mb-6 pt-3 rounded bg-gray-200">
+                  <label class="block text-gray-700 text-sm font-bold mb-2 ml-3" for="foto">Foto</label>
+                  <input 
+                    type="file"
+                    id="foto" 
+                    name="foto" 
+                    value="{{ old('foto') }}" 
+                    required autocomplete="foto" 
+                    autofocus
+                    class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3 @error('foto') is-invalid @enderror">
+                </div>
 
-          <div class="py-1 relative mt-3">
-            <label for="alamat"><i class="fa fa-map-marker absolute text-primarycolor text-xl"></i></label>
-            <input
-              id="alamat" 
-              type="alamat" 
-              name="alamat" 
-              value="{{ old('alamat') }}" 
-              required 
-              autocomplete="alamat"
-              placeholder="alamat"
-              class="w-full pl-8 border-b-2 font-display focus:outline-none focus:border-primarycolor transition-all duration-500 capitalize text-md form-control @error('alamat') is-invalid @enderror"
-              {{-- style="text-transform: lowercase;" --}}
-              />
-          </div>
+                <div class="mb-6 pt-3 rounded bg-gray-200">
+                  <label class="block text-gray-700 text-sm font-bold mb-2 ml-3" for="name">Nama</label>
+                  <input 
+                    type="text"
+                    id="name" 
+                    name="name" 
+                    value="{{ old('name') }}" 
+                    required autocomplete="name" 
+                    autofocus
+                    class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3 @error('name') is-invalid @enderror">
+                </div>
 
-          <div class="py-1 relative mt-3 flex flex-row">
-            <label for="password"><i class="fa fa-lock absolute text-primarycolor text-xl"></i></label>
-            <input
-              id="password"
-              type="password"
-              name="password"
-              required
-              autocomplete="new-password"
-              placeholder="Password"
-              class="w-full pl-8 border-b-2 font-display focus:outline-none focus:border-primarycolor transition-all duration-500 text-md @error('password') is-invalid @enderror"
-              {{-- style="text-transform: lowercase;" --}}
-              />
-              <span class="fa fa-eye-slash form-control-feedback view_password"></span>
-          </div>
+                <div class="mb-6 pt-3 rounded bg-gray-200">
+                  <label class="block text-gray-700 text-sm font-bold mb-2 ml-3" for="alamat">Alamat</label>
+                  <input 
+                    type="text"
+                    id="alamat" 
+                    name="alamat" 
+                    value="{{ old('alamat') }}" 
+                    required autocomplete="alamat" 
+                    autofocus
+                    class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3 @error('alamat') is-invalid @enderror">
+                </div>
 
-          <div class="py-1 relative mt-3">
-            <label for="password-confirm"><i class="fa fa-unlock absolute text-primarycolor text-xl"></i></label>
-            <input
-                id="password-confirm" 
-                type="password"  
-                name="password_confirmation" 
-                required 
-                autocomplete="new-password"
-                placeholder="Konfirmasi password"
-                class="w-full pl-8 border-b-2 font-display focus:outline-none focus:border-primarycolor transition-all duration-500 text-md @error('password') is-invalid @enderror"
-                {{-- style="text-transform: lowercase;" --}}
-                />
-          </div>
+                <div class="mb-6 pt-3 rounded bg-gray-200">
+                    <label class="block text-gray-700 text-sm font-bold mb-2 ml-3" for="email">Email</label>
+                    <input 
+                        type="text" 
+                        id="email" 
+                        name="email"
+                        value="{{ old('email') }}" 
+                        required autocomplete="email" 
+                        autofocus
+                        class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3 @error('email') is-invalid @enderror">
+                </div>
 
-          @if (session('pesan'))
-          <div class="px-4 py-2 -mx-3" role="alert">
-            <div class="mx-3">
-              <p class="text-sm text-gray-600 dark:text-gray-200">
-                {{session('pesan')}}
-              </p>
-            </div>
-          </div>
-          @endif
-          
-          <div class="py-5">
-              <button
-                  name="signin" 
-                  id="signin"
-                  class="w-full bg-yellow-600 lg:mx-0 hover:underline bg-white text-white font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
-              >
-                  Register
-              </button>
-          </div>
-          <div class="text-center">
-            <div class="hover:underline text-black font-bold opacity-75 focus:outline-none transform transition hover:scale-105 duration-300 ease-in-out">
-              @if (Route::has('login'))
-                <a class="" href="{{ route('login') }}">{{ __('Kembali ke Login') }}</a>
-              @endif
-            </div>
-          </div>
-        </form>
-      </div>
+                <div class="mb-6 pt-3 rounded bg-gray-200">
+                    <label class="block text-gray-700 text-sm font-bold mb-2 ml-3" for="password">Password</label>
+                    <div class="flex">
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password"
+                        value="{{ old('password') }}" 
+                        required autocomplete="new-password" 
+                        autofocus
+                        class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3 @error('password') is-invalid @enderror">
+                    <span class="fa fa-eye-slash form-control-feedback view_password px-3"></span> 
+                    </div>   
+                </div>
+
+                <div class="mb-6 pt-3 rounded bg-gray-200">
+                  <label class="block text-gray-700 text-sm font-bold mb-2 ml-3" for="password-confirm">Konfirmasi Password</label>
+                  <div class="flex">
+                  <input 
+                      type="password" 
+                      id="password" 
+                      name="password_confirmation"
+                      value="{{ old('password') }}" 
+                      required autocomplete="new-password" 
+                      autofocus
+                      class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3 @error('password') is-invalid @enderror">
+                  <span class="fa fa-eye-slash form-control-feedback view_password px-3"></span> 
+                  </div>   
+                </div>
+
+                <button 
+                    name="register" 
+                    id="register"
+                    class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 rounded shadow-lg hover:shadow-xl transition duration-200" 
+                    type="submit"
+                    >
+                        Register
+                </button>
+            </form>
+        </section>
+    </main>
+
+    @guest
+    <div class="max-w-lg mx-auto text-center mt-12 mb-6">
+      @if (Route::has('login'))
+      <a class="text-white hover:underline hover:text-gray-200" href="{{ route('login') }}">{{ __('Kembali ke Login') }}</a>
+      @endif
     </div>
-  </body>
+    @endguest
+
+    <footer class="max-w-lg mx-auto flex justify-center text-white">
+        <a href="#" class="hover:underline">Contact</a>
+        <span class="mx-3">•</span>
+        <a href="#" class="hover:underline">Privacy</a>
+    </footer>
+</body>
 </html>
-
-
-<script src="{{asset('template-login')}}/vendor/jquery/jquery.min.js"></script>
-<script src="{{asset('template-login')}}/js/main.js"></script>
 
 <!-- jQuery 3 -->
 <script src="{{asset('Login_inv/bower_components/jquery/dist/jquery.min.js')}}"></script>

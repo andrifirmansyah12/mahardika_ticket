@@ -71,7 +71,7 @@
               @forelse ($akun as $data)
               <tr>
                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                  {{ $loop->iteration }}
+                  {{ ++$i }}
                 </td>
                 <td class="px-6 py-4 whitespace-nowrap">
                   <div class="flex items-center">

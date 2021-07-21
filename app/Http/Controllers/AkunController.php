@@ -14,13 +14,15 @@ class AkunController extends Controller
     }
 
     public function index(Request $request){
+        $pagination = 3;
         $data = [
             'akun' => $this->AkunModel::when($request->keyword, function ($query) use ($request) {
                 $query
                 ->where('name', 'like', "%{$request->keyword}%");
-            })->orderBy('created_at', 'desc') ->paginate(2)
+            })->orderBy('created_at', 'desc') ->paginate($pagination)
         ];
-        return view('admin.akun.v_akun', $data);
+        return view('admin.akun.v_akun', $data)
+            ->with('i', ($request->input('page', 1) - 1) * $pagination);
     }
 
     public function tambah(){

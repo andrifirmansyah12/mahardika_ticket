@@ -1,3 +1,6 @@
+<!-- JavaScript -->
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
 <script>
     var scrollpos = window.scrollY;
     var navcontent = document.getElementById("nav-content");

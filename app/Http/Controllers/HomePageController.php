@@ -12,12 +12,12 @@ class HomePageController extends Controller
         $this->HomePageModel = new HomePageModel(); 
     }
 
-    public function index()
+    public function ticket()
     {   
         $data = [
             'film' => $this->HomePageModel->paginate(3),
         ];
-        return view('v_home_page', $data);
+        return view('main.v_ticket', $data);
     }
 
     public function detail($id)
@@ -31,6 +31,11 @@ class HomePageController extends Controller
         return view('v_detail_page', $data);
     }
 
+    public function index()
+    {   
+        return view('v_home_page');
+    }
+
     public function aboutUs()
     {   
         return view('main.v_about_us');
@@ -39,6 +44,21 @@ class HomePageController extends Controller
     public function contact()
     {   
         return view('main.v_contact');
+    }
+
+    public function store()
+    {   
+        return view('main.v_store');
+    }
+
+    public function forum()
+    {   
+        return view('main.v_forum');
+    }
+
+    public function latihan()
+    {   
+        return view('main.v_latihan');
     }
     
 }
