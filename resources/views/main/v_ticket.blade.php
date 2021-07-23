@@ -58,7 +58,7 @@
               <div class='mx-3 w-full'>
                   <div class="flex flex-row mb-6 mt-2">
                     <a class='border-2 transform transition hover:scale-95 duration-300 ease-in-out rounded-md cursor-pointer mb-3' href="/homepage/detail{{ $data->id }}">
-                      <img class="rounded" src="{{ url('img-film/' . $data->foto)}}">
+                      <img class="w-72 md:w-full xl:w-full rounded" src="{{ url('img-film/' . $data->foto)}}">
                     </a>
                   </div>
               </div>
@@ -71,9 +71,9 @@
     @foreach ($film as $data)
     <div class="w-full p-7 px-16 bg-gray-200 flex justify-center items-center">
       <article class="sm:grid grid-cols-5 bg-white shadow-sm p-7 relative sm:p-4 rounded-lg lg:col-span-2 mt-4 lg:mt-0 py-4 px-8 shadow focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-        <a class="rounded-md cursor-pointer" href="/homepage/detail{{ $data->id }}"><img src="{{ url('img-film/' . $data->foto)}}" alt="foto" class="w-full rounded-lg"></a>
+        <a class="cursor-pointer w-full rounded-lg" href="/homepage/detail{{ $data->id }}"><img src="{{ url('img-film/' . $data->foto)}}" alt="foto"></a>
         <div class="pt-5 space-y-2 self-center sm:pt-0 sm:pl-10 col-span-3">
-          <a href="/homepage/detail{{ $data->id }}" class="mx-auto font-bold text-green-600 text-5xl">
+          <a href="/homepage/detail{{ $data->id }}" class="mx-auto font-bold text-green-600 text-3xl md:text-5xl xl:text-5xl">
             {{ $data->judul }}
           </a>
           <p class="px-1 mx-auto text-black text-red-600">
@@ -88,7 +88,7 @@
           <h3 class="line-through mx-auto text-1xl font-bold text-red-600">
             {{ $data->diskon }}
           </h3>
-          <p class="py-1 mx-auto text-black font-bold text-4xl">
+          <p class="py-1 mx-auto text-black font-bold text-2xl md:text-4xl xl:text-4xl">
             {{ $data->harga }}
           </p>
         </div>

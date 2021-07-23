@@ -101,7 +101,7 @@
             </main>
     
             <footer class="w-full bg-indigo-600 text-right p-4">
-                <a target="_blank" href="#" class="no-underline">
+                <a target="_blank" href="#" class="no-underline text-white">
                     © PT. Mahardika Solusi Teknologi. 2020.
                 </a>
             </footer>

@@ -13,8 +13,38 @@
 </head>
 <body class="leading-normal tracking-normal bg-white text-white" style="font-family: 'Source Sans Pro', sans-serif;">
 
+  <div class="preloader bg-white">
+    <div class="loading">
+      <img src="{{ asset('mahardika_ticket/img/tenor.png') }}" width="80">
+      <p class="text-gray-600 font-bold py-2">Harap Tunggu</p>
+    </div>
+  </div>
+
     <!-- Nav -->
     @component("components.nav_page")
+      @section('nav')
+        <div class="block lg:hidden pr-4">
+          <button id="nav-toggle" class="flex items-center p-1 text-pink-800 hover:text-gray-900 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+            <svg class="fill-current h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <title>Menu</title>
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+            </svg>
+          </button>
+        </div>
+        <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20" id="nav-content">
+          <ul class="list-reset lg:flex justify-end flex-1 items-center">
+            <li class="mr-3">
+              <a class="inline-block text-black no-underline font-sans hover:text-gray-800 hover:text-underline py-2 px-1" href="/homepage">Home</a>
+            </li>
+            <li class="mr-3">
+              <a class="inline-block text-black no-underline font-sans hover:text-gray-800 hover:text-underline py-2 px-1" href="/aboutus">About Us</a>
+            </li>
+            <li class="mr-3">
+              <a class="inline-block text-black no-underline font-sans hover:text-gray-800 hover:text-underline py-2 px-1" href="/contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      @endsection
     @endcomponent
 
     <section class="bg-gray-200">
@@ -25,23 +55,23 @@
           </div>
           <div class="flex flex-wrap">
             <div class="w-5/6 sm:w-1/2 p-8">
-              <h3 class="px-8 md:mt-16 mx-auto font-bold text-green-600 text-5xl">
+              <h3 class="px-0 md:px-8 xl:px-8 md:mt-16 mx-auto font-bold text-green-600 text-3xl md:text-5xl xl:text-5xl">
                 {{ $film->judul }}
               </h3>
-              <p class="flex py-3 px-9 text-red-600 text-xl">
+              <p class="flex py-3 px-0 md:px-9 xl:px-9 text-red-600 text:md md:text-xl xl:text-xl">
                 {{ $film->hari }}
                 <span class="px-4">{{ $film->tanggal }}</span>
               </p>
-              <h3 class="px-8 mx-auto text-3xl font-bold text-red-600">
+              <h3 class="px-0 md:px-8 xl:px-8 mx-auto text-2xl md:text-3xl xl:text-3xl font-bold text-red-600">
                 {{ $film->jam_tayang }}
               </h3>
             </div>
             <div class="w-full sm:w-1/2 p-8 ">
               <div class="align-middle">
-                <h3 class="px-8 line-through md:mt-16 mx-auto text-3xl font-bold text-red-600">
+                <h3 class="px-0 md:px-8 xl:px-8 line-through md:mt-16 mx-auto text-2xl md:text-3xl xl:text-3xl font-bold text-red-600">
                   {{ $film->diskon }}
                 </h3>
-                <p class="py-3 px-8 mx-auto text-black font-bold text-5xl">
+                <p class="py-3 px-0 md:px-8 xl:px-8 mx-auto text-black font-bold text-3xl md:text-4xl xl:text-5xl">
                   {{ $film->harga }}
                 </p>
               </div>

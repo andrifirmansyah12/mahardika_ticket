@@ -47,59 +47,6 @@
         @endsection
     @endcomponent
 
-    {{-- <section class="w-full bg-gray-200 bg-cover bg-center rounded-t-lg flex items-center justify-center" style="background-image: url({{ asset('mahardika_ticket/dist/img/img4.jpg') }});">
-      <div class="container flex flex-wrap mx-auto px-2 pt-4 pb-12 text-gray-800">
-        <h1 class="w-full my-2 mt-16 text-5xl font-extrabold leading-tight text-center text-white">
-          Best Seller
-        </h1>
-        @forelse($film as $data)
-        <div class='flex max-w-sm w-70 shadow-2xl rounded-lg overflow-hidden mx-auto'>
-          <div class='flex items-center w-full px-2 py-2'>
-              <div class='mx-3 w-full'>
-                  <div class="flex flex-row mb-6 mt-2">
-                    <a class='border-2 transform transition hover:scale-95 duration-300 ease-in-out rounded-md cursor-pointer mb-3' href="/homepage/detail{{ $data->id }}">
-                      <img class="rounded" src="{{ url('img-film/' . $data->foto)}}">
-                    </a>
-                  </div>
-              </div>
-          </div>
-        </div>
-        @endforeach
-      </div>
-    </section>
-    
-    @foreach ($film as $data)
-    <div class="w-full p-7 px-16 bg-gray-200 flex justify-center items-center">
-      <article class="sm:grid grid-cols-5 bg-white shadow-sm p-7 relative sm:p-4 rounded-lg lg:col-span-2 mt-4 lg:mt-0 py-4 px-8 shadow focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-        <a class="rounded-md cursor-pointer" href="/homepage/detail{{ $data->id }}"><img src="{{ url('img-film/' . $data->foto)}}" alt="foto" class="w-full rounded-lg"></a>
-        <div class="pt-5 space-y-2 self-center sm:pt-0 sm:pl-10 col-span-3">
-          <a href="/homepage/detail{{ $data->id }}" class="mx-auto font-bold text-green-600 text-5xl">
-            {{ $data->judul }}
-          </a>
-          <p class="px-1 mx-auto text-black text-red-600">
-            {{ $data->hari }}
-            <span class="px-4 font-semibold">{{ $data->tanggal }}</span>
-          </p>
-          <h3 class="px-1 mx-auto text-2xl font-bold text-red-600">
-            {{ $data->jam_tayang }}
-          </h3>
-        </div>
-        <div class="justify-self-end mt-2">
-          <h3 class="line-through mx-auto text-1xl font-bold text-red-600">
-            {{ $data->diskon }}
-          </h3>
-          <p class="py-1 mx-auto text-black font-bold text-4xl">
-            {{ $data->harga }}
-          </p>
-        </div>
-      </article>
-    </div>
-    @endforeach 
-    
-    <div class="mb-3 bg-gray-200 text-gray-200">
-      {{ $film->links() }}
-    </div> --}}
-
     <!--Header-->
 	<div class="w-full m-0 p-0 bg-cover bg-bottom" style="background-image:url('cover.jpg'); height: 60vh; max-height:460px;">
     <div class="container max-w-4xl mx-auto pt-16 md:pt-32 text-center break-normal">
@@ -132,7 +79,7 @@
               <a class="inline-block text-gray-600 hover:text-gray-300 no-underline  hover:underline py-2 px-2 hover:bg-indigo-600" href="/forum">FORUM</a>
               </li>
               <li class="mr-2">
-              <a class="inline-block text-gray-600 hover:text-gray-300 no-underline  hover:underline py-2 px-2 hover:bg-indigo-600" href="post_vue.html">POST VUE</a>
+              <a class="inline-block text-gray-600 hover:text-gray-300 no-underline  hover:underline py-2 px-2 hover:bg-indigo-600" href="/latihan">POST VUE</a>
               </li>
             </ul>
           </div>
