@@ -41,13 +41,14 @@ class TicketController extends Controller
             'hari' => 'required', 
             'jam_tayang' => 'required',  
         ], [
-            'judul.required' => 'Harus diisi, tidak boleh kosong!',
-            'deskripsi_film.required' => 'Harus diisi, tidak boleh kosong!',
-            'harga.required' => 'Harus diisi, tidak boleh kosong!',
-            'diskon.required' => 'Harus diisi, tidak boleh kosong!',
-            'tanggal.required' => 'Harus diisi, tidak boleh kosong!',
-            'hari.required' => 'Harus diisi, tidak boleh kosong!',
-            'jam_tayang.required' => 'Harus diisi, tidak boleh kosong!',
+            'judul.required' => 'Tidak boleh kosong!',
+            'deskripsi_film.required' => 'Tidak boleh kosong!',
+            'harga.required' => 'Tidak boleh kosong!',
+            'diskon.required' => 'Tidak boleh kosong!',
+            'tanggal.required' => 'Tidak boleh kosong!',
+            'hari.required' => 'Tidak boleh kosong!',
+            'jam_tayang.required' => 'Tidak boleh kosong!',
+            'foto.required' => 'Harus upload foto!',
         ]);
 
         //upload foto

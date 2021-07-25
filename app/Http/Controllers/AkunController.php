@@ -91,10 +91,11 @@ class AkunController extends Controller
             'alamat' => 'required',
             'foto' => 'mimes:jpg,jpeg,bmp,png|max:1024',
         ], [
-            'name.required' => 'Harus diisi, tidak boleh kosong!',
-            'email.required' => 'Harus diisi, tidak boleh kosong!',
-            'password.required' => 'Harus diisi, tidak boleh kosong!',
-            'alamat.required' => 'Harus diisi, tidak boleh kosong!',
+            'name.required' => 'Tidak boleh kosong!',
+            'email.required' => 'Tidak boleh kosong!',
+            'password.required' => 'Tidak boleh kosong!',
+            'alamat.required' => 'Tidak boleh kosong!',
+            'alamat.required' => 'Harus upload foto!',
         ]);
 
         if (Request()->foto <> "") {

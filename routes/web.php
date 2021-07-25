@@ -9,6 +9,7 @@ use App\Http\Controllers\DetailPageController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\HomePageController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\BlogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,6 +37,15 @@ Route::group(['middleware' => ['auth']], function () {
 
     // Calendar
     Route::get('/calendar', [CalendarController::class, 'index']);
+
+    // Ticket
+    Route::get('/blog', [BlogController::class, 'index'])->name('blog');
+    Route::get('/blog/tambah', [BlogController::class, 'tambah']);
+    Route::post('/blog/tambah_aksi', [BlogController::class, 'tambah_aksi']);
+    Route::get('/blog/detailblog/{id}', [BlogController::class, 'detailblog']);
+    Route::get('/blog/edit/{id}', [BlogController::class, 'edit']);
+    Route::post('/blog/edit_aksi/{id}', [BlogController::class, 'edit_aksi']);
+    Route::get('/blog/hapus/{id}', [BlogController::class, 'hapus']);
 
     // Ticket
     Route::get('/ticket', [TicketController::class, 'index'])->name('film');

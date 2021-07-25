@@ -15,8 +15,13 @@
     <div class="overflow-x-auto sm:-mx-6 lg:-mx-8 ">
         <body class="font-nunito antialiased bg-gray-100 text-gray-900 my-16 flex items-center justify-center">
             <div class="bg-white container mx-auto px-4 sm:px-8 max-w-3xl">
-                <div class="main-images py-3 ">
+                <div class="main-images py-3 mt-10">
                     <div class="images grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <img 
+                            src="img-akun/{{ Auth::user()->foto }}" 
+                            class="w-24 h-24 p-1 justify-center object-cover rounded-full border-2 border-indigo-500" 
+                            alt="User Profile Picture"
+                        >
                     </div>
                 </div>
                 <div class="main-question mb-8 flex flex-col divide-y text-gray-800 text-base">

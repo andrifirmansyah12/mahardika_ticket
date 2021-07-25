@@ -10,8 +10,12 @@
             <i class="fas fa-tachometer-alt mr-3"></i>
             Dashboard
         </a>
+        <a href="/blog" class="flex items-center text-black opacity-75 hover:opacity-100 py-4 pl-6 hover:bg-indigo-600 {{ request()->is('blog') ? 'active' : ''}}">
+            <i class="fas fa-newspaper mr-3"></i>
+            Blog
+        </a>
         <a href="/ticket" class="flex items-center text-black opacity-75 hover:opacity-100 py-4 pl-6 hover:bg-indigo-600 {{ request()->is('ticket') ? 'active' : ''}}">
-            <i class="fas fa-sticky-note mr-3"></i>
+            <i class="fas fa-ticket-alt mr-3"></i>
             Ticket Film
         </a>
         <a href="/akun" class="flex items-center text-black opacity-75 hover:opacity-100 py-4 pl-6 hover:bg-indigo-600 {{ request()->is('akun') ? 'active' : ''}}">

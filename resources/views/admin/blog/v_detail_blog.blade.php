@@ -1,5 +1,5 @@
 @extends('layout.index')
-@section('title','Detail Akun')
+@section('title','Detail Blog')
 
 @section('content')
 
@@ -11,45 +11,37 @@
                 <div class="main-images py-3 ">
                     <div class="images grid grid-cols-1 md:grid-cols-3 gap-8">
                         <div class="px-3 mt-5 image items-center overflow-hidden">
-                                <img class="w-24 h-24 p-1 justify-center object-cover rounded-full border-2 border-indigo-500" src="{{ url('img-akun/' . $akun->foto)}}" alt="foto">
+                                <img class="w-24 h-24 p-1 justify-center object-cover rounded-full border-2 border-indigo-500" src="{{ url('img-blog/' . $blog->foto)}}" alt="foto">
                         </div>
                     </div>
                 </div>
                 <div class="main-question mb-8 flex flex-col divide-y text-gray-800 text-base">
                     <div class="item px-6 py-6">
                         <h4 class="font-bold">
-                            Nama : 
+                            Judul : 
                             <span class="px-2 inline-flex text-sm leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                                {{ $akun->name}}
+                                {{ $blog->judul}}
                             </span>
                         </h4>
                     </div>
                     <div class="item px-6 py-6">
                         <h4 class="font-bold">
-                            Email : 
+                            Nama Tempat : 
                             <span class="px-2 inline-flex text-sm leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                                {{ $akun->email}}
+                                {{ $blog->nama_tempat}}
                             </span>
                         </h4>
                     </div>
                     <div class="item px-6 py-6">
                         <h4 class="font-bold">
-                            Password :
+                            Deskripsi :
                             <span class="px-2 inline-flex text-sm leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                                {{ $akun->password}}
-                            </span>
-                        </h4>
-                    </div>
-                    <div class="item px-6 py-6">
-                        <h4 class="font-bold">
-                            Alamat : 
-                            <span class="px-2 inline-flex text-sm leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                                {{ $akun->alamat}}
+                                {{ $blog->deskripsi}}
                             </span>
                         </h4>
                     </div>
                     <div class="flex flex-col bg-white px-8 py-3 items-end">
-                        <a class="rounded-full hover:underline focus:outline-none transform transition hover:scale-105 duration-300 ease-in-out px-4 py-4 bg-gray-600 rounded-md text-white text-sm focus:border-transparent" href="/akun">Kembali</a>
+                        <a class="rounded-full hover:underline focus:outline-none transform transition hover:scale-105 duration-300 ease-in-out px-4 py-4 bg-gray-600 rounded-md text-white text-sm focus:border-transparent" href="/blog">Kembali</a>
                     </div>
                 </div>
             </div>

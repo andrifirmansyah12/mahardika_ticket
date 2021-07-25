@@ -10,8 +10,8 @@
             <div class="bg-white container mx-auto px-4 sm:px-8 max-w-3xl">
                 <div class="main-images py-3">
                     <div class="images md:grid-cols-3 gap-8">
-                        <div class="image border-2 border-gray-200 bg-white items-center rounded-lg shadow-lg overflow-hidden">
-                                <img class="" src="{{ url('img-film/' . $film->foto)}}" alt="foto">
+                        <div class="px-3 mt-5 image items-center overflow-hidden">
+                            <img class="w-24 h-24 p-1 justify-center object-cover rounded-full border-2 border-indigo-500" src="{{ url('img-film/' . $film->foto)}}" alt="foto">
                         </div>
                     </div>
                 </div>
