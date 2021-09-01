@@ -11,7 +11,7 @@
     @endcomponent
 
 </head>
-<body class="leading-normal tracking-normal bg-white text-white" style="font-family: 'Source Sans Pro', sans-serif;">
+<body class="max-w-screen-2xl mx-auto leading-normal tracking-normal bg-white text-white" style="font-family: 'Source Sans Pro', sans-serif;">
 
     <div class="preloader bg-white">
         <div class="loading">
@@ -70,7 +70,7 @@
                                 <div class="p-6 flex flex-wrap">
                                     <div class="w-full md:w-1/2 md:pr-32 order-3 md:order-1">
                                         <div class="max-w-md md:float-right md:text-right leading-loose tracking-tight md:sticky md:top-0 ">
-                                            <p class="font-bold text-xl my-2 font-mono">Sosial Media</p>
+                                            <p class="font-bold text-xl my-2">Sosial Media</p>
                             
                                             <ul class="flex flex-wrap justify-between flex-col">
                                                 <li><a href="#" class="nav hover:text-gray-900"><i class="fab fa-whatsapp"></i> Whatsapp</a></li>
@@ -83,7 +83,7 @@
                                     </div>
                                     <div class="w-full md:w-1/2 order-1 md:order-2">
                                         <div class="max-w-md leading-loose tracking-tight text-justify">
-                                            <h1 class="font-bold my-2 text-xl font-mono">Contact Me</h1>
+                                            <h1 class="font-bold my-2 text-xl">Contact Me</h1>
 
                                             <p class=""><i class="fas fa-phone pr-2"></i> (+026) - 7777</p>
                                             <p class=""><i class="fas fa-map-marker-alt pr-3"></i> Indonesia</p>
@@ -99,7 +99,7 @@
                                                 <div class="max-w-md leading-loose tracking-tight">
                                                     <p class="font-bold md:mt-10 md:mb-5">About Me</p>
                                     
-                                                    <p class="mb-8 font-mono font-bold">
+                                                    <p class="mb-8 ">
                                                         We Are PT. MAHARDIKA SOLUSI TEKNOLOGI
                                                         A Professional IT Consultant and Software Development 
                                                         Services in Indonesia.    

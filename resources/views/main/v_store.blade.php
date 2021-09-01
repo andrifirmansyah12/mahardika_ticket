@@ -73,7 +73,7 @@
 
 </head>
 
-<body class="bg-white text-gray-600 work-sans leading-normal text-base tracking-normal">
+<body class="max-w-screen-2xl mx-auto bg-white text-gray-600 work-sans leading-normal text-base tracking-normal">
     {{-- loader --}}
     <div class="preloader bg-white">
         <div class="loading">
@@ -83,7 +83,7 @@
     </div>
 
     <!--Nav-->
-    <nav id="header" class="fixed bg-white border-b-2 border-gray-200 w-full z-30 top-0 py-1">
+    <nav id="header" class="max-w-screen-2xl mx-auto shadow fixed bg-white border-b-2 border-gray-200 w-full z-30 top-0 py-1">
         <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-6 py-3">
 
             <label for="menu-toggle" class="cursor-pointer md:hidden block">

@@ -10,6 +10,24 @@
 <script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
 
     <style>
+        #close {
+        float:right;
+        display:inline-block;
+        padding:2px 5px;
+        color: black;
+      }
+
+        .icon::after{
+        content: '';
+        display: block;
+        position: absolute;
+        border-top: 23px solid transparent;
+        border-bottom: 17px solid transparent;
+        border-left: 12px solid #3182ce;
+        left: 100%;
+        top: 0;
+      }
+
       .preloader {
         position: fixed;
         top: 0;

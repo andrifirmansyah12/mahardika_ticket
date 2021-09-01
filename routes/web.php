@@ -10,6 +10,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\HomePageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +27,8 @@ use App\Http\Controllers\BlogController;
 Route::get('/profile', function () {
     return view('admin.profile.v_profile');
 })->name('profile');
+
+Route::post('/send-mail', [ContactController::class, 'sendmail'])->name('send-mail');
 
 // Route::get('/welcome', function () {
 //     return view('layouts.app');

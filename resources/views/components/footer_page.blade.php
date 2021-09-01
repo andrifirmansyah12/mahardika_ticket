@@ -1,7 +1,7 @@
-<footer class="bg-white border-t-2 border-gray-300">
+<footer class="shadow bg-white border-t border-gray-100">
     <div class="py-3">
       <div class="container mx-auto py-4 flex flex-wrap flex-col sm:flex-row">
-        <div class="flex items-center space-x-1 p-2">
+        <div class="flex items-center justify-center space-x-1 p-2">
           <button class="relative z-10 w-8 h-8">
               <img class="" src="{{ asset('mahardika_ticket/dist/img/logo9.png') }}">
           </button>

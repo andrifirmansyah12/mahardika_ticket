@@ -11,7 +11,7 @@
     @endcomponent
 
 </head>
-<body class="leading-normal tracking-normal bg-white text-white" style="font-family: 'Source Sans Pro', sans-serif;">
+<body class="max-w-screen-2xl mx-auto leading-normal tracking-normal bg-white text-white" style="font-family: 'Source Sans Pro', sans-serif;">
 
     <div class="preloader bg-white">
       <div class="loading">
@@ -48,8 +48,8 @@
     @endcomponent
 
     <!--Header-->
-	<div class="w-full m-0 p-0 bg-cover bg-bottom" style="background-image:url('cover.jpg'); height: 60vh; max-height:460px;">
-    <div class="container max-w-4xl mx-auto pt-16 md:pt-32 text-center break-normal">
+	<div class="w-full m-0 p-0 bg-cover bg-bottom" >
+    <div class="container max-w-4xl mx-auto pt-32 text-center break-normal">
       <!--Title-->
         <p class="text-gray-600 font-extrabold text-3xl md:text-5xl">
           Mahardika Ticket
@@ -59,7 +59,7 @@
   </div>
   
   <!--Container-->
-  <div class="container px-4 md:px-0 max-w-6xl mx-auto -mt-32">
+  <div class="container px-4 md:px-0 max-w-6xl mx-auto pt-16">
     
     <div class="mx-0 sm:mx-6">
       
@@ -266,9 +266,51 @@
       </div>
       <!--/ Post Content-->   
     </div>
+
+    <div class="shadow-md p-3 md:p-10 flex md:flex-row flex-col my-10 gap-3 md:gap-2">
+      <div class="flex items-center justify-center">
+        <img class="w-full h-96 object-cover object-center" src="https://images.unsplash.com/photo-1502773860571-211a597d6e4b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" alt="">
+      </div>
+      <div>
+        <form action="{{route('send-mail')}}" class="form bg-white p-0 md:p-6 relative" method="POST">
+          @csrf
+          <h3 class="text-2xl text-gray-900 font-semibold">Let us call you!</h3>
+          <p class="text-gray-600"> To help you choose your property</p>
+          <div class="flex space-x-5 mt-3">
+              <input type="text" name="name" id="name" placeholder="Your Name" class="border p-2 text-gray-600 w-1/2 " required>
+              <input type="tel" name="number" id="number" placeholder="Your Number" class="border text-gray-600 p-2 w-1/2 " required>
+          </div>
+          <input type="email" name="email" id="email" placeholder="Your Email" class="border text-gray-600 p-2 w-full mt-3" required>
+          <textarea name="message" id="message" cols="10" rows="3" placeholder="Tell us about desired property" class="text-gray-600 border p-2 mt-3 w-full" required></textarea>
+            @if (Session::has('message_sent'))
+            <div class="flex bg-green-200 p-4">
+              <div class="mr-4">
+                <div class="h-10 w-10 text-white bg-green-600 rounded-full flex justify-center items-center">
+                  <i class="material-icons">done</i>
+                </div>
+              </div>
+              <div class="flex justify-between w-full">
+                <div class="text-green-600">
+                  <p class="mb-2 font-bold">
+                    Succes
+                  </p>
+                  <p class="text-xs">
+                    {{Session::get('message_sent')}}
+                  </p>
+                </div>
+                <span id='close' onclick='this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode); return false;'>
+                  x
+                </span>
+              </div>
+            </div>
+            @endif
+          <button type="submit" class="w-full mt-6 bg-gray-700 hover:bg-gray-500 text-white font-semibold p-3">Submit</button>
+        </form>
+      </div>
+    </div>
     
     
-      <!--Subscribe-->
+      {{-- <!--Subscribe-->
       <div class="mb-4">	
         <div class="container font-sans bg-green-100 rounded mt-8 p-4 md:p-24 text-center">
           <h2 class="font-bold break-normal text-2xl md:text-4xl">Subscribe to Mahardika Ticket</h2>
@@ -283,7 +325,7 @@
           </div>
         </div>
       </div>
-      <!-- /Subscribe-->
+      <!-- /Subscribe--> --}}
     </div>
   </div>
 
@@ -303,6 +345,14 @@
         tippy('.link',{
         placement: 'bottom'
       })
+
+      window.onload = function(){
+        document.getElementById('close').onclick = function(){
+        this.parentNode.parentNode.parentNode
+        .removeChild(this.parentNode.parentNode);
+        return false;
+          };
+      };
     </script>
 
   </body>

@@ -52,8 +52,12 @@
                     <i class="fas fa-tachometer-alt mr-3"></i>
                     Dashboard
                 </a>
+                <a href="/blog" class="flex items-center text-black opacity-75 hover:opacity-100 py-2 pl-4 nav-item {{ request()->is('ticket') ? 'active' : ''}}">
+                    <i class="fas fa-newspaper mr-3"></i>
+                    Blog
+                </a>
                 <a href="/ticket" class="flex items-center text-black opacity-75 hover:opacity-100 py-2 pl-4 nav-item {{ request()->is('ticket') ? 'active' : ''}}">
-                    <i class="fas fa-sticky-note mr-3"></i>
+                    <i class="fas fa-ticket-alt mr-3"></i>
                     Ticket Film
                 </a>
                 {{-- <a href="tables.html" class="flex items-center text-black opacity-75 hover:opacity-100 py-2 pl-4 nav-item">

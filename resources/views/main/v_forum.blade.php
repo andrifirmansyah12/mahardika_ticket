@@ -11,7 +11,7 @@
     @endcomponent
 
 </head>
-<body class="leading-normal tracking-normal bg-white text-white" style="font-family: 'Source Sans Pro', sans-serif;">
+<body class="max-w-screen-2xl mx-auto leading-normal tracking-normal bg-white text-white" style="font-family: 'Source Sans Pro', sans-serif;">
 
     <!-- Nav -->
     @component("components.nav_page")
