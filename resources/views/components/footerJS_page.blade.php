@@ -76,3 +76,18 @@
     }
   </script>
 
+<script src="{{ asset('assets/js/slick.min.js') }}"></script>
+<script>
+  $('#slick-image').slick({
+    autoplay: true,
+    autoplaySpeed: 5000,
+    slidesToShow: 1,
+  });
+
+  $('#slick-blog').slick({
+    autoplay: true,
+    autoplaySpeed: 5000,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+  });
+</script>

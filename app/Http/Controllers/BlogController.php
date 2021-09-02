@@ -34,11 +34,13 @@ class BlogController extends Controller
         Request()->validate([
             'judul' => 'required',
             'nama_tempat' => 'required',
+            'tanggal' => 'required',
             'deskripsi' => 'required',
-            'foto' => 'mimes:jpg,jpeg,bmp,png|max:1024',   
+            'foto' => 'mimes:jpg,jpeg,bmp,png|max:7024',   
         ], [
             'judul.required' => 'Harus diisi, tidak boleh kosong!',
             'nama_tempat.required' => 'Harus diisi, tidak boleh kosong!',
+            'tanggal.required' => 'Harus diisi, tidak boleh kosong!',
             'deskripsi.required' => 'Harus diisi, tidak boleh kosong!',
         ]);
 
@@ -51,6 +53,7 @@ class BlogController extends Controller
             'foto' => $fileName,
             'judul' => Request()->judul,
             'nama_tempat' => Request()->nama_tempat,
+            'tanggal' => Request()->tanggal,
             'deskripsi' => Request()->deskripsi,
         ];
 
@@ -85,11 +88,13 @@ class BlogController extends Controller
         Request()->validate([
             'judul' => 'required',
             'nama_tempat' => 'required',
+            'tanggal' => 'required',
             'deskripsi' => 'required',
-            'foto' => 'mimes:jpg,jpeg,bmp,png|max:1024',
+            'foto' => 'mimes:jpg,jpeg,bmp,png|max:7024',
         ], [
             'judul.required' => 'Tidak boleh kosong!',
             'nama_tempat.required' => 'Tidak boleh kosong!',
+            'tanggal.required' => 'Tidak boleh kosong!',
             'deskripsi.required' => 'Tidak boleh kosong!',
             'foto.required' => 'Harus upload foto!',
         ]);
@@ -105,6 +110,7 @@ class BlogController extends Controller
                 'foto' => $fileName,
                 'judul' => Request()->judul,
                 'nama_tempat' => Request()->nama_tempat,
+                'tanggal' => Request()->tanggal,
                 'deskripsi' => Request()->deskripsi,
             ];
             $this->BlogModel->editData($id, $data);
@@ -113,6 +119,7 @@ class BlogController extends Controller
             $data = [
                 'judul' => Request()->judul,
                 'nama_tempat' => Request()->nama_tempat,
+                'tanggal' => Request()->tanggal,
                 'deskripsi' => Request()->deskripsi,
             ];
             $this->BlogModel->editData($id, $data);

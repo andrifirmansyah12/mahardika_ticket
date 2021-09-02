@@ -1,0 +1,146 @@
+* {
+  font-family: 'Lato';
+  src: url('./assets/font/Lato-Regular.ttf');
+  scroll-behavior: smooth;
+}
+
+.font-lato {
+  font-family: 'Lato', sans-serif;
+}
+
+.text-mst-orange {
+  color: #FF7A03;
+}
+
+.border-mst-orange {
+  border-color: #FF7A03;
+}
+
+#slick-expertise {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  width: 100%;
+}
+
+#slick-image {
+  width: 14rem;
+  padding: 4rem;
+  margin: auto;
+}
+
+#slick-limiting {
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.max-w-screen-2xl {
+  max-width: 90rem;
+}
+
+.responsive {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 24rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .responsive {
+    max-width: 36rem;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+@media (min-width: 768px) {
+  .responsive {
+    max-width: 42rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .responsive {
+    max-width: 56rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .responsive {
+    max-width: 72rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .responsive {
+    max-widht: 1480px;
+  }
+}
+
+/* Create a sticky/fixed navbar */
+
+#home {
+  padding-top: 5rem;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: #fff;
+  transition: 0.2s; /* Adds a transition effect when the padding is decreased */
+  position: fixed; /* Sticky/fixed navbar */
+  width: 100%;
+  color: black;
+  top: 0; /* At the top */
+  z-index: 99;
+}
+
+.img-container {
+  position: relative;
+  width: 100%;
+  padding-top: 64%;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+  background-color: #00171F;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #8b6f6f;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+  

@@ -34,6 +34,14 @@
                     </div>
                     <div class="item px-6 py-6">
                         <h4 class="font-bold">
+                            Tanggal :
+                            <span class="px-2 inline-flex text-sm leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                                {{ $blog->tanggal}}
+                            </span>
+                        </h4>
+                    </div>
+                    <div class="item px-6 py-6">
+                        <h4 class="font-bold">
                             Deskripsi :
                             <span class="px-2 inline-flex text-sm leading-5 font-semibold rounded-full bg-green-100 text-green-800">
                                 {{ $blog->deskripsi}}

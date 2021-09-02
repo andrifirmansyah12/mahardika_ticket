@@ -31,6 +31,18 @@
                     @enderror
                 </div>
                 <div class="mb-1">
+                    <label class="text-sm" for="tanggal">
+                        Tanggal
+                    </label>
+                    <input type="date" id="tanggal" placeholder="{{$blog->tanggal}}" name="tanggal" class="px-3 py-3 form-textarea block w-full focus:border-gray-600 focus:outline-none border-black border-2" id="my-textarea" value="{{old('tanggal')}}" rows="8"></input>
+                    {{-- <input type="text" value="{{$blog->tanggal}}" class="h-12 px-3 w-full border-black border-2 rounded focus:outline-none focus:border-gray-600" id="tanggal" name="tanggal" value="{{old('tanggal')}}"> --}}
+                    @error('tanggal')
+                    <div class="bg-red-400 p-2 shadow-sm rounded mt-2">
+                        {{ $message }}
+                    </div>
+                    @enderror
+                </div>
+                <div class="mb-1">
                     <label class="text-sm" for="deskripsi">
                         Deskripsi
                     </label>

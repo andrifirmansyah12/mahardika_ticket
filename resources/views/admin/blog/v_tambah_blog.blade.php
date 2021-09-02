@@ -12,7 +12,7 @@
                     <label class="text-sm" for="judul">
                         Judul
                     </label>
-                      <input type="text" class="h-12 px-3 w-full border-black border-2 rounded focus:outline-none focus:border-gray-600" id="judul" name="judul" value="{{old('judul')}}">
+                      <input type="text" class="h-12 px-3 w-full border-black border-2 rounded focus:outline-none focus:border-gray-600" id="judul" name="judul" value="{{old('judul')}}" required>
                       @error('judul')
                       <div class="bg-red-400 p-2 shadow-sm rounded mt-2">
                           {{ $message }}
@@ -23,8 +23,19 @@
                     <label class="text-sm" for="nama_tempat">
                         Nama Tempat
                     </label>
-                    <input type="text" class="h-12 px-3 w-full border-black border-2 rounded focus:outline-none focus:border-gray-600" id="nama_tempat" name="nama_tempat" value="{{old('nama_tempat')}}">
+                    <input type="text" class="h-12 px-3 w-full border-black border-2 rounded focus:outline-none focus:border-gray-600" id="nama_tempat" name="nama_tempat" value="{{old('nama_tempat')}}" required>
                     @error('nama_tempat')
+                    <div class="bg-red-400 p-2 shadow-sm rounded mt-2">
+                        {{ $message }}
+                    </div>
+                    @enderror
+                </div>
+                <div class="mb-1">
+                    <label class="text-sm" for="tanggal">
+                        Tanggal
+                    </label>
+                    <input type="date" class="py-3 px-3 form-textarea block w-full border-black border-2 rounded focus:outline-none focus:border-gray-600" id="tanggal" name="tanggal" value="{{old('tanggal')}}"rows="8" required></input>
+                    @error('tanggal')
                     <div class="bg-red-400 p-2 shadow-sm rounded mt-2">
                         {{ $message }}
                     </div>
@@ -34,7 +45,7 @@
                     <label class="text-sm" for="deskripsi">
                         Deskripsi
                     </label>
-                    <textarea class="py-3 px-3 form-textarea block w-full border-black border-2 rounded focus:outline-none focus:border-gray-600" id="deskripsi" name="deskripsi" value="{{old('deskripsi')}}"rows="8"></textarea>
+                    <textarea class="py-3 px-3 form-textarea block w-full border-black border-2 rounded focus:outline-none focus:border-gray-600" id="deskripsi" name="deskripsi" value="{{old('deskripsi')}}"rows="8" required></textarea>
                     @error('deskripsi')
                     <div class="bg-red-400 p-2 shadow-sm rounded mt-2">
                         {{ $message }}

@@ -9,15 +9,15 @@ use Illuminate\Support\Facades\DB;
 
 class HomePageModel extends Model
 {
-    protected $table = 'film';
+    protected $table = 'blog';
+
     public function allData()
     {
-        return DB::table('film')->get();
+        return DB::select('select * from blog ORDER BY id DESC');
     }
 
     public function detail($id)
     {
-        return DB::table('film')->where('id', $id)->first();
+        return DB::table('blog')->where('id', $id)->first();
     }
-
 }

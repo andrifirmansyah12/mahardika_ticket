@@ -11,6 +11,7 @@ use App\Http\Controllers\HomePageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\TicketPageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -76,7 +77,8 @@ Route::get('/homepage', [HomePageController::class, 'index'])->name('homepage');
 Route::get('/homepage/detail{id}', [HomePageController::class, 'detail']);
 Route::get('/aboutus', [HomePageController::class, 'aboutUs'])->name('aboutUs');
 Route::get('/contact', [HomePageController::class, 'contact'])->name('contact');
-Route::get('/ticketkonser', [HomePageController::class, 'ticket'])->name('ticket');
+Route::get('/ticketkonser', [TicketPageController::class, 'ticket'])->name('ticket');
+Route::get('/ticketkonser/detail{id}', [TicketPageController::class, 'detail']);
 Route::get('/forum', [HomePageController::class, 'forum'])->name('forum');
 Route::get('/store', [HomePageController::class, 'store'])->name('store');
 Route::get('/latihan', [HomePageController::class, 'latihan'])->name('latihan');

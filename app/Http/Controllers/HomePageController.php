@@ -12,12 +12,12 @@ class HomePageController extends Controller
         $this->HomePageModel = new HomePageModel(); 
     }
 
-    public function ticket()
+    public function index()
     {   
         $data = [
-            'film' => $this->HomePageModel->paginate(3),
+            'blog' => $this->HomePageModel->paginate(7),
         ];
-        return view('main.v_ticket', $data);
+        return view('v_home_page', $data);
     }
 
     public function detail($id)
@@ -26,14 +26,17 @@ class HomePageController extends Controller
             abort(404);
         }
         $data = [
-            'film' => $this->HomePageModel->detail($id),
+            'blog' => $this->HomePageModel->detail($id),
         ];
-        return view('v_detail_page', $data);
+        return view('main.v_forum', $data);
     }
 
-    public function index()
+    public function subIndex()
     {   
-        return view('v_home_page');
+        $data = [
+            'blog' => $this->HomePageModel->paginate(3),
+        ];
+        return view('main.v_forum', $data);
     }
 
     public function aboutUs()
@@ -49,11 +52,6 @@ class HomePageController extends Controller
     public function store()
     {   
         return view('main.v_store');
-    }
-
-    public function forum()
-    {   
-        return view('main.v_forum');
     }
 
     public function latihan()
