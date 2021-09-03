@@ -9,10 +9,16 @@ use Illuminate\Support\Facades\DB;
 class TicketPageModel extends Model
 {
     protected $table = 'film';
+    protected $blog = 'blog';
 
     public function allData()
     {
         return DB::table('film')->get();
+    }
+
+    public function blogs()
+    {
+        return DB::table('blog')->get();
     }
 
     public function detail($id)

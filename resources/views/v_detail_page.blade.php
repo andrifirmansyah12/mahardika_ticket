@@ -47,8 +47,8 @@
       @endsection
     @endcomponent
 
-    <section class="bg-gray-200">
-      <div class="px-10 mb-6 py-4">
+    <section class="bg-white">
+      <div class="px-0 md:px-10 mb-6 py-4">
         <div class="rounded-md bg-white mt-20">
           <div class="w-full">
             <img src="{{ url('img-film/' . $film->foto)}}" width="1920" height="288" class="w-full object-cover rounded-md block mx-auto sm:block sm:w-full"></img>

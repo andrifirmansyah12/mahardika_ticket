@@ -166,7 +166,37 @@
       </div>
       <!--/ Post Content-->   
     </div>
-    
+
+    <div class="flex flex-col gap-y-2 mt-20 items-center justify-center">
+      <h1 class="text-4xl font-bold text-indigo-700 font-lato">Blog Newest</h1>
+      <div class="border-b-2 w-20 border-gray-800"></div>
+    </div>
+
+    <div class="flex flex-row bg-white">
+      <div class="container w-full max-w-6xl mx-auto px-2 py-8">
+        <div id="slick-blog" class="flex flex-wrap -mx-2">
+          @foreach ($blog as $data)
+          <div class="w-full md:w-1/3 px-2 pb-12">
+            <div class="h-full bg-white rounded overflow-hidden shadow-md hover:shadow-lg relative smooth">
+              <img src="{{ url('img-blog/' . $data->foto)}}" class="h-48 object-cover object-top w-full rounded-t shadow-lg">
+              <div class="p-6 h-auto md:h-48">	
+                <p class="text-gray-600 text-xs md:text-sm">GETTING STARTED</p>
+                <a href="/homepage/detail{{ $data->id }}" class="no-underline hover:no-underline">
+                <div class="font-bold text-xl text-gray-900">{{ $data->judul }}.</div>
+                </a>
+                <p class="text-gray-800 font-serif text-base mb-5">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula. 
+                </p>
+              </div>
+              <div class="flex items-center justify-end inset-x-0 bottom-0 p-6">
+                <p class="text-gray-600 text-xs md:text-sm">2 MIN READ</p>
+              </div>
+            </div>
+          </div>
+          @endforeach ($blog as $data)
+        </div>
+      </div>
+    </div>
 
     <div class="shadow-md p-3 md:p-10 flex md:flex-row flex-col my-10 gap-3 md:gap-2">
       <div class="flex items-center justify-center">

@@ -42,13 +42,13 @@
 	
 
 	<!--Title-->
-	<div class="text-center pt-16 md:pt-32">
+	<div class="text-center pt-32">
 		<p class="text-sm md:text-base text-green-500 font-bold">{{ $blog->tanggal }} <span class="text-gray-900">/</span> {{ $blog->nama_tempat }}</p>
 		{{-- <h1 class="text-green-500 font-bold break-normal text-3xl md:text-5xl">Welcome to  Mahardika Ticket</h1> --}}
 	</div>
 
 	<!--image-->
-	<div class="container w-full max-w-6xl mx-auto bg-white bg-cover mt-4 rounded" style="background-image:url('{{ url('img-blog/' . $blog->foto)}}'); height: 75vh;"></div>
+	<div class="container w-full max-w-6xl mx-auto bg-white bg-cover bg-center md:bg-top mt-4 rounded" style="background-image:url('{{ url('img-blog/' . $blog->foto)}}'); height: 75vh;"></div>
 	
 	<!--Container-->
 	<div class="container max-w-5xl mx-auto -mt-16">
@@ -83,7 +83,7 @@
 				<div class="w-full md:w-1/3 px-2 pb-12">
 					<div class="h-full bg-white rounded overflow-hidden shadow-md hover:shadow-lg relative smooth">
 						<a href="#" class="no-underline hover:no-underline">
-								<img src="https://source.unsplash.com/_AjqGGafofE/400x200" class="h-48 w-full rounded-t shadow-lg">
+								<img src="https://images.unsplash.com/photo-1600104654136-f6e2426ad471?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=751&q=80" class="h-48 object-cover object-top w-full rounded-t shadow-lg">
 								<div class="p-6 h-auto md:h-48">	
 									<p class="text-gray-600 text-xs md:text-sm">GETTING STARTED</p>
 									<div class="font-bold text-xl text-gray-900">Lorem ipsum dolor sit amet.</div>
@@ -101,7 +101,7 @@
 				<div class="w-full md:w-1/3 px-2 pb-12">
 					<div class="h-full bg-white rounded overflow-hidden shadow-md hover:shadow-lg relative smooth">
 						<a href="#" class="no-underline hover:no-underline">
-								<img src="https://source.unsplash.com/_AjqGGafofE/400x200" class="h-48 w-full rounded-t shadow">
+								<img src="https://images.unsplash.com/photo-1629104300023-694ad6aa2431?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80" class="h-48 object-cover object-top w-full rounded-t shadow">
 								<div class="p-6 h-auto md:h-48">	
 									<p class="text-gray-600 text-xs md:text-sm">UNDERWATER</p>
 									<div class="font-bold text-xl text-gray-900">Biolumini algae diatomeae ecology.</div>
@@ -119,7 +119,7 @@
 				<div class="w-full md:w-1/3 px-2 pb-12">
 					<div class="h-full bg-white rounded overflow-hidden shadow-md hover:shadow-lg relative smooth">
 						<a href="#" class="no-underline hover:no-underline">
-								<img src="https://source.unsplash.com/DEa8_vxKlEo/400x200" class="h-48 w-full rounded-t shadow">
+								<img src="https://images.unsplash.com/photo-1608869843129-3da551dcde5a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" class="h-48 object-cover object-top w-full rounded-t shadow">
 								<div class="p-6 h-auto md:h-48">	
 									<p class="text-gray-600 text-xs md:text-sm">FOREST</p>
 									<div class="font-bold text-xl text-gray-900">What is life but a teardrop in the eye of infinity?</div>

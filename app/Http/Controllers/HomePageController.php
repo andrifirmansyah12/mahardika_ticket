@@ -21,20 +21,12 @@ class HomePageController extends Controller
     }
 
     public function detail($id)
-    {
+    {   
         if (!$this->HomePageModel->detail($id)) {
             abort(404);
         }
         $data = [
             'blog' => $this->HomePageModel->detail($id),
-        ];
-        return view('main.v_forum', $data);
-    }
-
-    public function subIndex()
-    {   
-        $data = [
-            'blog' => $this->HomePageModel->paginate(3),
         ];
         return view('main.v_forum', $data);
     }
