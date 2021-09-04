@@ -169,7 +169,7 @@
 
     <div class="flex flex-col gap-y-2 mt-20 items-center justify-center">
       <h1 class="text-4xl font-bold text-indigo-700 font-lato">Blog Newest</h1>
-      <div class="border-b-2 w-20 border-gray-800"></div>
+      <div class="border-b-2 w-20 border-yellow-600"></div>
     </div>
 
     <div class="flex flex-row bg-white">
