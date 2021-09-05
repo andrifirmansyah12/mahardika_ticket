@@ -46,15 +46,15 @@
         </div>
       @endsection
     @endcomponent
-
-    <section class="bg-white">
-      <div class="px-0 md:px-10 mb-6 py-4">
-        <div class="rounded-md bg-white mt-20">
+        
+    <section class="bg-white rounded-md shadow mt-24 mx-4 md:mx-10">
+      <div class="mb-8">
+        <div class="rounded-md bg-white">
           <div class="w-full">
-            <img src="{{ url('img-film/' . $film->foto)}}" width="1920" height="288" class="w-full object-cover rounded-md block mx-auto sm:block sm:w-full"></img>
+            <img src="{{ url('img-film/' . $film->foto)}}" class="w-full h-96 object-center object-cover rounded-md block mx-auto sm:block sm:w-full"></img>
           </div>
           <div class="flex flex-wrap">
-            <div class="w-5/6 sm:w-1/2 p-8">
+            <div class="w-5/6 sm:w-1/2 pl-8 pt-8 md:pt-0 md:p-0">
               <h3 class="px-0 md:px-8 xl:px-8 md:mt-16 mx-auto font-bold text-green-600 text-3xl md:text-5xl xl:text-5xl">
                 {{ $film->judul }}
               </h3>
@@ -66,7 +66,7 @@
                 {{ $film->jam_tayang }}
               </h3>
             </div>
-            <div class="w-full sm:w-1/2 p-8 ">
+            <div class="w-full flex items-center justify-start md:justify-end sm:w-1/2 p-8 ">
               <div class="align-middle">
                 <h3 class="px-0 md:px-8 xl:px-8 line-through md:mt-16 mx-auto text-2xl md:text-3xl xl:text-3xl font-bold text-red-600">
                   {{ $film->diskon }}
@@ -77,11 +77,11 @@
               </div>
             </div>
             <div class="px-5">
-              <p class="mb-4 text-black px-3 justify-content font-serif text-justify">
+              <p class="mb-4 font-lato text-black px-3 justify-content font-serif text-justify">
                 {{ $film->deskripsi_film }}
               </p>
               <div class="py-3 text-right">
-                <button class="ml-2 h-10 w-60 bg-green-600 rounded text-white">
+                <button class="mr-3 h-10 w-60 bg-green-600 rounded text-white">
                     Booking Ticket
                 </button>
             </div>

@@ -119,9 +119,9 @@
             <a href="/homepage/detail{{ $data->id }}" class="flex flex-wrap no-underline hover:no-underline">
               <img src="{{ url('img-blog/' . $data->foto)}}" 
                 class="h-64 w-full object-cover object-top rounded-t pb-6">
-              <p class="w-full text-gray-600 text-xs md:text-sm px-6">{{ $data->nama_tempat }}</p>
-              <div class="w-full font-bold text-xl text-gray-900 px-6">{{ $data->judul }}</div>
-              <p class="text-gray-800 font-serif text-base px-6 mb-5">
+              <p class="w-full text-gray-600 font-lato text-xs md:text-sm px-6">{{ $data->nama_tempat }}</p>
+              <div class="w-full font-bold font-lato text-xl text-gray-900 px-6">{{ $data->judul }}</div>
+              <p class="text-gray-800 font-lato text-base px-6 mb-5">
                 {{ $data->deskripsi }}
               </p>
             </a>
@@ -180,11 +180,11 @@
             <div class="h-full bg-white rounded overflow-hidden shadow-md hover:shadow-lg relative smooth">
               <img src="{{ url('img-blog/' . $data->foto)}}" class="h-48 object-cover object-top w-full rounded-t shadow-lg">
               <div class="p-6 h-auto md:h-48">	
-                <p class="text-gray-600 text-xs md:text-sm">GETTING STARTED</p>
+                <p class="text-gray-600 text-xs md:text-sm font-lato">GETTING STARTED</p>
                 <a href="/homepage/detail{{ $data->id }}" class="no-underline hover:no-underline">
-                <div class="font-bold text-xl text-gray-900">{{ $data->judul }}.</div>
+                <div class="font-bold text-xl font-lato text-gray-900">{{ $data->judul }}.</div>
                 </a>
-                <p class="text-gray-800 font-serif text-base mb-5">
+                <p class="text-gray-800 font-lato text-base mb-5">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula. 
                 </p>
               </div>

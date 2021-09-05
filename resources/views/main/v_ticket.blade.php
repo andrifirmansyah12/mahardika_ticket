@@ -58,7 +58,7 @@
               <div class='mx-3 w-full'>
                   <div class="flex flex-row mb-6 mt-2">
                     <a class='border-2 transform transition hover:scale-95 duration-300 ease-in-out rounded-md cursor-pointer mb-3' href="/ticketkonser/detail{{ $data->id }}">
-                      <img class="w-72 md:w-full xl:w-full rounded" src="{{ url('img-film/' . $data->foto)}}">
+                      <img class="w-60 h-44 object-cover object-center rounded" src="{{ url('img-film/' . $data->foto)}}">
                     </a>
                   </div>
               </div>
@@ -71,7 +71,7 @@
     @forelse ($film as $data)
     <div class="w-full p-7 px-16 bg-gray-200 flex justify-center items-center">
       <article class="sm:grid grid-cols-5 bg-white shadow-sm p-7 relative sm:p-4 rounded-lg lg:col-span-2 mt-4 lg:mt-0 py-4 px-8 shadow focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-        <a class="cursor-pointer w-full rounded-lg" href="/ticketkonser/detail{{ $data->id }}"><img src="{{ url('img-film/' . $data->foto)}}" alt="foto"></a>
+        <a class="cursor-pointer w-full rounded-lg" href="/ticketkonser/detail{{ $data->id }}"><img class="w-full h-44 object-cover object-center" src="{{ url('img-film/' . $data->foto)}}" alt="foto"></a>
         <div class="pt-5 space-y-2 self-center sm:pt-0 sm:pl-10 col-span-3">
           <a href="/ticketkonser/detail{{ $data->id }}" class="mx-auto font-bold text-green-600 text-3xl md:text-5xl xl:text-5xl">
             {{ $data->judul }}
