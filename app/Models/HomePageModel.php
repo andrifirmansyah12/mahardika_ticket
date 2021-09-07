@@ -13,7 +13,7 @@ class HomePageModel extends Model
 
     public function allData()
     {
-        return DB::select('select * from blog ORDER BY id ASC');
+        return DB::select('select * from blog ORDER BY id DESC');
     }
 
     public function detail($id)

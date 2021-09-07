@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forum | Mahardika Ticket</title>
+    <title>Detail Blog | Mahardika Ticket</title>
 
     <!-- Header -->
     @component("components.header_page")
@@ -42,9 +42,9 @@
 	
 
 	<!--Title-->
-	<div class="text-center pt-32">
-		<p class="text-sm md:text-base text-green-500 font-bold">{{ $blog->tanggal }} <span class="text-gray-900">/</span> {{ $blog->nama_tempat }}</p>
-		{{-- <h1 class="text-green-500 font-bold break-normal text-3xl md:text-5xl">Welcome to  Mahardika Ticket</h1> --}}
+	<div class="text-center pt-20">
+		{{-- <p class="text-sm md:text-base text-green-500 font-bold font-lato">{{ $blog->tanggal }} <span class="font-lato text-gray-900">/</span> {{ $blog->nama_tempat }}</p>
+		<h1 class="text-green-500 font-bold break-normal text-3xl md:text-5xl">Welcome to  Mahardika Ticket</h1> --}}
 	</div>
 
 	<!--image-->
@@ -55,11 +55,19 @@
 		<div class="mx-2 sm:mx-6">
 			<div class="shadow mb-8 rounded-xl bg-white w-full p-8 md:p-24 text-xl md:text-2xl text-gray-800 leading-normal" style="font-family:Georgia,serif;">
 				<!--Lead Para-->
-				<p class="text-2xl md:text-3xl mb-5">
+				<p class="text-2xl font-lato md:text-3xl">
 					{{ $blog->judul }}.
 				</p>
-				<blockquote class="border-l-4 border-green-500 italic my-8 pl-8 md:pl-12">
+				<p class="mb-5 text-sm font-lato italic text-indigo-700">
+					~ {{ $blog->nama_tempat }}
+				</p>
+				<blockquote class="border-l-4 font-lato border-green-500 my-8 pl-8 md:pl-12">
 					{{ $blog->deskripsi }}.
+					<div class="flex items-center justify-end">
+						<p class="text-sm font-lato">
+							{{ $blog->tanggal }}
+						</p>
+					</div>
 				</blockquote>
 
 				{{-- <p class="py-6">Example code block:</p>
@@ -85,15 +93,14 @@
 						<a href="#" class="no-underline hover:no-underline">
 								<img src="https://images.unsplash.com/photo-1600104654136-f6e2426ad471?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=751&q=80" class="h-48 object-cover object-top w-full rounded-t shadow-lg">
 								<div class="p-6 h-auto md:h-48">	
-									<p class="text-gray-600 text-xs md:text-sm">GETTING STARTED</p>
-									<div class="font-bold text-xl text-gray-900">Lorem ipsum dolor sit amet.</div>
-									<p class="text-gray-800 font-serif text-base mb-5">
+									<p class="text-gray-600 text-xs md:text-sm font-lato">GETTING STARTED</p>
+									<div class="font-bold text-xl text-gray-900 font-lato">Lorem ipsum dolor sit amet.</div>
+									<p class="text-gray-800 font-lato text-base mb-5">
 										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula. 
 									</p>
 								</div>
 								<div class="flex items-center justify-between inset-x-0 bottom-0 p-6">
-									<img class="w-8 h-8 rounded-full mr-4" src="http://i.pravatar.cc/300" alt="Avatar of Author">
-									<p class="text-gray-600 text-xs md:text-sm">2 MIN READ</p>
+									<p class="text-gray-600 text-xs font-lato md:text-sm">2 MIN READ</p>
 								</div>
 						</a>
 					</div>
@@ -103,15 +110,14 @@
 						<a href="#" class="no-underline hover:no-underline">
 								<img src="https://images.unsplash.com/photo-1629104300023-694ad6aa2431?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80" class="h-48 object-cover object-top w-full rounded-t shadow">
 								<div class="p-6 h-auto md:h-48">	
-									<p class="text-gray-600 text-xs md:text-sm">UNDERWATER</p>
-									<div class="font-bold text-xl text-gray-900">Biolumini algae diatomeae ecology.</div>
-									<p class="text-gray-800 font-serif text-base mb-5">
+									<p class="text-gray-600 text-xs font-lato md:text-sm">UNDERWATER</p>
+									<div class="font-bold text-xl font-lato text-gray-900">Biolumini algae diatomeae ecology.</div>
+									<p class="text-gray-800 font-lato text-base mb-5">
 										Lorem ipsum dolor sit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula. 
 									</p>
 								</div>
 								<div class="flex items-center justify-between inset-x-0 bottom-0 p-6">
-									<img class="w-8 h-8 rounded-full mr-4" src="http://i.pravatar.cc/300" alt="Avatar of Author">
-									<p class="text-gray-600 text-xs md:text-sm">4 MIN READ</p>
+									<p class="text-gray-600 text-xs font-lato md:text-sm">4 MIN READ</p>
 								</div>
 						</a>
 					</div>
@@ -121,15 +127,14 @@
 						<a href="#" class="no-underline hover:no-underline">
 								<img src="https://images.unsplash.com/photo-1608869843129-3da551dcde5a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" class="h-48 object-cover object-top w-full rounded-t shadow">
 								<div class="p-6 h-auto md:h-48">	
-									<p class="text-gray-600 text-xs md:text-sm">FOREST</p>
-									<div class="font-bold text-xl text-gray-900">What is life but a teardrop in the eye of infinity?</div>
-									<p class="text-gray-800 font-serif text-base mb-5">
+									<p class="text-gray-600 text-xs font-lato md:text-sm">FOREST</p>
+									<div class="font-bold text-xl font-lato text-gray-900">What is life but a teardrop in the eye of infinity?</div>
+									<p class="text-gray-800 font-lato text-base mb-5">
 										Mollis pretium integer eros et dui orci, lectus nec elit sagittis neque. Dignissim ac nullam semper aliquet volutpat, ut scelerisque.
 									</p>
 								</div>
 								<div class="flex items-center justify-between inset-x-0 bottom-0 p-6">
-									<img class="w-8 h-8 rounded-full mr-4" src="http://i.pravatar.cc/300" alt="Avatar of Author">
-									<p class="text-gray-600 text-xs md:text-sm">7 MIN READ</p>
+									<p class="text-gray-600 text-xs font-lato md:text-sm">7 MIN READ</p>
 								</div>
 						</a>
 					</div>

@@ -29,9 +29,11 @@ class HomeController extends Controller
     {  
         $akun = DB::table('users')->count();
         $ticket = DB::table('film')->count();
+        $blog = DB::table('blog')->count();
         return view('v_home', compact(
             'akun',
-            'ticket'
+            'ticket',
+            'blog'
         ));
     }
     

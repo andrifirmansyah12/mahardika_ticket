@@ -113,7 +113,7 @@
       <!--Posts Container-->
       <div class="flex flex-wrap justify-between pt-12 -mx-6">
         <!--1/3 col -->
-        @foreach ($blog as $data)
+        @forelse ($blog as $data)
         <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
           <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
             <a href="/homepage/detail{{ $data->id }}" class="flex flex-wrap no-underline hover:no-underline">
@@ -132,7 +132,12 @@
             </div>
           </div>
         </div>
-        @endforeach
+        @empty
+        <div class="flex items-center bg-yellow-500 text-white text-sm font-bold px-4 py-3" role="alert">
+          <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M12.432 0c1.34 0 2.01.912 2.01 1.957 0 1.305-1.164 2.512-2.679 2.512-1.269 0-2.009-.75-1.974-1.99C9.789 1.436 10.67 0 12.432 0zM8.309 20c-1.058 0-1.833-.652-1.093-3.524l1.214-5.092c.211-.814.246-1.141 0-1.141-.317 0-1.689.562-2.502 1.117l-.528-.88c2.572-2.186 5.531-3.467 6.801-3.467 1.057 0 1.233 1.273.705 3.23l-1.391 5.352c-.246.945-.141 1.271.106 1.271.317 0 1.357-.392 2.379-1.207l.6.814C12.098 19.02 9.365 20 8.309 20z"/></svg>
+          <p>Data Ticket Film Belum Tersedia</p>
+        </div>
+        @endforelse ($film as $data)
 
         <!--2/3 col -->
         <div class="w-full md:w-2/3 p-6 flex flex-col flex-grow flex-shrink">
@@ -167,6 +172,11 @@
       <!--/ Post Content-->   
     </div>
 
+    {{-- Pagination --}}
+    {{-- <div class="mb-3 bg-gray-200 text-gray-200">
+      {{ $blog->links() }}
+    </div> --}}
+
     <div class="flex flex-col gap-y-2 mt-20 items-center justify-center">
       <h1 class="text-4xl font-bold text-indigo-700 font-lato">Blog Newest</h1>
       <div class="border-b-2 w-20 border-yellow-600"></div>
@@ -198,7 +208,7 @@
       </div>
     </div>
 
-    <div class="shadow-md p-3 md:p-10 flex md:flex-row flex-col my-10 gap-3 md:gap-2">
+    <div class="shadow-md p-3 md:p-10 flex md:flex-row flex-col mb-20 gap-3 md:gap-2">
       <div class="flex items-center justify-center">
         <img class="w-full h-96 object-cover object-center" src="https://images.unsplash.com/photo-1502773860571-211a597d6e4b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" alt="">
       </div>

@@ -21,7 +21,7 @@
           <div class="p-2 sm:p-10 text-center cursor-pointer">
               <div class="py-16 max-w-sm rounded overflow-hidden shadow-lg hover:bg-white transition duration-500  bg-white">
                   <div class="space-y-10">
-                      <i class="fas fa-sticky-note" style="font-size:48px;"></i>
+                      <i class="fas fa-ticket-alt" style="font-size:48px;"></i>
                       
                       <div class="px-6 py-4">
                           <div class="space-y-5">
@@ -55,13 +55,13 @@
           <div class="p-2 sm:p-10 text-center cursor-pointer translate-x-2">
             <div class="py-16 max-w-sm rounded overflow-hidden shadow-lg hover:bg-white transition duration-500 bg-white ">
                 <div class="space-y-10">
-                    <i class="fa fa-head-side-mask" style="font-size:48px;"></i>
+                    <i class="fas fa-newspaper" style="font-size:48px;"></i>
                     
                     <div class="px-6 py-4">
                         <div class="space-y-5">
-                            <div class="font-bold text-xl mb-2">??</div>
+                            <div class="font-bold text-xl mb-2">Blog</div>
                             <p class="text-gray-700 text-base">
-                              ??
+                                {{ $blog }} Data
                             </p>
                         </div>
                     </div>
