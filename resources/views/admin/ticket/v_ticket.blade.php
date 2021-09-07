@@ -12,7 +12,7 @@
     <div class="">
       <form action="{{ url()->current() }}"
         method="get">
-        <div class="relative mx-auto">
+        <div class="mx-auto">
           <input type="search"
             name="keyword"
             value="{{ request('keyword') }}"
