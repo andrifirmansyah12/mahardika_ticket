@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" rel="stylesheet">
 
@@ -16,7 +17,19 @@
 
     <style>
       .font-lato {
-        font-family: 'Open Sans', sans-serif;
+        font-family: 'Montserrat', sans-serif;;
+      }
+
+      .text-blue-ticket{
+        color: #181863;
+      }
+
+      .border-blue-ticket{
+        border-color: #181863;
+      }
+
+      .bg-blue-ticket{
+        background-color: #181863;
       }
 
         #close {

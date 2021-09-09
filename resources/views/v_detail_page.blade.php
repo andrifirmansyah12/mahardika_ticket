@@ -16,7 +16,7 @@
   <div class="preloader bg-white">
     <div class="loading">
       <img src="{{ asset('mahardika_ticket/img/tenor.png') }}" width="80">
-      <p class="text-gray-600 font-bold py-2">Harap Tunggu</p>
+      <p class="text-blue-ticket font-bold py-2 font-lato">Harap Tunggu</p>
     </div>
   </div>
 
@@ -31,16 +31,16 @@
             </svg>
           </button>
         </div>
-        <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20" id="nav-content">
+        <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-blue-ticket p-4 lg:p-0 z-20" id="nav-content">
           <ul class="list-reset lg:flex justify-end flex-1 items-center">
             <li class="mr-3">
-              <a class="inline-block text-black no-underline font-sans hover:text-gray-800 hover:text-underline py-2 px-1" href="/homepage">Home</a>
+              <a class="font-lato inline-block text-blue-ticket no-underline font-sans hover:text-gray-800 hover:text-underline py-2 px-1" href="/homepage">Home</a>
             </li>
             <li class="mr-3">
-              <a class="inline-block text-black no-underline font-sans hover:text-gray-800 hover:text-underline py-2 px-1" href="/aboutus">About Us</a>
+              <a class="font-lato inline-block text-blue-ticket no-underline font-sans hover:text-gray-800 hover:text-underline py-2 px-1" href="/aboutus">About Us</a>
             </li>
             <li class="mr-3">
-              <a class="inline-block text-black no-underline font-sans hover:text-gray-800 hover:text-underline py-2 px-1" href="/contact">Contact</a>
+              <a class="font-lato inline-block text-blue-ticket no-underline font-sans hover:text-gray-800 hover:text-underline py-2 px-1" href="/contact">Contact</a>
             </li>
           </ul>
         </div>
@@ -55,33 +55,33 @@
           </div>
           <div class="flex flex-wrap">
             <div class="w-5/6 sm:w-1/2 pl-8 pt-8 md:pt-0 md:p-0">
-              <h3 class="px-0 md:px-8 xl:px-8 md:mt-16 mx-auto font-bold text-green-600 text-3xl md:text-5xl xl:text-5xl">
+              <h3 class="px-0 font-lato md:px-8 xl:px-8 md:mt-16 mx-auto font-bold text-blue-ticket text-3xl md:text-5xl xl:text-5xl">
                 {{ $film->judul }}
               </h3>
-              <p class="flex py-3 px-0 md:px-9 xl:px-9 text-red-600 text:md md:text-xl xl:text-xl">
+              <p class="flex py-3 font-lato px-0 md:px-9 xl:px-9 text-blue-ticket text:md md:text-xl xl:text-xl">
                 {{ $film->hari }}
-                <span class="px-4">{{ $film->tanggal }}</span>
+                <span class="px-4 font-lato">{{ $film->tanggal }}</span>
               </p>
-              <h3 class="px-0 md:px-8 xl:px-8 mx-auto text-2xl md:text-3xl xl:text-3xl font-bold text-red-600">
+              <h3 class="px-0 font-lato md:px-8 xl:px-8 mx-auto text-2xl md:text-3xl xl:text-3xl font-bold text-blue-ticket">
                 {{ $film->jam_tayang }}
               </h3>
             </div>
             <div class="w-full flex items-center justify-start md:justify-end sm:w-1/2 p-8 ">
               <div class="align-middle">
-                <h3 class="px-0 md:px-8 xl:px-8 line-through md:mt-16 mx-auto text-2xl md:text-3xl xl:text-3xl font-bold text-red-600">
+                <h3 class="px-0 font-lato md:px-8 xl:px-8 line-through md:mt-16 mx-auto text-2xl md:text-3xl xl:text-3xl font-bold text-red-600">
                   {{ $film->diskon }}
                 </h3>
-                <p class="py-3 px-0 md:px-8 xl:px-8 mx-auto text-black font-bold text-3xl md:text-4xl xl:text-5xl">
+                <p class="py-3 font-lato px-0 md:px-8 xl:px-8 mx-auto text-blue-ticket font-bold text-3xl md:text-4xl xl:text-5xl">
                   {{ $film->harga }}
                 </p>
               </div>
             </div>
             <div class="px-5">
-              <p class="mb-4 font-lato text-black px-3 justify-content font-serif text-justify">
+              <p class="mb-4 font-lato text-blue-ticket px-3 justify-content font-lato text-justify">
                 {{ $film->deskripsi_film }}
               </p>
               <div class="py-3 text-right">
-                <button class="mr-3 h-10 w-60 bg-green-600 rounded text-white">
+                <button class="mr-3 h-10 w-60 bg-blue-ticket font-lato rounded text-white">
                     Booking Ticket
                 </button>
             </div>

@@ -46,6 +46,11 @@ class HomePageController extends Controller
         return view('main.v_store');
     }
 
+    public function galeri()
+    {   
+        return view('main.v_galeri');
+    }
+
     public function latihan()
     {   
         return view('main.v_latihan');

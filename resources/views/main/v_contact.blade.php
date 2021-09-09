@@ -16,7 +16,7 @@
     <div class="preloader bg-white">
         <div class="loading">
           <img src="{{ asset('mahardika_ticket/img/tenor.png') }}" width="80">
-          <p class="text-gray-600 font-bold py-2">Harap Tunggu</p>
+          <p class="text-blue-ticket font-lato font-bold py-2">Harap Tunggu</p>
         </div>
     </div>
 
@@ -31,16 +31,16 @@
               </svg>
             </button>
           </div>
-          <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20" id="nav-content">
+          <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-blue-ticket font-lato p-4 lg:p-0 z-20" id="nav-content">
             <ul class="list-reset lg:flex justify-end flex-1 items-center">
               <li class="mr-3">
-                <a class="inline-block text-black no-underline font-sans hover:text-gray-800 hover:text-underline py-2 px-1" href="/homepage">Home</a>
+                <a class="inline-block text-blue-ticket font-lato no-underline hover:text-gray-800 hover:text-underline py-2 px-1" href="/homepage">Home</a>
               </li>
               <li class="mr-3">
-                <a class="inline-block text-black no-underline font-sans hover:text-gray-800 hover:text-underline py-2 px-1" href="/aboutus">About Us</a>
+                <a class="inline-block text-blue-ticket font-lato no-underline hover:text-gray-800 hover:text-underline py-2 px-1" href="/aboutus">About Us</a>
               </li>
               <li class="mr-3">
-                <a class="inline-block py-2 px-1 text-black font-bold font-sans no-underline" href="/contact">Contact</a>
+                <a class="inline-block py-2 px-1 text-blue-ticket font-lato font-bold no-underline" href="/contact">Contact</a>
               </li>
             </ul>
           </div>
@@ -48,13 +48,13 @@
     @endcomponent
 
     {{-- Content --}}
-    <div class="bg-gray-200">
+    <div class="bg-white">
         <div class="container mx-auto items-center">
             <div class="mt-14">
                 <div class="p-8 space-y-3">
-                    <div class="shadow-xl rounded-lg bg-white">
+                    <div class="shadow-md rounded-lg bg-white">
                         <div class="w-full text-center py-3">
-                            <p class="text-sm tracking-widest font-bold text-5xl text-gray-600 pt-3">Contact</p>
+                            <p class="text-sm tracking-widest font-bold text-5xl text-blue-ticket font-lato pt-3">Contact</p>
                         </div>
                         <div class="w-full mb-4">
                             <div class="h-1 mx-auto bg-gray-600 w-1/6 opacity-25 my-0 py-0 rounded-t"></div>
@@ -62,28 +62,28 @@
                         <div class="mt-8 container">
                             <div class="bg-white text-gray-700 rounded text-center border-2 border-gray-200">
                                 <div class="flex justify-center py-2">
-                                    <div class="bg-gray-200 rounded-full h-16 w-16 -mt-8 flex items-center justify-center">
-                                        <i class="fas fa-phone-alt text-gray-600 text-3xl">
+                                    <div class="bg-blue-ticket rounded-full h-16 w-16 -mt-8 flex items-center justify-center">
+                                        <i class="fas fa-phone-alt text-white text-3xl">
                                         </i>
                                     </div>
                                 </div>
                                 <div class="p-6 flex flex-wrap">
                                     <div class="w-full md:w-1/2 md:pr-32 order-3 md:order-1">
                                         <div class="max-w-md md:float-right md:text-right leading-loose tracking-tight md:sticky md:top-0 ">
-                                            <p class="font-bold text-xl my-2">Sosial Media</p>
+                                            <p class="font-bold text-blue-ticket font-lato text-xl my-2">Sosial Media</p>
                             
-                                            <ul class="flex flex-wrap justify-between flex-col">
+                                            <ul class="flex flex-wrap text-blue-ticket font-lato justify-between flex-col">
                                                 <li><a href="#" class="nav hover:text-gray-900"><i class="fab fa-whatsapp"></i> Whatsapp</a></li>
                                                 <li><a href="#" class="nav "><i class="fab fa-instagram"></i> Instagram</a></li>
                                                 <li><a href="#" class="nav "><i class="fab fa-facebook"></i> Facebook</a></li>
                                                 <li><a href="#" class="nav "><i class="fab fa-telegram"></i> Telegram</a></li>
                                             </ul>
-                                            <a href="#" class="normal font-bold hover:font-bold">more...</a>
+                                            <a href="#" class="normal text-blue-ticket font-lato font-bold hover:font-bold">more...</a>
                                         </div>
                                     </div>
                                     <div class="w-full md:w-1/2 order-1 md:order-2">
-                                        <div class="max-w-md leading-loose tracking-tight text-justify">
-                                            <h1 class="font-bold my-2 text-xl">Contact Me</h1>
+                                        <div class="max-w-md leading-loose text-blue-ticket font-lato tracking-tight text-justify">
+                                            <h1 class="font-bold my-2 text-blue-ticket font-lato text-xl">Contact Me</h1>
 
                                             <p class=""><i class="fas fa-phone pr-2"></i> (+026) - 7777</p>
                                             <p class=""><i class="fas fa-map-marker-alt pr-3"></i> Indonesia</p>
@@ -95,7 +95,7 @@
                                                     
                                                 </div>
                                             </div>
-                                            <div class="w-full md:w-full order-2 md:order-4">
+                                            <div class="w-full md:w-full text-blue-ticket font-lato order-2 md:order-4">
                                                 <div class="max-w-md leading-loose tracking-tight">
                                                     <p class="font-bold md:mt-10 md:mb-5">About Me</p>
                                     
@@ -113,7 +113,7 @@
                         </div>
                     </div>
                     <div class="shadow-xl rounded-lg bg-white">
-                        <h1 class="w-full tracking-widest py-3 text-5xl font-bold leading-tight text-center text-gray-600">
+                        <h1 class="w-full tracking-widest py-3 text-5xl font-bold leading-tight text-center text-blue-ticket font-lato">
                             Google Maps
                         </h1>
                         <div class="w-full mb-4">

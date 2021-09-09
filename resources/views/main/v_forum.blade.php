@@ -24,16 +24,16 @@
               </svg>
             </button>
           </div>
-          <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20" id="nav-content">
+          <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-blue-ticket p-4 lg:p-0 z-20" id="nav-content">
             <ul class="list-reset lg:flex justify-end flex-1 items-center">
               <li class="mr-3">
-                <a class="inline-block py-2 px-1 text-black font-bold font-sans no-underline" href="/homepage">Home</a>
+                <a class="inline-block py-2 px-1 text-blue-ticket font-bold font-sans no-underline" href="/homepage">Home</a>
               </li>
               <li class="mr-3">
-                <a class="inline-block text-black no-underline font-sans hover:text-gray-800 hover:text-underline py-2 px-1" href="/aboutus">About Us</a>
+                <a class="inline-block text-blue-ticket no-underline font-sans hover:text-gray-800 hover:text-underline py-2 px-1" href="/aboutus">About Us</a>
               </li>
               <li class="mr-3">
-                <a class="inline-block text-black no-underline font-sans hover:text-gray-800 hover:text-underline py-2 px-1" href="/contact">Contact</a>
+                <a class="inline-block text-blue-ticket no-underline font-sans hover:text-gray-800 hover:text-underline py-2 px-1" href="/contact">Contact</a>
               </li>
             </ul>
           </div>
@@ -55,16 +55,16 @@
 		<div class="mx-2 sm:mx-6">
 			<div class="shadow mb-8 rounded-xl bg-white w-full p-8 md:p-24 text-xl md:text-2xl text-gray-800 leading-normal" style="font-family:Georgia,serif;">
 				<!--Lead Para-->
-				<p class="text-2xl font-lato md:text-3xl">
+				<p class="text-2xl font-bold text-blue-ticket font-lato md:text-3xl">
 					{{ $blog->judul }}.
 				</p>
-				<p class="mb-5 text-sm font-lato italic text-indigo-700">
+				<p class="mb-5 text-sm font-lato italic text-blue-ticket">
 					~ {{ $blog->nama_tempat }}
 				</p>
-				<blockquote class="border-l-4 font-lato border-green-500 my-8 pl-8 md:pl-12">
+				<blockquote class="border-l-4 text-blue-ticket font-lato border-green-500 my-8 pl-8 md:pl-12">
 					{{ $blog->deskripsi }}.
 					<div class="flex items-center justify-end">
-						<p class="text-sm font-lato">
+						<p class="text-sm text-blue-ticket font-lato">
 							{{ $blog->tanggal }}
 						</p>
 					</div>
@@ -93,14 +93,14 @@
 						<a href="#" class="no-underline hover:no-underline">
 								<img src="https://images.unsplash.com/photo-1600104654136-f6e2426ad471?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=751&q=80" class="h-48 object-cover object-top w-full rounded-t shadow-lg">
 								<div class="p-6 h-auto md:h-48">	
-									<p class="text-gray-600 text-xs md:text-sm font-lato">GETTING STARTED</p>
-									<div class="font-bold text-xl text-gray-900 font-lato">Lorem ipsum dolor sit amet.</div>
-									<p class="text-gray-800 font-lato text-base mb-5">
+									<p class="text-blue-ticket text-blue-ticket text-xs md:text-sm font-lato">GETTING STARTED</p>
+									<div class="font-bold text-xl text-blue-ticket font-lato">Lorem ipsum dolor sit amet.</div>
+									<p class="text-blue-ticket font-lato text-base mb-5">
 										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula. 
 									</p>
 								</div>
 								<div class="flex items-center justify-between inset-x-0 bottom-0 p-6">
-									<p class="text-gray-600 text-xs font-lato md:text-sm">2 MIN READ</p>
+									<p class="text-blue-ticket text-xs font-lato md:text-sm">2 MIN READ</p>
 								</div>
 						</a>
 					</div>
@@ -110,14 +110,14 @@
 						<a href="#" class="no-underline hover:no-underline">
 								<img src="https://images.unsplash.com/photo-1629104300023-694ad6aa2431?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80" class="h-48 object-cover object-top w-full rounded-t shadow">
 								<div class="p-6 h-auto md:h-48">	
-									<p class="text-gray-600 text-xs font-lato md:text-sm">UNDERWATER</p>
-									<div class="font-bold text-xl font-lato text-gray-900">Biolumini algae diatomeae ecology.</div>
-									<p class="text-gray-800 font-lato text-base mb-5">
+									<p class="text-blue-ticket text-xs font-lato md:text-sm">UNDERWATER</p>
+									<div class="font-bold text-xl font-lato text-blue-ticket">Biolumini algae diatomeae ecology.</div>
+									<p class="text-blue-ticket font-lato text-base mb-5">
 										Lorem ipsum dolor sit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula. 
 									</p>
 								</div>
 								<div class="flex items-center justify-between inset-x-0 bottom-0 p-6">
-									<p class="text-gray-600 text-xs font-lato md:text-sm">4 MIN READ</p>
+									<p class="text-blue-ticket text-xs font-lato md:text-sm">4 MIN READ</p>
 								</div>
 						</a>
 					</div>
@@ -127,14 +127,14 @@
 						<a href="#" class="no-underline hover:no-underline">
 								<img src="https://images.unsplash.com/photo-1608869843129-3da551dcde5a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" class="h-48 object-cover object-top w-full rounded-t shadow">
 								<div class="p-6 h-auto md:h-48">	
-									<p class="text-gray-600 text-xs font-lato md:text-sm">FOREST</p>
-									<div class="font-bold text-xl font-lato text-gray-900">What is life but a teardrop in the eye of infinity?</div>
-									<p class="text-gray-800 font-lato text-base mb-5">
+									<p class="text-blue-ticket text-xs font-lato md:text-sm">FOREST</p>
+									<div class="font-bold text-xl font-lato text-blue-ticket">What is life but a teardrop in the eye of infinity?</div>
+									<p class="text-blue-ticket font-lato text-base mb-5">
 										Mollis pretium integer eros et dui orci, lectus nec elit sagittis neque. Dignissim ac nullam semper aliquet volutpat, ut scelerisque.
 									</p>
 								</div>
 								<div class="flex items-center justify-between inset-x-0 bottom-0 p-6">
-									<p class="text-gray-600 text-xs font-lato md:text-sm">7 MIN READ</p>
+									<p class="text-blue-ticket text-xs font-lato md:text-sm">7 MIN READ</p>
 								</div>
 						</a>
 					</div>

@@ -16,7 +16,7 @@
     <div class="preloader bg-white">
       <div class="loading">
         <img src="{{ asset('mahardika_ticket/img/tenor.png') }}" width="80">
-        <p class="text-gray-600 font-bold py-2">Harap Tunggu</p>
+        <p class="text-blue-ticket font-bold py-2 font-lato">Harap Tunggu</p>
       </div>
     </div>
 
@@ -31,29 +31,29 @@
               </svg>
             </button>
           </div>
-          <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20" id="nav-content">
+          <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-blue-ticket p-4 lg:p-0 z-20" id="nav-content">
             <ul class="list-reset lg:flex justify-end flex-1 items-center">
               <li class="mr-3">
-                <a class="inline-block py-2 px-1 text-black font-bold font-sans no-underline" href="/homepage">Home</a>
+                <a class="font-lato inline-block py-2 px-1 text-blue-ticket font-bold font-sans no-underline" href="/homepage">Home</a>
               </li>
               <li class="mr-3">
-                <a class="inline-block text-black no-underline font-sans hover:text-gray-800 hover:text-underline py-2 px-1" href="/aboutus">About Us</a>
+                <a class="font-lato inline-block text-blue-ticket no-underline font-sans hover:text-gray-800 hover:text-underline py-2 px-1" href="/aboutus">About Us</a>
               </li>
               <li class="mr-3">
-                <a class="inline-block text-black no-underline font-sans hover:text-gray-800 hover:text-underline py-2 px-1" href="/contact">Contact</a>
+                <a class="font-lato inline-block text-blue-ticket no-underline font-sans hover:text-gray-800 hover:text-underline py-2 px-1" href="/contact">Contact</a>
               </li>
             </ul>
           </div>
         @endsection
     @endcomponent
 
-    <section class="w-full bg-gray-200 bg-cover bg-center rounded-t-lg flex items-center justify-center" style="background-image: url({{ asset('mahardika_ticket/dist/img/img4.jpg') }});">
+    <section class="w-full bg-white bg-cover bg-center rounded-t-lg flex items-center justify-center" style="background-image: url({{ asset('mahardika_ticket/dist/img/img4.jpg') }});">
       <div class="container flex flex-wrap mx-auto px-2 pt-4 pb-12 text-gray-800">
-        <h1 class="w-full my-2 mt-16 text-5xl font-extrabold leading-tight text-center text-white">
+        <h1 class="w-full my-2 mt-16 text-5xl font-lato font-extrabold leading-tight text-center text-white">
           Best Seller
         </h1>
         @foreach ($film as $data)
-        <div class='flex max-w-sm w-70 shadow-2xl rounded-lg overflow-hidden mx-auto'>
+        <div class='flex max-w-sm w-70 shadow-md rounded-lg overflow-hidden mx-auto'>
           <div class='flex items-center w-full px-2 py-2'>
               <div class='mx-3 w-full'>
                   <div class="flex flex-row mb-6 mt-2">
@@ -69,26 +69,26 @@
     </section>
     
     @forelse ($film as $data)
-    <div class="w-full p-7 px-16 bg-gray-200 flex justify-center items-center">
-      <article class="sm:grid grid-cols-5 bg-white shadow-sm p-7 relative sm:p-4 rounded-lg lg:col-span-2 mt-4 lg:mt-0 py-4 px-8 shadow focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+    <div class="w-full p-7 px-16 bg-white flex justify-center items-center">
+      <article class="sm:grid grid-cols-5 bg-white border border-blue-ticket shadow-md p-7 relative sm:p-4 rounded-lg lg:col-span-2 mt-4 lg:mt-0 py-4 px-8 shadow focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
         <a class="cursor-pointer w-full rounded-lg" href="/ticketkonser/detail{{ $data->id }}"><img class="w-full h-44 object-cover object-center" src="{{ url('img-film/' . $data->foto)}}" alt="foto"></a>
         <div class="pt-5 space-y-2 self-center sm:pt-0 sm:pl-10 col-span-3">
-          <a href="/ticketkonser/detail{{ $data->id }}" class="mx-auto font-bold text-green-600 text-3xl md:text-5xl xl:text-5xl">
+          <a href="/ticketkonser/detail{{ $data->id }}" class="font-lato mx-auto font-bold text-blue-ticket text-3xl md:text-5xl xl:text-5xl">
             {{ $data->judul }}
           </a>
-          <p class="px-1 mx-auto text-black text-red-600">
+          <p class="px-1 font-lato mx-auto text-black text-blue-ticket">
             {{ $data->hari }}
-            <span class="px-4 font-semibold">{{ $data->tanggal }}</span>
+            <span class="px-4 font-lato font-semibold">{{ $data->tanggal }}</span>
           </p>
-          <h3 class="px-1 mx-auto text-2xl font-bold text-red-600">
+          <h3 class="px-1 mx-auto text-2xl font-lato font-bold text-blue-ticket">
             {{ $data->jam_tayang }}
           </h3>
         </div>
         <div class="justify-self-end mt-2">
-          <h3 class="line-through mx-auto text-1xl font-bold text-red-600">
+          <h3 class="line-through font-lato mx-auto text-1xl font-bold text-red-600">
             {{ $data->diskon }}
           </h3>
-          <p class="py-1 mx-auto text-black font-bold text-2xl md:text-4xl xl:text-4xl">
+          <p class="py-1 mx-auto font-lato text-blue-ticket font-bold text-2xl md:text-4xl xl:text-4xl">
             {{ $data->harga }}
           </p>
         </div>
@@ -101,7 +101,7 @@
     </div>
     @endforelse ($film as $data)
     
-    <div class="mb-3 bg-gray-200 text-gray-200">
+    <div class="mb-3 bg-white text-gray-200">
       {{ $film->links() }}
     </div>
 

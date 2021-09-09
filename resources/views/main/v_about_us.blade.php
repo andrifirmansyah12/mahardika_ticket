@@ -16,7 +16,7 @@
   <div class="preloader bg-white">
     <div class="loading">
       <img src="{{ asset('mahardika_ticket/img/tenor.png') }}" width="80">
-      <p class="text-gray-600 font-bold py-2">Harap Tunggu</p>
+      <p class="text-blue-ticket font-lato font-bold py-2">Harap Tunggu</p>
     </div>
   </div>
 
@@ -31,16 +31,16 @@
               </svg>
             </button>
           </div>
-          <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20" id="nav-content">
+          <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-blue-ticket p-4 lg:p-0 z-20" id="nav-content">
             <ul class="list-reset lg:flex justify-end flex-1 items-center">
               <li class="mr-3">
-                <a class="inline-block text-black no-underline font-sans hover:text-gray-800 hover:text-underline py-2 px-1" href="/homepage">Home</a>
+                <a class="inline-block text-blue-ticket no-underline font-lato hover:text-gray-800 hover:text-underline py-2 px-1" href="/homepage">Home</a>
               </li>
               <li class="mr-3">
-                <a class="inline-block py-2 px-1 text-black font-bold font-sans no-underline" href="/aboutus">About Us</a>
+                <a class="inline-block py-2 px-1 text-blue-ticket font-bold font-lato no-underline" href="/aboutus">About Us</a>
               </li>
               <li class="mr-3">
-                <a class="inline-block text-black no-underline font-sans hover:text-gray-800 hover:text-underline py-2 px-1" href="/contact">Contact</a>
+                <a class="inline-block no-underline text-blue-ticket font-lato hover:text-gray-800 hover:text-underline py-2 px-1" href="/contact">Contact</a>
               </li>
               <li class="mr-3">
                 {{-- <a class="inline-block text-black no-underline font-sans hover:text-gray-800 hover:text-underline py-2 px-1" href="/latihan">Latihan</a> --}}
@@ -50,13 +50,13 @@
         @endsection
     @endcomponent
 
-    <div class="bg-gray-200">
+    <div class="bg-white">
       <div class="container mx-auto items-center">
           <div class="mt-14">
               <div class="p-8 space-y-3">
-                  <div class="shadow-xl rounded-lg bg-white">
+                  <div class="shadow-md rounded-lg bg-white">
                       <div class="w-full text-center py-3">
-                          <p class="text-sm tracking-widest font-bold text-5xl text-gray-600 pt-3">
+                          <p class="text-sm tracking-widest font-bold font-lato text-5xl text-blue-ticket pt-3">
                             About Us
                           </p>
                       </div>
@@ -66,17 +66,17 @@
                       <div class="mt-8 container">
                         <div class="bg-white text-gray-700 rounded text-center border-2 border-gray-200">
                           <div class="flex justify-center py-2">
-                              <div class="bg-gray-200 rounded-full h-16 w-16 -mt-8 flex items-center justify-center">
-                                  <i class="fas fa-info text-gray-600 text-3xl">
+                              <div class="bg-blue-ticket rounded-full h-16 w-16 -mt-8 flex items-center justify-center">
+                                  <i class="fas fa-info text-white text-3xl">
                                   </i>
                               </div>
                           </div>
                           <div class="mt-6">
-                              <h1 class="text-3xl text-gray-600 font-bold">
+                              <h1 class="text-3xl font-lato text-blue-ticket font-bold">
                                 Mahardika Ticket
                               </h1>
                               <div class="p-3 mx-6">
-                                <p class="mt-1 text-gray-600 text-md text-justify">
+                                <p class="mt-1 font-lato text-blue-ticket text-md text-justify">
                                   Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                                   Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
                                   when an unknown printer took a galley of type and scrambled it
@@ -89,7 +89,7 @@
                               </div>
                           </div>
                           <a href="/contact" class="no-underline">
-                              <div class="mt-8 p-2 bg-gray-200 text-gray-600 font-bold hover:bg-gray-300 hover:text-gray-700"> 
+                              <div class="mt-8 p-2 bg-blue-ticket text-white font-bold hover:opacity-90 hover:text-gray-700"> 
                                 Contact Support
                               </div>
                           </a>

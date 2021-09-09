@@ -13,7 +13,6 @@
     @component("components.header_page")
     @endcomponent
 
-    <link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
     <!--Replace with your tailwind.css once created-->
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,400&display=swap" rel="stylesheet">
 
@@ -78,7 +77,7 @@
     <div class="preloader bg-white">
         <div class="loading">
           <img src="{{ asset('mahardika_ticket/img/tenor.png') }}" width="80">
-          <p class="text-gray-600 font-bold py-2">Harap Tunggu</p>
+          <p class="text-blue-ticket font-bold py-2 font-lato">Harap Tunggu</p>
         </div>
     </div>
 

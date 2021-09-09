@@ -16,7 +16,7 @@
     <div class="preloader bg-white">
       <div class="loading">
         <img src="{{ asset('mahardika_ticket/img/tenor.png') }}" width="80">
-        <p class="text-gray-600 font-bold py-2">Harap Tunggu</p>
+        <p class="text-blue-ticket font-bold py-2 font-lato">Harap Tunggu</p>
       </div>
     </div>
 
@@ -31,16 +31,16 @@
               </svg>
             </button>
           </div>
-          <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20" id="nav-content">
+          <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-blue-ticket p-4 lg:p-0 z-20" id="nav-content">
             <ul class="list-reset lg:flex justify-end flex-1 items-center">
               <li class="mr-3">
-                <a class="inline-block py-2 px-1 text-black font-bold font-sans no-underline" href="/homepage">Home</a>
+                <a class="font-lato inline-block py-2 px-1 text-blue-ticket font-bold font-sans no-underline" href="/homepage">Home</a>
               </li>
               <li class="mr-3">
-                <a class="inline-block text-black no-underline font-sans hover:text-gray-800 hover:text-underline py-2 px-1" href="/aboutus">About Us</a>
+                <a class="font-lato inline-block text-blue-ticket no-underline font-sans hover:text-gray-800 hover:text-underline py-2 px-1" href="/aboutus">About Us</a>
               </li>
               <li class="mr-3">
-                <a class="inline-block text-black no-underline font-sans hover:text-gray-800 hover:text-underline py-2 px-1" href="/contact">Contact</a>
+                <a class="font-lato inline-block no-underline text-blue-ticket font-sans hover:text-gray-800 hover:text-underline py-2 px-1" href="/contact">Contact</a>
               </li>
             </ul>
           </div>
@@ -51,10 +51,10 @@
 	<div class="w-full m-0 p-0 bg-cover bg-bottom" >
     <div class="container max-w-4xl mx-auto pt-32 text-center break-normal">
       <!--Title-->
-        <p class="text-gray-600 font-extrabold text-3xl md:text-5xl">
+        <p class="font-lato text-blue-ticket font-extrabold text-3xl md:text-5xl">
           Mahardika Ticket
         </p>
-        <p class="text-xl md:text-2xl text-gray-500">Welcome to my Blog</p>
+        <p class="font-lato text-xl md:text-2xl text-blue-ticket">Welcome to my Blog</p>
     </div>
   </div>
   
@@ -70,16 +70,16 @@
           <div class="flex w-1/2 pl-4 text-sm">
             <ul class="list-reset flex justify-between flex-1 md:flex-none items-center font-bold">
               <li class="mr-2">
-              <a class="inline-block py-2 px-2 text-gray-600 hover:text-white no-underline hover:bg-indigo-600" href="/store">STORE</a>
+              <a class="font-lato inline-block py-2 px-2 text-blue-ticket hover:text-white no-underline hover:bg-indigo-600" href="/store">STORE</a>
               </li>
               <li class="mr-2">
-              <a class="inline-block text-gray-600 hover:text-white no-underline py-2 px-2 hover:bg-indigo-600" href="/ticketkonser">TICKET</a>
+              <a class="font-lato inline-block text-blue-ticket hover:text-white no-underline py-2 px-2 hover:bg-indigo-600" href="/ticketkonser">TICKET</a>
               </li>
               <li class="mr-2">
-              <a class="inline-block text-gray-600 hover:text-white no-underline py-2 px-2 hover:bg-indigo-600" href="#">GALERI</a>
+              <a class="font-lato inline-block text-blue-ticket hover:text-white no-underline py-2 px-2 hover:bg-indigo-600" href="/galeri">GALERI</a>
               </li>
               <li class="mr-2">
-              <a class="inline-block text-gray-600 hover:text-white no-underline py-2 px-2 hover:bg-indigo-600" href="/latihan">POST VUE</a>
+              <a class="font-lato inline-block text-blue-ticket hover:text-white no-underline py-2 px-2 hover:bg-indigo-600" href="/latihan">POST VUE</a>
               </li>
             </ul>
           </div>
@@ -119,16 +119,16 @@
             <a href="/homepage/detail{{ $data->id }}" class="flex flex-wrap no-underline hover:no-underline">
               <img src="{{ url('img-blog/' . $data->foto)}}" 
                 class="h-64 w-full object-cover object-top rounded-t pb-6">
-              <p class="w-full text-gray-600 font-lato text-xs md:text-sm px-6">{{ $data->nama_tempat }}</p>
-              <div class="w-full font-bold font-lato text-xl text-gray-900 px-6">{{ $data->judul }}</div>
-              <p class="text-gray-800 font-lato text-base px-6 mb-5">
+              <p class="w-full text-blue-ticket font-lato text-xs md:text-sm px-6">{{ $data->nama_tempat }}</p>
+              <div class="w-full font-bold font-lato text-xl text-blue-ticket px-6">{{ $data->judul }}</div>
+              <p class="text-blue-ticket font-lato text-base px-6 mb-5">
                 {{ $data->deskripsi }}
               </p>
             </a>
             </div>
           <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow-lg p-6">
             <div class="flex items-center justify-end">
-              <p class="text-gray-600 text-xs md:text-sm">{{ $data->tanggal }}</p>
+              <p class="text-blue-ticket text-xs md:text-sm">{{ $data->tanggal }}</p>
             </div>
           </div>
         </div>
@@ -178,7 +178,7 @@
     </div> --}}
 
     <div class="flex flex-col gap-y-2 mt-20 items-center justify-center">
-      <h1 class="text-4xl font-bold text-indigo-700 font-lato">Blog Newest</h1>
+      <h1 class="text-4xl font-bold text-blue-ticket font-lato">Blog Newest</h1>
       <div class="border-b-2 w-20 border-yellow-600"></div>
     </div>
 
@@ -190,16 +190,16 @@
             <div class="h-full bg-white rounded overflow-hidden shadow-md hover:shadow-lg relative smooth">
               <img src="{{ url('img-blog/' . $data->foto)}}" class="h-48 object-cover object-top w-full rounded-t shadow-lg">
               <div class="p-6 h-auto md:h-48">	
-                <p class="text-gray-600 text-xs md:text-sm font-lato">GETTING STARTED</p>
+                <p class="text-blue-ticket text-xs md:text-sm font-lato">{{ $data->nama_tempat }}</p>
                 <a href="/homepage/detail{{ $data->id }}" class="no-underline hover:no-underline">
-                <div class="font-bold text-xl font-lato text-gray-900">{{ $data->judul }}.</div>
+                <div class="font-bold text-xl font-lato text-blue-ticket">{{ $data->judul }}.</div>
                 </a>
-                <p class="text-gray-800 font-lato text-base mb-5">
+                <p class="text-blue-ticket font-lato text-base mb-5">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula. 
                 </p>
               </div>
               <div class="flex items-center justify-end inset-x-0 bottom-0 p-6">
-                <p class="text-gray-600 text-xs md:text-sm">2 MIN READ</p>
+                <p class="text-blue-ticket text-xs md:text-sm">2 MIN READ</p>
               </div>
             </div>
           </div>
@@ -215,19 +215,19 @@
       <div>
         <form action="{{route('send-mail')}}" class="form bg-white p-0 md:p-6 relative" method="POST">
           @csrf
-          <h3 class="text-2xl text-gray-900 font-semibold">Let us call you!</h3>
+          <h3 class="font-lato text-2xl text-gray-900 font-semibold">Let us call you!</h3>
           <p class="text-gray-600"> To help you choose your property</p>
           <div class="flex space-x-5 mt-3">
-              <input type="text" name="name" id="name" placeholder="Your Name" class="border p-2 text-gray-600 w-1/2 " required>
-              <input type="tel" name="number" id="number" placeholder="Your Number" class="border text-gray-600 p-2 w-1/2 " required>
+              <input type="text" name="name" id="name" placeholder="Your Name" class="font-lato border p-2 text-gray-600 w-1/2 " required>
+              <input type="tel" name="number" id="number" placeholder="Your Number" class="font-lato border text-gray-600 p-2 w-1/2 " required>
           </div>
-          <input type="email" name="email" id="email" placeholder="Your Email" class="border text-gray-600 p-2 w-full mt-3" required>
-          <textarea name="message" id="message" cols="10" rows="3" placeholder="Tell us about desired property" class="text-gray-600 border p-2 mt-3 w-full" required></textarea>
+          <input type="email" name="email" id="email" placeholder="Your Email" class="font-lato border text-gray-600 p-2 w-full mt-3" required>
+          <textarea name="message" id="message" cols="10" rows="3" placeholder="Tell us about desired property" class="font-lato text-gray-600 border p-2 mt-3 w-full" required></textarea>
             @if (Session::has('message_sent'))
             <div class="flex bg-green-200 p-4">
               <div class="mr-4">
                 <div class="h-10 w-10 text-white bg-green-600 rounded-full flex justify-center items-center">
-                  <i class="material-icons">done</i>
+                  <i class="font-lato material-icons">done</i>
                 </div>
               </div>
               <div class="flex justify-between w-full">
@@ -245,7 +245,7 @@
               </div>
             </div>
             @endif
-          <button type="submit" class="w-full mt-6 bg-gray-700 hover:bg-gray-500 text-white font-semibold p-3">Submit</button>
+          <button type="submit" class="font-lato w-full mt-6 bg-blue-ticket hover:opacity-90 text-white font-semibold p-3">Submit</button>
         </form>
       </div>
     </div>

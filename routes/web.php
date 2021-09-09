@@ -79,7 +79,7 @@ Route::get('/aboutus', [HomePageController::class, 'aboutUs'])->name('aboutUs');
 Route::get('/contact', [HomePageController::class, 'contact'])->name('contact');
 Route::get('/ticketkonser', [TicketPageController::class, 'ticket'])->name('ticket');
 Route::get('/ticketkonser/detail{id}', [TicketPageController::class, 'detail']);
-Route::get('/forum', [HomePageController::class, 'forum'])->name('forum');
+Route::get('/galeri', [HomePageController::class, 'galeri'])->name('galeri');
 Route::get('/store', [HomePageController::class, 'store'])->name('store');
 Route::get('/latihan', [HomePageController::class, 'latihan'])->name('latihan');
 
