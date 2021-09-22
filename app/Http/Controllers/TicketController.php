@@ -14,7 +14,7 @@ class TicketController extends Controller
     }
     
     public function index(Request $request){
-        $pagination = 3;
+        $pagination = 5;
         $data = [
             'film' => $this->TicketModel::when($request->keyword, function ($query) use ($request) {
                 $query

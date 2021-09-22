@@ -14,6 +14,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
+
      <!-- Ionicons -->
      <link rel="stylesheet" href="{{ asset('Login_inv/bower_components/Ionicons/css/ionicons.min.css') }}">
      <!-- iCheck -->
@@ -23,8 +25,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <style>
         .body-bg {
-            background-color: #9921e8;
-            background-image: linear-gradient(315deg, #9921e8 0%, #5f72be 74%);
+            background-color: #181863;
+            background-image: linear-gradient(315deg, #181863 0%);
         }
         .modal {
         transition: opacity 0.25s ease;
@@ -33,9 +35,24 @@
         overflow-x: hidden;
         overflow-y: visible !important;
         }
+        .font-lato {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .text-blue-ticket{
+            color: #181863;
+        }
+
+        .border-blue-ticket{
+            border-color: #181863;
+        }
+
+        .bg-blue-ticket{
+            background-color: #181863;
+        }
     </style>
 </head>
-<body class="body-bg min-h-screen pt-12 md:pt-20 pb-6 px-2 md:px-0" style="font-family:'Lato',sans-serif;">
+<body class="body-bg min-h-screen pt-12 md:pt-20 pb-6 px-2 md:px-0" style="font-family: 'Montserrat', sans-serif;">
     <header class="max-w-lg mx-auto">
         <a href="#">
             <h1 class="text-4xl font-bold text-white text-center">Mahardika Ticket</h1>
@@ -44,20 +61,20 @@
 
     <main class="bg-white max-w-lg mx-auto p-8 md:p-12 my-10 rounded-lg shadow-2xl">
         <section>
-            <h3 class="font-bold text-2xl">Welcome to Mahardika Ticket</h3>
-            <p class="text-gray-600 pt-2">Sign in to your account.</p>
+            <h3 class="font-bold text-blue-ticket text-2xl">Welcome to Mahardika Ticket</h3>
+            <p class="text-blue-ticket opacity-80 pt-2">Sign in to your account.</p>
         </section>
 
         <section class="mt-10">
             <form class="flex flex-col" method="POST" action="{{ route('login') }}">
                 @csrf
                 <div class="mb-6 pt-3 rounded bg-gray-200">
-                    <label class="block text-gray-700 text-sm font-bold mb-2 ml-3" for="email">Email</label>
+                    <label class="block text-blue-ticket text-sm font-bold mb-2 ml-3" for="email">Email</label>
                     <input 
                         type="text" 
                         id="email" 
                         name="email"
-                        class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3">
+                        class="bg-gray-200 rounded w-full text-blue-ticket focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3">
                 </div>
 
                 {{-- Email Error --}}
@@ -67,7 +84,7 @@
                     <span class="font-semibold text-red-500 dark:text-red-400"
                         >Error!</span
                     >
-                    <p class="text-sm text-gray-600 dark:text-gray-200">
+                    <p class="text-sm text-blue-ticket dark:text-blue-ticket">
                         {{ $message }}
                     </p>
                   </div>
@@ -75,13 +92,13 @@
                 @enderror
 
                 <div class="mb-6 pt-3 rounded bg-gray-200">
-                    <label class="block text-gray-700 text-sm font-bold mb-2 ml-3" for="password">Password</label>
+                    <label class="block text-blue-ticket text-sm font-bold mb-2 ml-3" for="password">Password</label>
                     <div class="flex">
                     <input 
                         type="password" 
                         id="password" 
                         name="password"
-                        class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3">
+                        class="bg-gray-200 rounded w-full text-blue-ticket focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3">
                     <span class="fa fa-eye-slash form-control-feedback view_password px-3"></span> 
                     </div>   
                 </div>
@@ -93,7 +110,7 @@
                     <span class="font-semibold text-red-500 dark:text-red-400"
                         >Error</span
                     >
-                    <p class="text-sm text-gray-600 dark:text-gray-200">
+                    <p class="text-sm text-blue-ticket dark:text-blue-ticket">
                         {{ $message }}
                     </p>
                     </div>
@@ -103,7 +120,7 @@
                 @if (session('status'))
                 <div class="px-4 py-2 -mx-3" role="alert">
                     <div class="mx-3">
-                    <p class="text-sm text-gray-600 dark:text-gray-200">
+                    <p class="text-sm text-blue-ticket dark:text-blue-ticket">
                         {{session('status')}}
                     </p>
                     </div>
@@ -113,7 +130,7 @@
                 @guest
                 <div class="flex justify-end">
                     @if (Route::has('password.request'))
-                        <a class="text-sm text-purple-600 hover:text-purple-700 hover:underline mb-6" href="{{ route('password.request') }}">
+                        <a class="text-sm text-blue-ticket hover:opacity-90 hover:underline mb-6" href="{{ route('password.request') }}">
                             {{ __('Forgot Your Password?') }}
                         </a>
                     @endif
@@ -123,7 +140,7 @@
                 <button 
                     name="signin" 
                     id="signin"
-                    class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 rounded shadow-lg hover:shadow-xl transition duration-200" 
+                    class="bg-blue-ticket text-white font-bold py-2 rounded shadow-lg hover:shadow-xl transition duration-200" 
                     type="submit"
                     >
                         Sign In
@@ -158,7 +175,7 @@
             <!--Title-->
             <div class="modal-overlay relative flex items-center px-10 justify-between py-3 shadow-md">
                 <div>
-                    <p class="text-2xl font-bold">Mahardika Ticket</p>
+                    <p class="text-2xl font-lato text-blue-ticket font-bold">Mahardika Ticket</p>
                 </div>
                 <div class="modal-close cursor-pointer z-50">
                     <svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
@@ -170,11 +187,11 @@
             <div class="modal-content py-4 text-left px-6 ">
                 <!--Body-->
 
-                <div class="px-5 space-y-5 py-5 overflow-y-auto h-80">
+                <div class="px-5 space-y-5 py-5 font-lato text-blue-ticket overflow-y-auto h-80">
                     <p class="text-2xl">
                         Privacy Policy
                     </p>
-                    <p class=""> 
+                    <p class="font-lato text-blue-ticket"> 
                         A privacy policy is a statement or legal document (in privacy law)
                         that discloses some or all of the ways a party gathers, uses, discloses,
                         and manages a customer or client's data. Personal information can be anything
@@ -195,7 +212,7 @@
             <!--Footer-->
             <div class="border-t-2 border-gray-200">
                 <div class="flex justify-end py-3 px-5 shadow-md">
-                    <button class="modal-close px-5 py-2 bg-indigo-700 font-semibold tracking-widest text-white">
+                    <button class="modal-close px-5 py-2 bg-blue-ticket font-lato text-white font-semibold tracking-widest text-white">
                         Confirm
                     </button>
                 </div>

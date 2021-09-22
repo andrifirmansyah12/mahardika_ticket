@@ -6,20 +6,20 @@
   <div class="mb-5 flex justify-between">
     <div class="mt-2">
       <button class="bg-blue-500 hover:bg-blue-700 text-white p-2 text-sm font-bold rounded">
-        <a href="/akun/tambah">Tambah</a>
+        <a href="/ticket/tambah">Tambah</a>
       </button>
     </div>
     <div class="">
       <form action="{{ url()->current() }}"
         method="get">
-        <div class="mx-auto">
+        <div class="mx-auto flex items-center justfy-center">
           <input type="search"
             name="keyword"
             value="{{ request('keyword') }}"
             placeholder="Search ....."
             class="block w-full py-3 pl-4 pr-10 text-sm leading-5 rounded-full shadow-sm">
           <button type="submit"
-            class="absolute top-1 right-0 inline-flex items-center px-2 py-2 ml-1 mr-2 text-sm focus:outline-none">
+            class="absolute inline-flex right-10 items-center px-2 py-2 ml-1 mr-2 text-sm focus:outline-none">
             <svg class="w-5 h-5 text-gray-500 transition dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 disabled:opacity-25"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"

@@ -14,7 +14,7 @@ class AkunController extends Controller
     }
 
     public function index(Request $request){
-        $pagination = 3;
+        $pagination = 5;
         $data = [
             'akun' => $this->AkunModel::when($request->keyword, function ($query) use ($request) {
                 $query

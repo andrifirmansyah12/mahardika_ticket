@@ -14,7 +14,7 @@ class BlogController extends Controller
     }
 
     public function index(Request $request){
-        $pagination = 3;
+        $pagination = 5;
         $data = [
             'blog' => $this->BlogModel::when($request->keyword, function ($query) use ($request) {
                 $query

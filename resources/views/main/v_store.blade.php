@@ -73,13 +73,6 @@
 </head>
 
 <body class="max-w-screen-2xl mx-auto bg-white text-gray-600 work-sans leading-normal text-base tracking-normal">
-    {{-- loader --}}
-    <div class="preloader bg-white">
-        <div class="loading">
-          <img src="{{ asset('mahardika_ticket/img/tenor.png') }}" width="80">
-          <p class="text-blue-ticket font-bold py-2 font-lato">Harap Tunggu</p>
-        </div>
-    </div>
 
     <!--Nav-->
     <nav id="header" class="max-w-screen-2xl mx-auto shadow fixed bg-white border-b-2 border-gray-200 w-full z-30 top-0 py-1">
@@ -114,7 +107,7 @@
 
             <div class="order-2 md:order-3 flex items-center" id="nav-content">
 
-                <div id="userButton" class="relative mt-2">
+                {{-- <div id="userButton" class="relative mt-2">
                     <a class="inline-block no-underline hover:text-black" href="#">
                         <svg class="fill-current hover:text-black" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                             <circle fill="none" cx="12" cy="7" r="3" />
@@ -125,11 +118,10 @@
 						<ul class="list-reset">
 							<li><a href="#" class="px-4 py-2 block text-gray-100 hover:bg-gray-800 no-underline hover:no-underline">Login</a></li>
 							<li><a href="#" class="px-4 py-2 block text-gray-100 hover:bg-gray-800 no-underline hover:no-underline">Notifications</a></li>
-							{{-- <li><hr class="border-t mx-2 border-gray-400"></li>
-							<li><a href="#" class="px-4 py-2 block text-gray-100 hover:bg-gray-800 no-underline hover:no-underline">Logout</a></li> --}}
+							<li><a href="#" class="px-4 py-2 block text-gray-100 hover:bg-gray-800 no-underline hover:no-underline">Logout</a></li>
 						</ul>
 					</div>
-                </div>
+                </div> --}}
                 
                 <div id="shopButton" class="relative mt-2">
                     <a class="link pl-3 inline-block no-underline hover:text-black" href="#" data-tippy-content="Keranjang">

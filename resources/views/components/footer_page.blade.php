@@ -18,3 +18,14 @@
       </div>
     </div>
 </footer>
+
+<div class="preloader bg-white">
+  <div class="loading flex flex-col items-center justify-center">
+    <div class="text-blue-ticket text-center font-bold mb-20 text-5xl">
+      <p>MAHARDIKA</p>
+      <p>TICKET</p>
+    </div>
+    <img src="{{ asset('mahardika_ticket/img/img-loader1.gif') }}">
+    <p class="text-blue-ticket font-bold py-2">Harap Tunggu</p>
+  </div>
+</div>

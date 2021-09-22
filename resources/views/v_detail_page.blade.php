@@ -13,13 +13,6 @@
 </head>
 <body class="leading-normal tracking-normal bg-white text-white" style="font-family: 'Source Sans Pro', sans-serif;">
 
-  <div class="preloader bg-white">
-    <div class="loading">
-      <img src="{{ asset('mahardika_ticket/img/tenor.png') }}" width="80">
-      <p class="text-blue-ticket font-bold py-2 font-lato">Harap Tunggu</p>
-    </div>
-  </div>
-
     <!-- Nav -->
     @component("components.nav_page")
       @section('nav')

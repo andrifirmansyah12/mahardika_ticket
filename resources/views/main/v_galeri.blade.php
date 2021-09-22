@@ -13,13 +13,6 @@
 </head>
 <body class="max-w-screen-2xl mx-auto leading-normal tracking-normal bg-white text-white" style="font-family: 'Source Sans Pro', sans-serif;">
 
-    <div class="preloader bg-white">
-      <div class="loading">
-        <img src="{{ asset('mahardika_ticket/img/tenor.png') }}" width="80">
-        <p class="text-blue-ticket font-bold py-2 font-lato">Harap Tunggu</p>
-      </div>
-    </div>
-
     <!-- Nav -->
     @component("components.nav_page")
     @section('nav')
@@ -50,11 +43,11 @@
     <!-- component -->
     <!-- Create By Joker Banny -->
     <div class="pt-28 flex items-center justify-center">
-        <h1 class="text-blue-ticket  font-lato text-5xl font-bold">GALERI</h1>
+        <h1 class="text-blue-ticket font-lato text-5xl font-bold">GALERI</h1>
     </div>
     <div class="flex flex-col gap-y-10 bg-blue-ticket flex justify-center items-center py-20 mt-8">
         <div class="container mx-auto p-12 bg-gray-100 rounded-xl">
-            <h1 class="text-4xl uppercase text-gray-700 font-bold from-current mb-8">TEAM WORK</h1>
+            <h1 class="text-4xl uppercase text-blue-ticket font-lato font-bold from-current mb-8">TEAM WORK</h1>
             <!-- Box-1 -->
             <div class="sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-4 space-y-4 sm:space-y-0">
                 <div class="bg-white">
@@ -103,7 +96,7 @@
             </div>
         </div>
         <div class="container mx-auto p-12 bg-gray-100 rounded-xl">
-            <h1 class="text-4xl uppercase text-gray-700 font-bold from-current mb-8">PEOPLE</h1>
+            <h1 class="text-4xl uppercase text-blue-ticket font-lato font-bold from-current mb-8">PEOPLE</h1>
             <!-- Box-1 -->
             <div class="sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-4 space-y-4 sm:space-y-0">
                 <div class="bg-white">

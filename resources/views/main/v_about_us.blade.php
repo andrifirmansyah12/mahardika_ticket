@@ -13,13 +13,6 @@
 </head>
 <body class="max-w-screen-2xl mx-auto leading-normal tracking-normal bg-white text-white" style="font-family: 'Source Sans Pro', sans-serif;">
 
-  <div class="preloader bg-white">
-    <div class="loading">
-      <img src="{{ asset('mahardika_ticket/img/tenor.png') }}" width="80">
-      <p class="text-blue-ticket font-lato font-bold py-2">Harap Tunggu</p>
-    </div>
-  </div>
-
     <!-- Nav -->
     @component("components.nav_page")
     @section('nav')
@@ -89,7 +82,7 @@
                               </div>
                           </div>
                           <a href="/contact" class="no-underline">
-                              <div class="mt-8 p-2 bg-blue-ticket text-white font-bold hover:opacity-90 hover:text-gray-700"> 
+                              <div class="mt-8 p-2 bg-white border border-blue-ticket text-blue-ticket font-bold hover:opacity-90"> 
                                 Contact Support
                               </div>
                           </a>
