@@ -2,14 +2,14 @@
 @section('title','Ticket Film')
 
 @section('content')
-<div class="flex-1">
-  <div class="mb-5 flex justify-between">
+<div class="">
+  <div class="flex justify-between">
     <div class="mt-2">
       <button class="bg-blue-500 hover:bg-blue-700 text-white p-2 text-sm font-bold rounded">
         <a href="/ticket/tambah">Tambah</a>
       </button>
     </div>
-    <div class="">
+    <div class="mt-2">
       <form action="{{ url()->current() }}"
         method="get">
         <div class="mx-auto flex items-center justfy-center">
@@ -19,7 +19,7 @@
             placeholder="Search ....."
             class="block w-full py-3 pl-4 pr-10 text-sm leading-5 rounded-full shadow-sm">
           <button type="submit"
-            class="absolute inline-flex right-10 items-center px-2 py-2 ml-1 mr-2 text-sm focus:outline-none">
+            class="relative inline-flex right-10 items-center px-2 py-2 ml-1 mr-2 text-sm focus:outline-none">
             <svg class="w-5 h-5 text-gray-500 transition dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 disabled:opacity-25"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
@@ -96,12 +96,13 @@
                   <div class="text-sm text-gray-900">{{$data->judul}}</div>
                 </td>
                 <td class="px-6 py-4">
-                  <!--Open modal button-->
+                  <div class="text-sm w-32 text-gray-900 overflow-hidden overflow-ellipsis whitespace-nowrap">{{$data->deskripsi_film}}</div>
+                  {{-- <!--Open modal button-->
                   <div>    
                     <button id="buttonmodal" data-toggle="modal" data-target="#detail{{ $data->id }}" class="focus:outline-none p-2 text-sm bg-purple-600 text-black rounded-lg hover:text-white" type="button">
                       Lihat
                     </button>
-                  </div>
+                  </div> --}}
                 </td>
                 <td class="px-6 py-4 whitespace-nowrap">
                   <div class="text-sm text-gray-900">{{$data->harga}}</div>
@@ -137,7 +138,7 @@
     </div>
   </div>
 
-  @foreach ($film as $data)
+  {{-- @foreach ($film as $data)
   <div id="modal"
     class="fixed top-0 left-0 w-screen h-screen flex items-center justify-center transform scale-0 transition-transform duration-300">
     <!-- Modal content -->
@@ -160,6 +161,6 @@
       </p>
     </div>
   </div>
-  @endforeach
+  @endforeach --}}
 
 @endsection

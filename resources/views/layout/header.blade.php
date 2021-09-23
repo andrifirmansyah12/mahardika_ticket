@@ -4,6 +4,7 @@
 <!-- flickity.css -->
 <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
 
 {{-- Data Tables --}}
 {{-- <script type="text/javascript" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
@@ -18,6 +19,10 @@
     .upgrade-btn:hover { background: #181863; }
     .active-nav-link { background: #181863; }
     .account-link:hover { background: #181863; }
+
+    .font-lato {
+        font-family: 'Montserrat', sans-serif;;
+      }
 
     .text-blue-ticket{
         color: #181863;
