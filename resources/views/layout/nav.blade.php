@@ -1,4 +1,4 @@
-<aside class="relative bg-white h-screen w-64 hidden sm:block shadow-xl">
+<aside class="relative z-10 bg-white h-screen w-64 hidden sm:block shadow-xl">
     <div class="flex items-center space-x-3 p-6">
         <button class="realtive z-10 w-12 h-12">
             <img class="" src="{{ asset('mahardika_ticket/dist/img/logo9.png') }}">

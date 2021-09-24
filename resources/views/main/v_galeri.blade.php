@@ -42,10 +42,10 @@
 
     <!-- component -->
     <!-- Create By Joker Banny -->
-    <div class="pt-28 flex items-center justify-center">
-        <h1 class="text-blue-ticket font-lato text-5xl font-bold">GALERI</h1>
-    </div>
-    <div class="flex flex-col gap-y-10 bg-blue-ticket flex justify-center items-center py-20 mt-8">
+    <div class="flex flex-col gap-y-10 bg-blue-ticket flex justify-center items-center py-20">
+        <div class="pt-8 flex items-center justify-center">
+            <h1 class="text-white font-lato text-5xl font-bold">GALERI</h1>
+        </div>
         <div class="container mx-auto p-12 bg-gray-100 rounded-xl">
             <h1 class="text-4xl uppercase text-blue-ticket font-lato font-bold from-current mb-8">TEAM WORK</h1>
             <!-- Box-1 -->

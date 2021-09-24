@@ -44,7 +44,7 @@
         </header>
 
         <!-- Mobile Header & Nav -->
-        <header x-data="{ isOpen: false }" class="w-full bg-white py-5 px-6 sm:hidden">
+        <header x-data="{ isOpen: false }" class="relative shadow-xl w-full bg-white py-5 px-6 sm:hidden">
             <div class="flex items-center justify-between">
                 <button @click="isOpen = !isOpen" class="realtive z-10 w-12 h-12">
                     <img class="" src="{{ asset('mahardika_ticket/dist/img/logo9.png') }}">
@@ -118,6 +118,17 @@
                 @yield('content')
                 
             </main>
+
+            <div class="fixed w-full h-full preloader bg-white">
+                <div class="loading mt-32 md:mr-48 flex flex-col items-center justify-center">
+                    <div class="text-blue-ticket text-center font-bold mb-40 text-5xl">
+                    <p>MAHARDIKA</p>
+                    <p>TICKET</p>
+                    </div>
+                    <img src="{{ asset('mahardika_ticket/img/img-loader1.gif') }}">
+                    <p class="text-blue-ticket font-bold py-2">Harap Tunggu</p>
+                </div>
+            </div>
     
             <footer class="w-full bg-blue-ticket text-right p-4">
                 <a target="_blank" href="#" class="no-underline text-white">
@@ -134,6 +145,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
     <!-- ChartJS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
+    
+    <script>
+    $(document).ready(function(){
+        setTimeout(function() {
+        $(".preloader").fadeOut();               
+        }, 500);
+    })
+    </script>
 
     <script>
         var chartOne = document.getElementById('chartOne');

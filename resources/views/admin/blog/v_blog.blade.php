@@ -4,11 +4,9 @@
 @section('content')
 
   <div class="flex-1">
-    <div class="flex justify-between">
-      <div class="mt-2">
-        <button class="bg-blue-500 hover:bg-blue-700 text-white p-2 text-sm font-bold rounded">
-          <a href="/akun/tambah">Tambah</a>
-        </button>
+    <div class="flex items-center justify-between">
+      <div class="">
+        <a class="bg-blue-500 hover:bg-blue-700 text-white p-2 text-sm font-bold rounded" href="/blog/tambah">Tambah</a>
       </div>
       <div class="mt-2">
         <form action="{{ url()->current() }}"
@@ -48,7 +46,7 @@
 <div class="flex flex-col">
     <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
       <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
-        <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+        <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-t-lg">
           <table id="table" class="min-w-full divide-y divide-gray-200">
             <thead class="bg-gray-50">
               <tr>
@@ -89,8 +87,8 @@
                   </div>
                 </td>
                 <td class="px-6 py-4 whitespace-nowrap">
-                    <div class="px-2 inline-flex text-sm leading-5 font-semibold rounded-full bg-green-100 text-green-800">{{$data->judul}}</div>
-                  </td>
+                  <div class="text-sm text-gray-900">{{$data->judul}}</div>
+                </td>
                 <td class="px-6 py-4 whitespace-nowrap">
                   <div class="text-sm text-gray-900">{{$data->nama_tempat}}</div>
                 </td>
@@ -114,9 +112,9 @@
               @endforelse ($blog as $data)
             </tbody>
           </table>
-          <div class="bg-yellow-600">
-            {{ $blog->links() }}
-          </div>
+        </div>
+        <div class="border-blue-ticket rounded-b-lg border bg-white shadow">
+          {{ $blog->links() }}
         </div>
       </div>
     </div>

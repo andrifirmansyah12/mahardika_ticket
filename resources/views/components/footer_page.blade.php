@@ -21,7 +21,7 @@
 
 <div class="preloader bg-white">
   <div class="loading flex flex-col items-center justify-center">
-    <div class="text-blue-ticket text-center font-bold mb-20 text-5xl">
+    <div class="text-blue-ticket text-center font-bold mb-40 text-5xl">
       <p>MAHARDIKA</p>
       <p>TICKET</p>
     </div>

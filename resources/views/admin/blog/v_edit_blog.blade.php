@@ -6,8 +6,8 @@
 <form action="/blog/edit_aksi/{{ $blog->id }}" method="POST" enctype="multipart/form-data">
     @csrf
     <div class="w-full px-3 bg-white rounded-md border-4 border-yellow-600">
-        <div class="md:flex">
-            <div class="w-full px-4 py-6 ">
+        <div class="px-4 py-6">
+            <div class="w-full grid md:grid-cols-2 gap-x-10">
                 <div class="mb-1"> 
                     <label class="text-sm" for="judul">
                         Judul
@@ -42,7 +42,8 @@
                     </div>
                     @enderror
                 </div>
-                <div class="mb-1">
+            </div>
+            <div class="mb-1">
                     <label class="text-sm" for="deskripsi">
                         Deskripsi
                     </label>
@@ -77,7 +78,6 @@
                         Edit
                     </button>
                 </div>
-            </div>
         </div>
     </div>
 </form>

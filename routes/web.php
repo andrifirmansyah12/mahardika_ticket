@@ -25,9 +25,6 @@ use App\Http\Controllers\TicketPageController;
 */
 
 // Login
-Route::get('/profile', function () {
-    return view('admin.profile.v_profile');
-})->name('profile');
 
 Route::post('/send-mail', [ContactController::class, 'sendmail'])->name('send-mail');
 
@@ -41,6 +38,11 @@ Route::group(['middleware' => ['auth']], function () {
 
     // Calendar
     Route::get('/calendar', [CalendarController::class, 'index']);
+
+    // Profile Admin
+    Route::get('/profile', function () {
+        return view('admin.profile.v_profile');
+    })->name('profile');
 
     // Ticket
     Route::get('/blog', [BlogController::class, 'index'])->name('blog');
