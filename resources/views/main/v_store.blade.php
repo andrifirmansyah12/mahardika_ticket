@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Store | Mahardika Ticket</title>
-    <meta name="description" content="Free open source Tailwind CSS Store template">
+    <meta name="description" content="Mahardika Ticket">
     <meta name="keywords" content="tailwind,tailwindcss,tailwind css,css,starter template,free template,store template, shop layout, minimal, monochrome, minimalistic, theme, nordic">
 
     <!-- Header -->
@@ -90,8 +90,21 @@
                 <nav>
                     <ul class="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0">
                         <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="/homepage">Home</a></li>
-                        <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="#">About</a></li>
-                        <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="#">Contact</a></li>
+                        <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="/about">About</a></li>
+                        <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="/contact">Contact</a></li>
+                        <li><a class="lg:hidden block inline-block no-underline hover:text-black hover:underline py-2 px-4" href="/store">Store</a></li>
+                        <li><a class="lg:hidden block inline-block no-underline hover:text-black hover:underline py-2 px-4" href="/ticket-concert">Ticket</a></li>
+                        <li><a class="lg:hidden block inline-block no-underline hover:text-black hover:underline py-2 px-4" href="/galeri">Galeri</a></li>
+                        <li class="hidden lg:block">
+                            <span class="js-dropdown">
+                                <a class="js-dropdown__toggle btns-text">Menu <img class="absolute -right-2 top-2 cursor-pointer" src="https://img.icons8.com/material-outlined/24/000000/expand-arrow--v1.png"/></a>
+                                <span class="js-dropdown__slider">
+                                    <a href="/store" class="js-dropdown__item">Store</a>
+                                    <a href="/ticket_concert" class="js-dropdown__item">Ticket</a>
+                                    <a href="/galeri" class="js-dropdown__item">Galeri</a>
+                                </span>
+                            </span>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -412,6 +425,21 @@ Alternatively if you want to just have a single hero
 	<script src="https://unpkg.com/tippy.js@4"></script>
 
 <script>
+    var dropdown = $("span.js-dropdown");
+
+      $(document).ready(function () {
+          $(dropdown).find("a.js-dropdown__toggle").on("click", function (e) {
+              $(this).parent().toggleClass("is-active");
+            return false;
+          })
+      });
+      
+      $(document).on("click", function (b) {
+          if (b.target.id != $("span.js-dropdown").attr("class")) {
+              $(dropdown).removeClass("is-active")
+          }
+      });
+
     $(document).ready(function(){
         setTimeout(function() {
             $(".preloader").fadeOut();               

@@ -1,6 +1,21 @@
 <!-- JavaScript -->
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 <script>
+  var dropdown = $("span.js-dropdown");
+
+      $(document).ready(function () {
+          $(dropdown).find("a.js-dropdown__toggle").on("click", function (e) {
+              $(this).parent().toggleClass("is-active");
+            return false;
+          })
+      });
+      
+      $(document).on("click", function (b) {
+          if (b.target.id != $("span.js-dropdown").attr("class")) {
+              $(dropdown).removeClass("is-active")
+          }
+      });
+
   $(document).ready(function(){
     setTimeout(function() {
       $(".preloader").fadeOut();               

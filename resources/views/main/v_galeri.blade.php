@@ -32,8 +32,27 @@
               <li class="mr-3">
                 <a class="font-lato inline-block text-blue-ticket no-underline font-sans hover:text-gray-800 hover:text-underline py-2 px-1" href="/aboutus">About Us</a>
               </li>
-              <li class="mr-3">
+              <li class="mr-0">
                 <a class="font-lato inline-block text-blue-ticket no-underline font-sans hover:text-gray-800 hover:text-underline py-2 px-1" href="/contact">Contact</a>
+              </li>
+              <li class="mr-0 lg:hidden block">
+                <a class="font-lato inline-block text-blue-ticket no-underline font-sans hover:text-gray-800 hover:text-underline py-2 px-1" href="/store">Store</a>
+              </li>
+              <li class="mr-0 lg:hidden block">
+                <a class="font-lato inline-block text-blue-ticket no-underline font-sans hover:text-gray-800 hover:text-underline py-2 px-1" href="/ticket_concert">Ticket</a>
+              </li>
+              <li class="mr-0 lg:hidden block">
+                <a class="font-lato inline-block text-blue-ticket no-underline font-sans hover:text-gray-800 hover:text-underline py-2 px-1" href="/galeri">Galeri</a>
+              </li>
+              <li class="hidden lg:block">
+                <span class="js-dropdown">
+                  <a class="js-dropdown__toggle btns-text">Menu <img class="absolute -right-2 top-1.5 cursor-pointer" src="https://img.icons8.com/material-outlined/24/000000/expand-arrow--v1.png"/></a>
+                  <span class="js-dropdown__slider">
+                    <a href="/store" class="js-dropdown__item">Store</a>
+                    <a href="/ticket_concert" class="js-dropdown__item">Ticket</a>
+                    <a href="/galeri" class="js-dropdown__item">Galeri</a>
+                  </span>
+                </span>
               </li>
             </ul>
           </div>

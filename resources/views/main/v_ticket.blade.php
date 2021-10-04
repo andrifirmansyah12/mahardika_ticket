@@ -27,13 +27,32 @@
           <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-blue-ticket p-4 lg:p-0 z-20" id="nav-content">
             <ul class="list-reset lg:flex justify-end flex-1 items-center">
               <li class="mr-3">
-                <a class="font-lato inline-block py-2 px-1 text-blue-ticket font-bold font-sans no-underline" href="/homepage">Home</a>
+                <a class="font-lato inline-block text-blue-ticket no-underline font-sans hover:text-gray-800 hover:text-underline py-2 px-1" href="/homepage">Home</a>
               </li>
               <li class="mr-3">
                 <a class="font-lato inline-block text-blue-ticket no-underline font-sans hover:text-gray-800 hover:text-underline py-2 px-1" href="/aboutus">About Us</a>
               </li>
-              <li class="mr-3">
+              <li class="mr-0">
                 <a class="font-lato inline-block text-blue-ticket no-underline font-sans hover:text-gray-800 hover:text-underline py-2 px-1" href="/contact">Contact</a>
+              </li>
+              <li class="mr-0 lg:hidden block">
+                <a class="font-lato inline-block text-blue-ticket no-underline font-sans hover:text-gray-800 hover:text-underline py-2 px-1" href="/store">Store</a>
+              </li>
+              <li class="mr-0 lg:hidden block">
+                <a class="font-lato inline-block text-blue-ticket no-underline font-sans hover:text-gray-800 hover:text-underline py-2 px-1" href="/ticket_concert">Ticket</a>
+              </li>
+              <li class="mr-0 lg:hidden block">
+                <a class="font-lato inline-block text-blue-ticket no-underline font-sans hover:text-gray-800 hover:text-underline py-2 px-1" href="/galeri">Galeri</a>
+              </li>
+              <li class="hidden lg:block">
+                <span class="js-dropdown">
+                  <a class="js-dropdown__toggle btns-text">Menu <img class="absolute -right-2 top-1.5 cursor-pointer" src="https://img.icons8.com/material-outlined/24/000000/expand-arrow--v1.png"/></a>
+                  <span class="js-dropdown__slider">
+                    <a href="/store" class="js-dropdown__item">Store</a>
+                    <a href="/ticket_concert" class="js-dropdown__item">Ticket</a>
+                    <a href="/galeri" class="js-dropdown__item">Galeri</a>
+                  </span>
+                </span>
               </li>
             </ul>
           </div>
@@ -50,7 +69,7 @@
           <div class='flex items-center w-full px-2 py-2'>
               <div class='mx-3 w-full'>
                   <div class="flex flex-row mb-6 mt-2">
-                    <a class='border-2 transform transition hover:scale-95 duration-300 ease-in-out rounded-md cursor-pointer mb-3' href="/ticketkonser/detail{{ $data->id }}">
+                    <a class='border-2 transform transition hover:scale-95 duration-300 ease-in-out rounded-md cursor-pointer mb-3' href="/ticket_concert/detail{{ $data->id }}">
                       <img class="w-60 h-44 object-cover object-center rounded" src="{{ url('img-film/' . $data->foto)}}">
                     </a>
                   </div>
@@ -64,9 +83,9 @@
     @forelse ($film as $data)
     <div class="w-full p-7 px-16 bg-white flex justify-center items-center">
       <article class="sm:grid grid-cols-5 bg-white border border-blue-ticket shadow-md p-7 relative sm:p-4 rounded-lg lg:col-span-2 mt-4 lg:mt-0 py-4 px-8 shadow focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-        <a class="cursor-pointer w-full rounded-lg" href="/ticketkonser/detail{{ $data->id }}"><img class="w-full h-44 object-cover object-center" src="{{ url('img-film/' . $data->foto)}}" alt="foto"></a>
+        <a class="cursor-pointer w-full rounded-lg" href="/ticket_concert/detail{{ $data->id }}"><img class="w-full h-44 object-cover object-center" src="{{ url('img-film/' . $data->foto)}}" alt="foto"></a>
         <div class="pt-5 space-y-2 self-center sm:pt-0 sm:pl-10 col-span-3">
-          <a href="/ticketkonser/detail{{ $data->id }}" class="font-lato mx-auto font-bold text-blue-ticket text-3xl md:text-5xl xl:text-5xl">
+          <a href="/ticket_concert/detail{{ $data->id }}" class="font-lato mx-auto font-bold text-blue-ticket text-3xl md:text-5xl xl:text-5xl">
             {{ $data->judul }}
           </a>
           <p class="px-1 font-lato mx-auto text-black text-blue-ticket">

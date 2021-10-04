@@ -191,7 +191,7 @@
                     <p class="text-2xl">
                         Privacy Policy
                     </p>
-                    <p class="font-lato text-blue-ticket"> 
+                    <p class="font-lato text-blue-ticket leading-7"> 
                         A privacy policy is a statement or legal document (in privacy law)
                         that discloses some or all of the ways a party gathers, uses, discloses,
                         and manages a customer or client's data. Personal information can be anything
@@ -212,7 +212,7 @@
             <!--Footer-->
             <div class="border-t-2 border-gray-200">
                 <div class="flex justify-end py-3 px-5 shadow-md">
-                    <button class="modal-close px-5 py-2 bg-blue-ticket font-lato text-white font-semibold tracking-widest text-white">
+                    <button class="modal-close px-4 py-1 bg-blue-ticket font-lato text-sm font-semibold text-white tracking-widest text-white">
                         Confirm
                     </button>
                 </div>
