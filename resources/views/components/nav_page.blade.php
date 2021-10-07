@@ -1,5 +1,5 @@
 <nav id="header" class="max-w-screen-2xl shadow-md mx-auto fixed w-full z-30 top-0 text-blue-ticket bg-white">
-  <div class="w-full mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
+  <div class="w-full px-3 lg:px-10 flex flex-wrap items-center justify-between mt-0 py-2">
     <div class="flex items-center space-x-1 p-2">
       <button class="relative z-10 w-8 h-8">
           <img class="" src="{{ asset('mahardika_ticket/dist/img/logo9.png') }}">

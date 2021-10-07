@@ -44,59 +44,59 @@
         </header>
 
         <!-- Mobile Header & Nav -->
-        <header x-data="{ isOpen: false }" class="relative shadow-xl w-full bg-white py-5 px-6 sm:hidden">
+        <header x-data="{ isOpen: false }" class="relative shadow-xl w-full bg-blue-ticket py-5 px-6 sm:hidden">
             <div class="flex items-center justify-between">
                 <button @click="isOpen = !isOpen" class="realtive z-10 w-12 h-12">
                     <img class="" src="{{ asset('mahardika_ticket/dist/img/logo9.png') }}">
                 </button>
-                <a href="/home" class="text-black text-3xl font-semibold uppercase hover:text-gray-300">Admin</a>
+                <a href="/home" class="text-white text-3xl font-semibold uppercase hover:text-gray-300">Admin</a>
                 <button @click="isOpen = !isOpen" class="text-black text-3xl focus:outline-none">
-                    <i x-show="!isOpen" class="fas fa-bars"></i>
-                    <i x-show="isOpen" class="fas fa-times"></i>
+                    <i x-show="!isOpen" class="fas fa-bars text-white"></i>
+                    <i x-show="isOpen" class="fas fa-times text-white"></i>
                 </button>
             </div>
 
             <!-- Dropdown Nav -->
             <nav :class="isOpen ? 'flex': 'hidden'" class="flex flex-col pt-4 font-semibold">
-                <a href="/home" class="flex items-center text-black opacity-75 hover:opacity-100 py-2 pl-4 nav-item hover:bg-indigo-600 {{ request()->is('dashboard') ? 'active' : ''}}">
+                <a href="/home" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 hover:bg-white hover:text-black {{ request()->is('dashboard') ? 'active' : ''}}">
                     <i class="fas fa-tachometer-alt mr-3"></i>
                     Dashboard
                 </a>
-                <a href="/blog" class="flex items-center text-black opacity-75 hover:opacity-100 py-2 pl-4 nav-item hover:bg-indigo-600 {{ request()->is('blog') ? 'active' : ''}}">
+                <a href="/blog" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 hover:bg-white hover:text-black {{ request()->is('blog') ? 'active' : ''}}">
                     <i class="fas fa-newspaper mr-3"></i>
                     Blog
                 </a>
-                <a href="/ticket" class="flex items-center text-black opacity-75 hover:opacity-100 py-2 pl-4 nav-item hover:bg-indigo-600 {{ request()->is('ticket') ? 'active' : ''}}">
+                <a href="/ticket" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 hover:bg-white hover:text-black {{ request()->is('ticket') ? 'active' : ''}}">
                     <i class="fas fa-ticket-alt mr-3"></i>
                     Ticket Film
                 </a>
-                {{-- <a href="tables.html" class="flex items-center text-black opacity-75 hover:opacity-100 py-2 pl-4 nav-item hover:bg-indigo-600">
+                {{-- <a href="tables.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 hover:bg-white hover:text-black">
                     <i class="fas fa-table mr-3"></i>
                     Tables
                 </a>
-                <a href="forms.html" class="flex items-center text-black opacity-75 hover:opacity-100 py-2 pl-4 nav-item hover:bg-indigo-600">
+                <a href="forms.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 hover:bg-white hover:text-black">
                     <i class="fas fa-align-left mr-3"></i>
                     Forms
                 </a> --}}
-                <a href="/akun" class="flex items-center text-black opacity-75 hover:opacity-100 py-2 pl-4 nav-item hover:bg-indigo-600 {{ request()->is('akun') ? 'active' : ''}}">
+                <a href="/akun" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 hover:bg-white hover:text-black {{ request()->is('akun') ? 'active' : ''}}">
                     <i class="fas fa-user mr-3"></i>
                     Akun
                 </a>
-                <a href="/calendar" class="flex items-center text-black opacity-75 hover:opacity-100 py-2 pl-4 nav-item hover:bg-indigo-600 {{ request()->is('calendar') ? 'active' : ''}}">
+                <a href="/calendar" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 hover:bg-white hover:text-black {{ request()->is('calendar') ? 'active' : ''}}">
                     <i class="fas fa-calendar mr-3"></i>
                     Calendar
                 </a>
-                {{-- <a href="#" class="flex items-center text-black opacity-75 hover:opacity-100 py-2 pl-4 nav-item hover:bg-indigo-600">
+                {{-- <a href="#" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 hover:bg-white hover:text-black">
                     <i class="fas fa-cogs mr-3"></i>
                     Support
                 </a>
-                <a href="#" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item hover:bg-indigo-600">
+                <a href="#" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 hover:bg-white hover:text-black">
                     <i class="fas fa-user mr-3"></i>
                     My Account
                 </a> --}}
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none hover:bg-white">
                     @csrf
-                    <button type="submit" class="font-semibold w-full flex items-center text-black opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
+                    <button type="submit" class="font-semibold w-full flex items-center text-white opacity-75 hover:text-black hover:opacity-100 py-2 pl-4 nav-item">
                         <i class="fas fa-sign-out-alt mr-3"></i>
                         Sign Out
                     </button>

@@ -27,7 +27,7 @@
           <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-blue-ticket p-4 lg:p-0 z-20" id="nav-content">
             <ul class="list-reset lg:flex justify-end flex-1 items-center">
               <li class="mr-3">
-                <a class="font-lato inline-block py-2 px-1 text-blue-ticket font-bold font-sans no-underline" href="/homepage">Home</a>
+                <a class="font-lato inline-block text-blue-ticket no-underline font-sans hover:text-gray-800 hover:text-underline py-2 px-1" href="/homepage">Home</a>
               </li>
               <li class="mr-3">
                 <a class="font-lato inline-block text-blue-ticket no-underline font-sans hover:text-gray-800 hover:text-underline py-2 px-1" href="/aboutus">About Us</a>
@@ -46,7 +46,7 @@
               </li>
               <li class="hidden lg:block">
                 <span class="js-dropdown">
-                  <a class="js-dropdown__toggle btns-text">Menu <img class="absolute -right-2 top-1.5 cursor-pointer" src="https://img.icons8.com/material-outlined/24/000000/expand-arrow--v1.png"/></a>
+                  <a class="js-dropdown__toggle btns-text">Menu <i class="fas fa-chevron-down text-blue-ticket"></i></a>
                   <span class="js-dropdown__slider">
                     <a href="/store" class="js-dropdown__item">Store</a>
                     <a href="/ticket_concert" class="js-dropdown__item">Ticket</a>

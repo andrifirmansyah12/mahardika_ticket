@@ -90,7 +90,7 @@
                                             </div>
                                             <div class="w-full md:w-full text-blue-ticket font-lato order-2 md:order-4">
                                                 <div class="max-w-md leading-loose tracking-tight">
-                                                    <p class="font-bold md:mt-10 md:mb-5">About Me</p>
+                                                    <p class="font-bold md:mt-10 md:mb-5">About Company</p>
                                     
                                                     <p class="mb-8 ">
                                                         We Are PT. MAHARDIKA SOLUSI TEKNOLOGI

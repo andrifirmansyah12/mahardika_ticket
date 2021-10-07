@@ -13,10 +13,10 @@
             Data
         </h1>
     </div>
-    <div class="mt-3">
-      <div class="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3 ">
+    <div class="flex items-center justify-center mt-3">
+      <div class="grid grid-cols-1 gap-4 lg:grid-cols-2 xl:grid-cols-3 ">
   
-          <div class="p-2 sm:p-10 text-center cursor-pointer">
+          <div class="w-80 lg:w-72 p-2 sm:py-10 text-center cursor-pointer">
               <div class="py-16 max-w-sm rounded overflow-hidden shadow-lg hover:bg-white transition duration-500  bg-white">
                   <div class="space-y-10">
                       <i class="fas fa-ticket-alt" style="font-size:48px;"></i>
@@ -33,7 +33,7 @@
               </div>
           </div>
   
-          <div class="p-2 sm:p-10 text-center cursor-pointer translate-x-2">
+          <div class="w-80 lg:w-72 p-2 sm:py-10 text-center cursor-pointer translate-x-2">
               <div class="py-16 max-w-sm rounded overflow-hidden shadow-lg hover:bg-white transition duration-500 bg-white ">
                   <div class="space-y-10">
                       <i class="fa fa-user" style="font-size:48px;"></i>
@@ -50,7 +50,7 @@
               </div>
           </div>
 
-          <div class="p-2 sm:p-10 text-center cursor-pointer translate-x-2">
+          <div class="w-80 lg:w-72 p-2 sm:py-10 text-center cursor-pointer translate-x-2">
             <div class="py-16 max-w-sm rounded overflow-hidden shadow-lg hover:bg-white transition duration-500 bg-white ">
                 <div class="space-y-10">
                     <i class="fas fa-newspaper" style="font-size:48px;"></i>

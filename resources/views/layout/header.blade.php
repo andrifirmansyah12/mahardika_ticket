@@ -15,11 +15,6 @@
 <style>
     @import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
     .font-family-karla { font-family: Arial, Helvetica, sans-serif; }
-    .bg-sidebar { background: #181863; }
-    .cta-btn { color: #181863; }
-    .upgrade-btn { background: #181863; }
-    .upgrade-btn:hover { background: #181863; }
-    .active-nav-link { background: #181863; }
     .account-link:hover { background: #181863; }
 
     .font-lato {
@@ -27,16 +22,16 @@
       }
 
     .text-blue-ticket{
-        color: #181863;
-      }
+      color: #181863;
+    }
 
-      .border-blue-ticket{
-        border-color: #181863;
-      }
+    .border-blue-ticket{
+      border-color: #181863;
+    }
 
-      .bg-blue-ticket{
-        background-color: #181863;
-      }
+    .bg-blue-ticket{
+      background-color: #181863;
+    }
 
       /* .preloader {
         position: fixed;

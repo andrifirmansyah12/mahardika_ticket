@@ -16,6 +16,14 @@
 <script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
 
     <style>
+      .truncate-2-lines {
+        max-height: 3.2em; /* double the size of line-height */
+        display: block;
+        text-overflow: ellipsis;
+        word-wrap: break-word;
+        overflow: hidden;
+      }
+
       .js-dropdown {
       position: relative;
       }
@@ -72,6 +80,7 @@
 
       .btns-text {
       color: #181863;
+      font-family: 'Montserrat', sans-serif;
       background: transparent;
       }
 
@@ -138,7 +147,7 @@
       }
 
       .font-lato {
-        font-family: 'Montserrat', sans-serif;;
+        font-family: 'Montserrat', sans-serif;
       }
 
       .text-blue-ticket{

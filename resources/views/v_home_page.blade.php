@@ -35,16 +35,8 @@
               <li class="mr-3">
                 <a class="font-lato inline-block no-underline text-blue-ticket font-sans hover:text-gray-800 hover:text-underline py-2 px-1" href="/contact">Contact</a>
               </li>
-              <li class="hidden lg:block">
-                <span class="js-dropdown">
-                  <a class="js-dropdown__toggle btns-text">Click Me!</a>
-                  <span class="js-dropdown__slider">
-                    <a href="#" class="js-dropdown__item">New</a>
-                    <a href="#" class="js-dropdown__item">Save</a>
-                    <a href="#" class="js-dropdown__item">Open</a>
-                    <a href="#" class="js-dropdown__item">Edit</a>
-                  </span>
-                </span>
+              <li class="mr-3">
+                <a class="font-lato inline-block no-underline text-blue-ticket font-sans hover:text-gray-800 hover:text-underline py-2 px-1" href="#login">Login</a>
               </li>
             </ul>
           </div>
@@ -198,7 +190,7 @@
                 <a href="/homepage/detail{{ $data->id }}" class="no-underline hover:no-underline">
                 <div class="font-bold text-xl font-lato text-blue-ticket">{{ $data->judul }}.</div>
                 </a>
-                <p class="text-blue-ticket font-lato text-base mb-5">
+                <p class="text-blue-ticket font-lato text-base mb-5 truncate-2-lines">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula. 
                 </p>
               </div>
