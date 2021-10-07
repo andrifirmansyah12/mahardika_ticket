@@ -73,13 +73,13 @@
               <p class="mb-4 font-lato text-blue-ticket px-3 justify-content font-lato text-justify">
                 {{ $film->deskripsi_film }}
               </p>
-              <div class="py-3 text-right">
-                <button class="mr-3 h-10 w-60 bg-blue-ticket font-lato rounded text-white">
+            </div>
+          </div> 
+          <div class="py-3 flex item-center justify-end">
+                <button class="mr-8 h-10 w-60 bg-blue-ticket font-lato rounded text-white">
                     Booking Ticket
                 </button>
             </div>
-            </div>
-          </div> 
         </div>
    `  </div>
     </section>

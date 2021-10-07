@@ -66,13 +66,27 @@
      <link rel="stylesheet" href="{{ asset('Login_inv/bower_components/Ionicons/css/ionicons.min.css') }}">
      <!-- iCheck -->
      <link rel="stylesheet" href="{{ asset('Login_inv/plugins/iCheck/square/blue.css') }}">
-
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <style>
         .body-bg {
-            background-color: #9921e8;
-            background-image: linear-gradient(315deg, #9921e8 0%, #5f72be 74%);
+            background-color: #181863;
+        }
+        .font-lato {
+            font-family: 'Montserrat', sans-serif;;
+        }
+
+        .text-blue-ticket{
+            color: #181863;
+        }
+
+        .border-blue-ticket{
+            border-color: #181863;
+        }
+
+        .bg-blue-ticket{
+            background-color: #181863;
         }
     </style>
 </head>
@@ -85,15 +99,15 @@
 
     <main class="bg-white max-w-lg mx-auto p-8 md:p-12 my-10 rounded-lg shadow-2xl">
         <section>
-            <h3 class="font-bold text-2xl">Welcome to Mahardika Ticket</h3>
-            <p class="text-gray-600 pt-2">Reset to your password.</p>
+            <h3 class="font-bold font-lato text-blue-ticket text-2xl">Welcome to Mahardika Ticket</h3>
+            <p class="font-lato text-blue-ticket pt-2">Reset to your password.</p>
         </section>
 
         <section class="mt-10">
             <form class="flex flex-col" method="POST" action="{{ route('password.email') }}">
                 @csrf
-                <div class="mb-6 pt-3 rounded bg-gray-200">
-                    <label class="block text-gray-700 text-sm font-bold mb-2 ml-3" for="email">Email</label>
+                <div class="mb-6 pt-3 rounded bg-blue-ticket">
+                    <label class="block text-white text-sm font-lato font-bold mb-2 ml-3" for="email">Email</label>
                     <input 
                         type="text" 
                         id="email" 
@@ -101,16 +115,17 @@
                         value="{{ old('email') }}" 
                         required autocomplete="email" 
                         autofocus
-                        class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3 @error('email') is-invalid @enderror">
+                        placeholder="Email"
+                        class="bg-gray-200 pt-2 w-full font-lato text-blue-ticket focus:outline-none border-b-4 border-gray-300 focus:border-gray-400 transition duration-500 px-3 pb-3 @error('email') is-invalid @enderror">
                 </div>
 
                 @error('email')
                 <div class="px-4 py-2 -mx-3" role="alert">
                     <div class="mx-3">
-                    <span class="font-semibold text-red-500 dark:text-red-400"
+                    <span class="font-semibold font-lato text-red-500 dark:text-red-400"
                         >Error!</span
                     >
-                    <p class="text-sm text-gray-600 dark:text-gray-200">
+                    <p class="text-sm text-gray-600 font-lato dark:text-gray-200">
                         {{ $message }}
                     </p>
                     </div>
@@ -120,7 +135,7 @@
                 <button 
                     name="signin" 
                     id="signin"
-                    class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 rounded shadow-lg hover:shadow-xl transition duration-200" 
+                    class="bg-blue-ticket font-lato hover:opacity-90 text-white font-semibold py-2 rounded shadow-lg hover:shadow-xl transition duration-200" 
                     type="submit"
                     >
                     {{ __('Send Password Reset Link') }}
@@ -132,15 +147,15 @@
     @guest
     <div class="max-w-lg mx-auto text-center mt-12 mb-6">
       @if (Route::has('login'))
-      <a class="text-white hover:underline hover:text-gray-200" href="{{ route('login') }}">{{ __('Kembali ke Login') }}</a>
+      <a class="text-white font-lato hover:text-gray-200" href="{{ route('login') }}"><i class="fas fa-reply"></i> {{ __('Back to Login') }}</a>
       @endif
     </div>
     @endguest
 
     <footer class="max-w-lg mx-auto flex justify-center text-white">
-        <a href="#" class="hover:underline">Contact</a>
+        <a href="#" class="hover:underline font-lato">Contact</a>
         <span class="mx-3">•</span>
-        <a href="#" class="hover:underline">Privacy</a>
+        <a href="#" class="hover:underline font-lato">Privacy</a>
     </footer>
 </body>
 </html>

@@ -66,13 +66,13 @@
           <div class="flex w-1/2 pl-4 text-sm">
             <ul class="list-reset flex justify-between flex-1 md:flex-none items-center font-bold">
               <li class="mr-2">
-              <a class="font-lato inline-block py-2 px-2 text-blue-ticket hover:text-white no-underline hover:bg-indigo-600" href="/store">STORE</a>
+              <a class="font-lato inline-block py-2 px-2 text-blue-ticket hover:text-white no-underline sub-menus" href="/store">STORE</a>
               </li>
               <li class="mr-2">
-              <a class="font-lato inline-block text-blue-ticket hover:text-white no-underline py-2 px-2 hover:bg-indigo-600" href="/ticket_concert">TICKET</a>
+              <a class="font-lato inline-block text-blue-ticket hover:text-white no-underline py-2 px-2 sub-menus" href="/ticket_concert">TICKET</a>
               </li>
               <li class="mr-2">
-              <a class="font-lato inline-block text-blue-ticket hover:text-white no-underline py-2 px-2 hover:bg-indigo-600" href="/galeri">GALERI</a>
+              <a class="font-lato inline-block text-blue-ticket hover:text-white no-underline py-2 px-2 sub-menus" href="/galeri">GALERI</a>
               </li>
               {{-- <li class="mr-2">
               <a class="font-lato inline-block text-blue-ticket hover:text-white no-underline py-2 px-2 hover:bg-indigo-600" href="/latihan">POST VUE</a>
@@ -117,11 +117,11 @@
                 class="h-64 w-full object-cover object-top rounded-t pb-6">
               <p class="w-full text-blue-ticket font-lato text-xs md:text-sm px-6">{{ $data->nama_tempat }}</p>
               <div class="w-full font-bold font-lato text-xl text-blue-ticket px-6">{{ $data->judul }}</div>
-              <p class="text-blue-ticket font-lato text-base px-6 mb-5">
+              <p class="text-blue-ticket font-lato text-base px-6 mb-5 truncate-2-lines">
                 {{ $data->deskripsi }}
               </p>
             </a>
-            </div>
+          </div>
           <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow-lg p-6">
             <div class="flex items-center justify-end">
               <p class="text-blue-ticket text-xs md:text-sm">{{ $data->tanggal }}</p>
@@ -191,7 +191,7 @@
                 <div class="font-bold text-xl font-lato text-blue-ticket">{{ $data->judul }}.</div>
                 </a>
                 <p class="text-blue-ticket font-lato text-base mb-5 truncate-2-lines">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula. 
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula. adipiscing elit commodo posuere Aliquam.
                 </p>
               </div>
               <div class="flex items-center justify-end inset-x-0 bottom-0 p-6">

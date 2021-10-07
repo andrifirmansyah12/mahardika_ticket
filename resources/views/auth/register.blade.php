@@ -96,35 +96,49 @@
      <link rel="stylesheet" href="{{ asset('Login_inv/bower_components/Ionicons/css/ionicons.min.css') }}">
      <!-- iCheck -->
      <link rel="stylesheet" href="{{ asset('Login_inv/plugins/iCheck/square/blue.css') }}">
-
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <style>
         .body-bg {
-            background-color: #9921e8;
-            background-image: linear-gradient(315deg, #9921e8 0%, #5f72be 74%);
+            background-color: #181863;
+        }
+        .font-lato {
+            font-family: 'Montserrat', sans-serif;;
+        }
+
+        .text-blue-ticket{
+            color: #181863;
+        }
+
+        .border-blue-ticket{
+            border-color: #181863;
+        }
+
+        .bg-blue-ticket{
+            background-color: #181863;
         }
     </style>
 </head>
 <body class="body-bg min-h-screen pt-12 md:pt-20 pb-6 px-2 md:px-0" style="font-family:'Lato',sans-serif;">
     <header class="max-w-lg mx-auto">
         <a href="#">
-            <h1 class="text-4xl font-bold text-white text-center">REGISTER</h1>
+            <h1 class="text-4xl font-lato font-bold text-white text-center">REGISTER</h1>
         </a>
     </header>
 
     <main class="bg-white max-w-lg mx-auto p-8 md:p-12 my-10 rounded-lg shadow-2xl">
         <section>
-            <h3 class="font-bold text-2xl">Welcome to Mahardika Ticket</h3>
-            <p class="text-gray-600 pt-2">Sign Up to your account.</p>
+            <h3 class="font-bold font-lato text-blue-ticket text-2xl">Welcome to Mahardika Ticket</h3>
+            <p class="font-lato text-blue-ticket pt-2">Sign Up to your account.</p>
         </section>
 
         <section class="mt-10">
             <form class="flex flex-col" method="POST" action="{{ route('register') }}">
                 @csrf
 
-                <div class="mb-6 pt-3 rounded bg-gray-200">
-                  <label class="block text-gray-700 text-sm font-bold mb-2 ml-3" for="foto">Foto</label>
+                <div class="mb-6 pt-3 rounded bg-blue-ticket">
+                  <label class="block font-lato text-white text-sm font-bold mb-2 ml-3" for="foto">Foto</label>
                   <input 
                     type="file"
                     id="foto" 
@@ -132,11 +146,11 @@
                     value="{{ old('foto') }}" 
                     required autocomplete="foto" 
                     autofocus
-                    class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3 @error('foto') is-invalid @enderror">
+                    class="bg-gray-200 pt-2 w-full font-lato text-blue-ticket focus:outline-none border-b-4 border-gray-300 focus:border-gray-400 transition duration-500 px-3 pb-3 @error('foto') is-invalid @enderror">
                 </div>
 
-                <div class="mb-6 pt-3 rounded bg-gray-200">
-                  <label class="block text-gray-700 text-sm font-bold mb-2 ml-3" for="name">Nama</label>
+                <div class="mb-6 pt-3 rounded bg-blue-ticket">
+                  <label class="block font-lato text-white text-sm font-bold mb-2 ml-3" for="name">Nama</label>
                   <input 
                     type="text"
                     id="name" 
@@ -144,11 +158,12 @@
                     value="{{ old('name') }}" 
                     required autocomplete="name" 
                     autofocus
-                    class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3 @error('name') is-invalid @enderror">
+                    placeholder="Nama"
+                    class="bg-gray-200 w-full pt-2 font-lato text-blue-ticket focus:outline-none border-b-4 border-gray-300 focus:border-gray-400 transition duration-500 px-3 pb-3 @error('name') is-invalid @enderror">
                 </div>
 
-                <div class="mb-6 pt-3 rounded bg-gray-200">
-                  <label class="block text-gray-700 text-sm font-bold mb-2 ml-3" for="alamat">Alamat</label>
+                <div class="mb-6 pt-3 rounded bg-blue-ticket">
+                  <label class="block font-lato text-white text-sm font-bold mb-2 ml-3" for="alamat">Alamat</label>
                   <input 
                     type="text"
                     id="alamat" 
@@ -156,11 +171,12 @@
                     value="{{ old('alamat') }}" 
                     required autocomplete="alamat" 
                     autofocus
-                    class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3 @error('alamat') is-invalid @enderror">
+                    placeholder="Alamat"
+                    class="bg-gray-200 w-full pt-2 font-lato text-blue-ticket focus:outline-none border-b-4 border-gray-300 focus:border-gray-400 transition duration-500 px-3 pb-3 @error('alamat') is-invalid @enderror">
                 </div>
 
-                <div class="mb-6 pt-3 rounded bg-gray-200">
-                    <label class="block text-gray-700 text-sm font-bold mb-2 ml-3" for="email">Email</label>
+                <div class="mb-6 pt-3 rounded bg-blue-ticket">
+                    <label class="block font-lato text-white text-sm font-bold mb-2 ml-3" for="email">Email</label>
                     <input 
                         type="text" 
                         id="email" 
@@ -168,12 +184,13 @@
                         value="{{ old('email') }}" 
                         required autocomplete="email" 
                         autofocus
-                        class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3 @error('email') is-invalid @enderror">
+                        placeholder="Email"
+                        class="bg-gray-200 w-full pt-2 font-lato text-blue-ticket focus:outline-none border-b-4 border-gray-300 focus:border-gray-400 transition duration-500 px-3 pb-3 @error('email') is-invalid @enderror">
                 </div>
 
-                <div class="mb-6 pt-3 rounded bg-gray-200">
-                    <label class="block text-gray-700 text-sm font-bold mb-2 ml-3" for="password">Password</label>
-                    <div class="flex">
+                <div class="mb-6 pt-3 rounded bg-blue-ticket">
+                    <label class="block font-lato text-white text-sm font-bold mb-2 ml-3" for="password">Password</label>
+                    <div class="flex items-center">
                     <input 
                         type="password" 
                         id="password" 
@@ -181,14 +198,15 @@
                         value="{{ old('password') }}" 
                         required autocomplete="new-password" 
                         autofocus
-                        class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3 @error('password') is-invalid @enderror">
-                    <span class="fa fa-eye-slash form-control-feedback view_password px-3"></span> 
+                        placeholder="Password"
+                        class="bg-gray-200 w-full pt-2 font-lato text-blue-ticket focus:outline-none border-b-4 border-gray-300 focus:border-gray-400 transition duration-500 px-3 pb-3 @error('password') is-invalid @enderror">
+                    <span class="fa fa-eye-slash bg-gray-200 py-4 form-control-feedback view_password px-3"></span> 
                     </div>   
                 </div>
 
-                <div class="mb-6 pt-3 rounded bg-gray-200">
-                  <label class="block text-gray-700 text-sm font-bold mb-2 ml-3" for="password-confirm">Konfirmasi Password</label>
-                  <div class="flex">
+                <div class="mb-6 pt-3 rounded bg-blue-ticket">
+                  <label class="block font-lato text-white text-sm font-bold mb-2 ml-3" for="password-confirm">Konfirmasi Password</label>
+                  <div class="flex items-center">
                   <input 
                       type="password" 
                       id="password" 
@@ -196,15 +214,16 @@
                       value="{{ old('password') }}" 
                       required autocomplete="new-password" 
                       autofocus
-                      class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3 @error('password') is-invalid @enderror">
-                  <span class="fa fa-eye-slash form-control-feedback view_password px-3"></span> 
+                      placeholder="Confirm Password"
+                      class="bg-gray-200 w-full pt-2 font-lato text-blue-ticket focus:outline-none border-b-4 border-gray-300 focus:border-gray-400 transition duration-500 px-3 pb-3 @error('password') is-invalid @enderror">
+                  <span class="bg-gray-200 py-4 fa fa-eye-slash form-control-feedback view_password px-3"></span> 
                   </div>   
                 </div>
 
                 <button 
                     name="register" 
                     id="register"
-                    class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 rounded shadow-lg hover:shadow-xl transition duration-200" 
+                    class="bg-blue-ticket font-lato hover:opacity-90 text-white font-semibold py-2 rounded shadow-lg hover:shadow-xl transition duration-200" 
                     type="submit"
                     >
                         Register
@@ -216,15 +235,15 @@
     @guest
     <div class="max-w-lg mx-auto text-center mt-12 mb-6">
       @if (Route::has('login'))
-      <a class="text-white hover:underline hover:text-gray-200" href="{{ route('login') }}">{{ __('Kembali ke Login') }}</a>
+      <a class="text-white font-lato hover:text-gray-200" href="{{ route('login') }}"><i class="fas fa-reply"></i> {{ __('Back to Login') }}</a>
       @endif
     </div>
     @endguest
 
     <footer class="max-w-lg mx-auto flex justify-center text-white">
-        <a href="#" class="hover:underline">Contact</a>
+        <a href="#" class="hover:underline font-lato">Contact</a>
         <span class="mx-3">•</span>
-        <a href="#" class="hover:underline">Privacy</a>
+        <a href="#" class="hover:underline font-lato">Privacy</a>
     </footer>
 </body>
 </html>

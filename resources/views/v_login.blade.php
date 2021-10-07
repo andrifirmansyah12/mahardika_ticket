@@ -68,13 +68,14 @@
         <section class="mt-10">
             <form class="flex flex-col" method="POST" action="{{ route('login') }}">
                 @csrf
-                <div class="mb-6 pt-3 rounded bg-gray-200">
-                    <label class="block text-blue-ticket text-sm font-bold mb-2 ml-3" for="email">Email</label>
+                <div class="mb-6 pt-3 rounded bg-blue-ticket">
+                    <label class="block text-white text-sm font-bold mb-2 ml-3" for="email">Email</label>
                     <input 
                         type="text" 
                         id="email" 
                         name="email"
-                        class="bg-gray-200 rounded w-full text-blue-ticket focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3">
+                        placeholder="Email"
+                        class="bg-gray-200 pt-2 w-full text-blue-ticket focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3">
                 </div>
 
                 {{-- Email Error --}}
@@ -91,15 +92,16 @@
                 </div>
                 @enderror
 
-                <div class="mb-6 pt-3 rounded bg-gray-200">
-                    <label class="block text-blue-ticket text-sm font-bold mb-2 ml-3" for="password">Password</label>
-                    <div class="flex">
+                <div class="mb-6 pt-3 rounded bg-blue-ticket">
+                    <label class="block text-white text-sm font-bold mb-2 ml-3" for="password">Password</label>
+                    <div class="flex items-center">
                     <input 
                         type="password" 
                         id="password" 
                         name="password"
-                        class="bg-gray-200 rounded w-full text-blue-ticket focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3">
-                    <span class="fa fa-eye-slash form-control-feedback view_password px-3"></span> 
+                        placeholder="Password"
+                        class="bg-gray-200 w-full pt-2 text-blue-ticket focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3">
+                    <span class="bg-gray-200 py-4 fa fa-eye-slash form-control-feedback view_password px-3"></span> 
                     </div>   
                 </div>
 

@@ -17,7 +17,7 @@
 
     <style>
       .truncate-2-lines {
-        max-height: 3.2em; /* double the size of line-height */
+        max-height: 6.1em; /* double the size of line-height */
         display: block;
         text-overflow: ellipsis;
         word-wrap: break-word;
@@ -207,5 +207,9 @@
 
       ::selection { 
         background-color: aliceblue
+      }
+
+      .sub-menus:hover {
+        background-color: #181863;
       }
     </style>
