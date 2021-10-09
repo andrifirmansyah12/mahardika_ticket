@@ -94,9 +94,7 @@
       border-radius: 3px;
       right: 10px;
       top: 100%;
-      width: 10rem;
       margin-top: 0.28571em;
-      padding: 0.14286em 0.71429em;
       visibility: hidden;
       -webkit-transform: translateY(20%);
       -ms-transform: translateY(20%);

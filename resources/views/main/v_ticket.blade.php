@@ -47,7 +47,7 @@
               <li class="hidden lg:block">
                 <span class="js-dropdown">
                   <a class="js-dropdown__toggle btns-text">Menu <i class="fas fa-chevron-down text-blue-ticket"></i></a>
-                  <span class="js-dropdown__slider">
+                  <span class="js-dropdown__slider w-32 px-2">
                     <a href="/store" class="js-dropdown__item">Store</a>
                     <a href="/ticket_concert" class="js-dropdown__item">Ticket</a>
                     <a href="/galeri" class="js-dropdown__item">Galeri</a>

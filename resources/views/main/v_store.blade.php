@@ -92,13 +92,13 @@
                         <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="/homepage">Home</a></li>
                         <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="/about">About</a></li>
                         <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="/contact">Contact</a></li>
-                        <li><a class="lg:hidden block inline-block no-underline hover:text-black hover:underline py-2 px-4" href="/store">Store</a></li>
+                        {{-- <li><a class="lg:hidden block inline-block no-underline hover:text-black hover:underline py-2 px-4" href="/store">Store</a></li>
                         <li><a class="lg:hidden block inline-block no-underline hover:text-black hover:underline py-2 px-4" href="/ticket-concert">Ticket</a></li>
-                        <li><a class="lg:hidden block inline-block no-underline hover:text-black hover:underline py-2 px-4" href="/galeri">Galeri</a></li>
-                        <li class="hidden lg:block">
+                        <li><a class="lg:hidden block inline-block no-underline hover:text-black hover:underline py-2 px-4" href="/galeri">Galeri</a></li> --}}
+                        <li class="hidden md:block">
                             <span class="js-dropdown">
                                 <a class="js-dropdown__toggle btns-text">Menu <i class="fas fa-chevron-down text-blue-ticket"></i></a>
-                                <span class="js-dropdown__slider">
+                                <span class="js-dropdown__slider w-32 px-2">
                                     <a href="/store" class="js-dropdown__item">Store</a>
                                     <a href="/ticket_concert" class="js-dropdown__item">Ticket</a>
                                     <a href="/galeri" class="js-dropdown__item">Galeri</a>
@@ -110,32 +110,50 @@
             </div>
 
             <div class="order-1 md:order-2">
-                <a class="flex items-center tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl " href="#">
-                    <svg class="fill-current text-gray-800 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <a class="flex text-blue-ticket items-center tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl " href="#">
+                    <svg class="fill-current text-blue-ticket mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                         <path d="M5,22h14c1.103,0,2-0.897,2-2V9c0-0.553-0.447-1-1-1h-3V7c0-2.757-2.243-5-5-5S7,4.243,7,7v1H4C3.447,8,3,8.447,3,9v11 C3,21.103,3.897,22,5,22z M9,7c0-1.654,1.346-3,3-3s3,1.346,3,3v1H9V7z M5,10h2v2h2v-2h6v2h2v-2h2l0.002,10H5V10z" />
                     </svg>
                     MAHARDIKA SHOP
                 </a>
             </div>
 
-            <div class="order-2 md:order-3 flex items-center" id="nav-content">
+            <div class="order-2 md:order-2 flex items-center">
+                <span class="js-dropdown">
+                    <a class="link js-dropdown__toggle btns-text" data-tippy-content="Keranjang"><i class="fas fa-shopping-cart text-blue-ticket"></i></a>
+                    <div class="js-dropdown__slider">
+                        <div class="w-64 h-72 overflow-auto">
+                        {{-- <a href="/store" class="js-dropdown__item">Store</a> --}}
+                            <div class="fixed px-3 py-2 w-full shadow bg-blue-ticket text-white">
+                                Items (2)
+                            </div>
+                            <div class="mt-14 mb-12 space-y-4 px-2">
+                                <div class="shadow flex flex-row space-x-2">
+                                    <img class="h-28 w-28 object-cover object-center" src="https://images.unsplash.com/photo-1555982105-d25af4182e4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80">
+                                    <div class="flex flex-col pt-2">
+                                        <p class="text-sm">Nama Barang</p>
+                                        <p class="text-sm">Rp. 50k</p>
+                                    </div>
+                                </div>
+                                <div class="shadow flex flex-row space-x-2">
+                                    <img class="h-28 w-28 object-cover object-center" src="https://images.unsplash.com/photo-1555982105-d25af4182e4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80">
+                                    <div class="flex flex-col pt-2">
+                                        <p class="text-sm">Nama Barang</p>
+                                        <p class="text-sm">Rp. 50k</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="absolute bottom-0">
+                                <button class="py-1 text-white bg-blue-ticket w-full" style="padding-left: 5.63rem; padding-right: 5.63rem;">
+                                    Checkout
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </span>
+            </div>
 
-                {{-- <div id="userButton" class="relative mt-2">
-                    <a class="inline-block no-underline hover:text-black" href="#">
-                        <svg class="fill-current hover:text-black" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                            <circle fill="none" cx="12" cy="7" r="3" />
-                            <path d="M12 2C9.243 2 7 4.243 7 7s2.243 5 5 5 5-2.243 5-5S14.757 2 12 2zM12 10c-1.654 0-3-1.346-3-3s1.346-3 3-3 3 1.346 3 3S13.654 10 12 10zM21 21v-1c0-3.859-3.141-7-7-7h-4c-3.86 0-7 3.141-7 7v1h2v-1c0-2.757 2.243-5 5-5h4c2.757 0 5 2.243 5 5v1H21z" />
-                        </svg>
-                    </a>
-                    <div id="userMenu" class="bg-gray-900 rounded shadow-md mt-2 absolute mt-8 top-0 right-0 min-w-full overflow-auto z-30 invisible">
-						<ul class="list-reset">
-							<li><a href="#" class="px-4 py-2 block text-gray-100 hover:bg-gray-800 no-underline hover:no-underline">Login</a></li>
-							<li><a href="#" class="px-4 py-2 block text-gray-100 hover:bg-gray-800 no-underline hover:no-underline">Notifications</a></li>
-							<li><a href="#" class="px-4 py-2 block text-gray-100 hover:bg-gray-800 no-underline hover:no-underline">Logout</a></li>
-						</ul>
-					</div>
-                </div> --}}
-                
+            {{-- <div class="order-2 md:order-3 flex items-center" id="nav-content">
                 <div id="shopButton" class="relative mt-2">
                     <a class="link pl-3 inline-block no-underline hover:text-black" href="#" data-tippy-content="Keranjang">
                         <svg class="fill-current hover:text-black" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -145,8 +163,7 @@
                         </svg>
                     </a>
                 </div>
-
-            </div>
+            </div> --}}
         </div>
     </nav>
 
@@ -235,7 +252,7 @@ Alternatively if you want to just have a single hero
 
         <div class="container mx-auto flex items-center flex-wrap pt-4 pb-12">
 
-            <nav id="store" class="w-full z-30 top-0 px-6 py-1">
+            <nav id="store" class="w-full top-0 px-6 py-1">
                 <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2 py-3">
 
                     <a class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl " href="#">
