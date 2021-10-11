@@ -83,7 +83,9 @@
     @forelse ($film as $data)
     <div class="w-full p-7 px-16 bg-white flex justify-center items-center">
       <article class="sm:grid grid-cols-5 bg-white border border-blue-ticket shadow-md p-7 relative sm:p-4 rounded-lg lg:col-span-2 mt-4 lg:mt-0 py-4 px-8 shadow focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-        <a class="cursor-pointer w-full rounded-lg" href="/ticket_concert/detail{{ $data->id }}"><img class="w-full sm:h-44 object-cover object-center" src="{{ url('img-film/' . $data->foto)}}" alt="foto"></a>
+        <a class="cursor-pointer w-full rounded-lg" href="/ticket_concert/detail{{ $data->id }}">
+          <img class="w-60 h-44 object-cover object-center" src="{{ url('img-film/' . $data->foto)}}" alt="foto">
+        </a>
         <div class="pt-5 space-y-2 self-center sm:pt-0 sm:pl-10 col-span-3">
           <a href="/ticket_concert/detail{{ $data->id }}" class="font-lato mx-auto font-bold text-blue-ticket text-2xl md:text-3xl xl:text-4xl">
             {{ $data->judul }}

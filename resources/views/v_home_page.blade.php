@@ -36,7 +36,7 @@
                 <a class="font-lato inline-block no-underline text-blue-ticket font-sans hover:text-gray-800 hover:text-underline py-2 px-1" href="/contact">Contact</a>
               </li>
               <li class="mr-3">
-                <a class="font-lato inline-block no-underline text-blue-ticket font-sans hover:text-gray-800 hover:text-underline py-2 px-1" href="#login">Login</a>
+                <a class="font-lato inline-block no-underline text-blue-ticket font-sans hover:text-gray-800 hover:text-underline py-2 px-1" href="/user/login">Login</a>
               </li>
             </ul>
           </div>
@@ -50,7 +50,7 @@
         <p class="font-lato text-blue-ticket font-extrabold text-3xl md:text-5xl">
           Mahardika Ticket
         </p>
-        <p class="font-lato text-xl md:text-2xl text-blue-ticket">Welcome to my Blog</p>
+        <p class="font-lato text-xl text-blue-ticket">Easy shopping at trusted place</p>
     </div>
   </div>
   

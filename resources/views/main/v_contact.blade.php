@@ -35,6 +35,15 @@
               <li class="mr-3">
                 <a class="inline-block py-2 px-1 text-blue-ticket font-lato font-bold no-underline" href="/contact">Contact</a>
               </li>
+              <li class="mr-0 lg:hidden block">
+                <a class="font-lato inline-block text-blue-ticket no-underline font-sans hover:text-gray-800 hover:text-underline py-2 px-1" href="/store">Store</a>
+              </li>
+              <li class="mr-0 lg:hidden block">
+                <a class="font-lato inline-block text-blue-ticket no-underline font-sans hover:text-gray-800 hover:text-underline py-2 px-1" href="/ticket_concert">Ticket</a>
+              </li>
+              <li class="mr-0 lg:hidden block">
+                <a class="font-lato inline-block text-blue-ticket no-underline font-sans hover:text-gray-800 hover:text-underline py-2 px-1" href="/galeri">Galeri</a>
+              </li>
             </ul>
           </div>
         @endsection
@@ -106,7 +115,7 @@
                         </div>
                     </div>
                     <div class="shadow-xl rounded-lg bg-white">
-                        <h1 class="w-full tracking-widest py-3 text-5xl font-bold leading-tight text-center text-blue-ticket font-lato">
+                        <h1 class="w-full tracking-widest py-3 text-4xl md:text-5xl font-bold leading-tight text-center text-blue-ticket font-lato">
                             Google Maps
                         </h1>
                         <div class="w-full mb-4">

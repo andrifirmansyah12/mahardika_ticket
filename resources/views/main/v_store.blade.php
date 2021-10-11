@@ -92,9 +92,9 @@
                         <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="/homepage">Home</a></li>
                         <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="/about">About</a></li>
                         <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="/contact">Contact</a></li>
-                        {{-- <li><a class="lg:hidden block inline-block no-underline hover:text-black hover:underline py-2 px-4" href="/store">Store</a></li>
-                        <li><a class="lg:hidden block inline-block no-underline hover:text-black hover:underline py-2 px-4" href="/ticket-concert">Ticket</a></li>
-                        <li><a class="lg:hidden block inline-block no-underline hover:text-black hover:underline py-2 px-4" href="/galeri">Galeri</a></li> --}}
+                        <li><a class="md:hidden block inline-block no-underline hover:text-black hover:underline py-2 px-4" href="/store">Store</a></li>
+                        <li><a class="md:hidden block inline-block no-underline hover:text-black hover:underline py-2 px-4" href="/ticket-concert">Ticket</a></li>
+                        <li><a class="md:hidden block inline-block no-underline hover:text-black hover:underline py-2 px-4" href="/galeri">Galeri</a></li>
                         <li class="hidden md:block">
                             <span class="js-dropdown">
                                 <a class="js-dropdown__toggle btns-text">Menu <i class="fas fa-chevron-down text-blue-ticket"></i></a>

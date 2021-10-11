@@ -35,8 +35,14 @@
               <li class="mr-3">
                 <a class="inline-block no-underline text-blue-ticket font-lato hover:text-gray-800 hover:text-underline py-2 px-1" href="/contact">Contact</a>
               </li>
-              <li class="mr-3">
-                {{-- <a class="inline-block text-black no-underline font-sans hover:text-gray-800 hover:text-underline py-2 px-1" href="/latihan">Latihan</a> --}}
+              <li class="mr-0 lg:hidden block">
+                <a class="font-lato inline-block text-blue-ticket no-underline font-sans hover:text-gray-800 hover:text-underline py-2 px-1" href="/store">Store</a>
+              </li>
+              <li class="mr-0 lg:hidden block">
+                <a class="font-lato inline-block text-blue-ticket no-underline font-sans hover:text-gray-800 hover:text-underline py-2 px-1" href="/ticket_concert">Ticket</a>
+              </li>
+              <li class="mr-0 lg:hidden block">
+                <a class="font-lato inline-block text-blue-ticket no-underline font-sans hover:text-gray-800 hover:text-underline py-2 px-1" href="/galeri">Galeri</a>
               </li>
             </ul>
           </div>

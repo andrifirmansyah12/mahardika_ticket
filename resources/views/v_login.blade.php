@@ -75,7 +75,7 @@
                         id="email" 
                         name="email"
                         placeholder="Email"
-                        class="bg-gray-200 pt-2 w-full text-blue-ticket focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3">
+                        class="bg-gray-200 pt-2 w-full text-blue-ticket focus:outline-none border-b-4 border-gray-300 focus:border-gray-400 transition duration-500 px-3 pb-3">
                 </div>
 
                 {{-- Email Error --}}
@@ -100,7 +100,7 @@
                         id="password" 
                         name="password"
                         placeholder="Password"
-                        class="bg-gray-200 w-full pt-2 text-blue-ticket focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3">
+                        class="bg-gray-200 w-full pt-2 text-blue-ticket focus:outline-none border-b-4 border-gray-300 focus:border-gray-400 transition duration-500 px-3 pb-3">
                     <span class="bg-gray-200 py-4 fa fa-eye-slash form-control-feedback view_password px-3"></span> 
                     </div>   
                 </div>

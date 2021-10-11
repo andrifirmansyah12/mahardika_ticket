@@ -28,6 +28,10 @@ use App\Http\Controllers\TicketPageController;
 
 Route::post('/send-mail', [ContactController::class, 'sendmail'])->name('send-mail');
 
+Route::get('/user/login', function () {
+    return view('login_user.v_login');
+});
+
 // Route::get('/welcome', function () {
 //     return view('layouts.app');
 // })->name('welcome');
